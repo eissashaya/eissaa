@@ -1,0 +1,242 @@
+/* تحسين تصميم صفحة كورس بايثون ليكون عصرياً وجذاباً ومتجاوباً */
+body {
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#f8f9fa 60%,#e3eafc 100%);
+    color: #232a36;
+    padding-top: 50px;
+}
+.container-index {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.col-index {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #0001;
+    padding: 18px 10px;
+    margin: 0 8px;
+}
+.links-index a {
+    background: linear-gradient(90deg,#57708a 70%,#3a4252 100%);
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #0001;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s;
+}
+.links-index a:hover {
+    background: #232a36;
+    color: #ffe082;
+    box-shadow: 0 4px 16px #0002;
+}
+.body-text {
+    background: #fff;
+    border: 1px solid #dde3f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #0001;
+    padding: 28px;
+    margin: 24px auto;
+    max-width: 900px;
+    font-size: 1.15em;
+    color: #232a36;
+}
+.items {
+    background: #fafdff;
+    border: 1px solid #dde3f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+.items h4 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.items p {
+    line-height: 1.8;
+    font-size: 1.13em;
+}
+.pythonkeywordcolor {
+    color: #dc3545;
+    font-weight: bold;
+}
+.container, .containe, .contain {
+    background: #fff;
+    border: 1px solid #dde3f0;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px #0001;
+    padding: 28px;
+    margin: 32px auto;
+    max-width: 900px;
+}
+.container h2, .containe h1, .contain h1, .contain h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+.container li {
+    background: #f1f1f1;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    color: #232a36;
+    font-size: 1.08em;
+}
+.container li span {
+    font-weight: bold;
+    color: #343a40;
+}
+.code-block, .code {
+    background: #232a36;
+    color: #ffe082;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px #0002;
+}
+.code-block h2 {
+    color: #f39c12;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+pre, .output {
+    background: #181c24;
+    color: #ffe082;
+    border-radius: 8px;
+    padding: 18px 14px;
+    font-size: 1.13em;
+    overflow-x: auto;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px #0001;
+}
+pre code {
+    color: #ffe082;
+    font-size: 1.13em;
+    font-family: 'Cairo', 'Tajawal', 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+.cod {
+    position: relative;
+    margin-bottom: 20px;
+}
+.copy-btn {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    background: linear-gradient(90deg,#007bff 70%,#232a36 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px #0002;
+}
+.copy-btn:hover {
+    background: #0056b3;
+}
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s;
+}
+#scrollToTopBtn:hover {
+    background: #0056b3;
+}
+.widget-content {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 32px auto 0 auto;
+    max-width: 900px;
+}
+.about-content {
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #7c7cf3;
+}
+.bio-data {
+    margin-top: 15px;
+}
+.bio-data .title {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+.image-caption {
+    font-size: 1.3em;
+    color: #6c757d;
+    font-style: italic;
+}
+.footer {
+    background: #232a36;
+    color: #ffe082;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+    border-radius: 18px 18px 0 0;
+    font-size: 1.1em;
+    box-shadow: 0 -2px 8px #0002;
+}
+@media (max-width: 900px) {
+    .body-text, .container, .containe, .contain, .widget-content {
+        padding: 14px 4vw;
+        max-width: 98vw;
+    }
+    .code-block, .code, pre, .output {
+        font-size: 1em;
+        padding: 12px 4vw;
+    }
+    .items {
+        padding: 12px 4vw;
+    }
+    .projects-card-box {
+        min-width: 90vw;
+        max-width: 98vw;
+        padding: 16px 4vw;
+    }
+}
+@media (max-width: 600px) {
+    .body-text, .container, .containe, .contain, .widget-content {
+        padding: 8px 2vw;
+        max-width: 99vw;
+    }
+    .code-block, .code, pre, .output {
+        font-size: 0.98em;
+        padding: 8px 2vw;
+    }
+    .items {
+        padding: 8px 2vw;
+    }
+}

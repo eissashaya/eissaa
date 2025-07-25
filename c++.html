@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أساسيات لغة C++</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cpp.css">
+</head>
+<body>
+    <header>
+        <nav class="cpp-header-nav">
+            <a href="index.html" class="logo">الرئيسية</a>
+            <ul class="links">
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                
+                <li><a href="abut.html">عن المبرمج</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cpp-main-section" id="content">
+        <h1>أساسيات لغة C++</h1>
+        <div class="cpp-content">
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>مقدمة عن C++</h3>
+                    <p>لغة C++ هي لغة برمجة قوية تُستخدم في تطوير البرمجيات عالية الأداء مثل الألعاب، أنظمة التشغيل، والتطبيقات المعقدة. تتميز بدعم البرمجة الكائنية (OOP) وسرعة التنفيذ.</p>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>كتابة أول برنامج</h3>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    cout &lt;&lt; "مرحباً بك في C++!";
+    return 0;
+}
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>المتغيرات وأنواع البيانات</h3>
+                    <ul>
+                        <li>int: الأعداد الصحيحة</li>
+                        <li>float, double: الأعداد العشرية</li>
+                        <li>char: حرف واحد</li>
+                        <li>string: نص</li>
+                        <li>bool: منطقي (صحيح/خطأ)</li>
+                    </ul>
+                    <pre><code>int age = 20;
+double pi = 3.14;
+char grade = 'A';
+bool isStudent = true;
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>جمل الإدخال والإخراج</h3>
+                    <pre><code>int x;
+cout &lt;&lt; "ادخل رقم: ";
+cin &gt;&gt; x;
+cout &lt;&lt; "الرقم هو: " &lt;&lt; x;
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>الشروط (if - else)</h3>
+                    <pre><code>int num = 10;
+if(num &gt; 5) {
+    cout &lt;&lt; "أكبر من 5";
+} else {
+    cout &lt;&lt; "5 أو أقل";
+}
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>الحلقات (for - while)</h3>
+                    <pre><code>for(int i=0; i&lt;5; i++) {
+    cout &lt;&lt; i &lt;&lt; " ";
+}
+// حلقة while
+int j = 0;
+while(j &lt; 5) {
+    cout &lt;&lt; j &lt;&lt; " ";
+    j++;
+}
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>الدوال (Functions)</h3>
+                    <pre><code>int sum(int a, int b) {
+    return a + b;
+}
+int main() {
+    cout &lt;&lt; sum(3, 4);
+}
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>المصفوفات (Arrays)</h3>
+                    <pre><code>int arr[3] = {1, 2, 3};
+cout &lt;&lt; arr[0]; // يطبع 1
+</code></pre>
+                </div>
+            </div>
+            <div class="cpp-card">
+                <div class="info">
+                    <h3>البرمجة الكائنية (OOP) - تعريف كلاس</h3>
+                    <pre><code>class Person {
+public:
+    string name;
+    int age;
+    void sayHello() {
+        cout &lt;&lt; "مرحباً!";
+    }
+};
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="cpp-footer">
+        
+        <p class="footer-title">حقوق النشر محفوظة لدى المبرمج 
+            <span><a href="index.html">م/عيسى شايع</a></span>
+        </p>
+    </footer>
+</body>
+</html>
