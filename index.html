@@ -1,1131 +1,1358 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ✅ تحسين SEO -->
-<title>المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل</title>
-<meta name="description" content="موقع المبرمج عيسى شايع - مطور مواقع ويب واحترافي برمجة تطبيقات موبايل. دروس، كورسات، تواصل مباشر وخدمات برمجية احترافية.">
-<meta name="keywords" content="المبرمج عيسى, المهندس عيسى, عيسى ابراهيم شايع, تطوير مواقع, تطبيقات موبايل, برمجة مواقع, تصميم ويب">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://eissashaya.github.io/eissaa/">
-
-<!-- ✅ Social Media Preview (Open Graph) -->
-<meta property="og:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
-<meta property="og:description" content="خدمات تطوير مواقع وتطبيقات موبايل، دروس برمجة، كورسات، وأعمال احترافية.">
-<meta property="og:image" content="https://eissashaya.github.io/eissaa/1.jpg">
-<meta property="og:url" content="https://eissashaya.github.io/eissaa/">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-
-<!-- ✅ Google Verification -->
-<meta name="google-site-verification" content="b-6zY1_e7PuuYkq-VMB1gA_kcIEIxUHpAEFM_BJbfTc">
-
-<!-- ✅ Favicon -->
-<link rel="icon" href="1.jpg" type="image/jpeg">
-
-<!-- ✅ Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<!-- ✅ CSS -->
-<style>
-/* ✅ القواعد العامة */
-* {
-    font-family: 'Poppins', 'Tahoma', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    text-decoration: none;
-}
-
-:root {
-    --primary: #2a5bd7;
-    --primary-light: #4a7bff;
-    --secondary: #ffc107;
-    --secondary-light: #ffd54f;
-    --dark: #121826;
-    --dark-light: #232a36;
-    --text-light: #f8f9fa;
-    --text-dark: #343a40;
-    --card-bg: #ffffff;
-    --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.15);
-    --transition: all 0.3s ease;
-}
-
-body {
-    background-color: var(--text-light);
-    color: var(--text-dark);
-    font-size: 16px;
-    line-height: 1.7;
-    transition: var(--transition);
-}
-
-/* ✅ الهيدر */
-header {
-    background-color: var(--dark);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 100;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    margin: auto;
-    height: 80px;
-    flex-wrap: wrap;
-}
-
-header nav .links {
-    display: flex;
-}
-
-header nav .links li {
-    list-style: none;
-    margin: 0 15px;
-    position: relative;
-}
-
-header nav .links li a {
-    color: #e0e6f0;
-    font-size: 17px;
-    font-weight: 500;
-    transition: var(--transition);
-    padding: 5px 0;
-}
-
-header nav .links li a:hover {
-    color: var(--secondary);
-}
-
-header nav .links li a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--secondary);
-    transition: var(--transition);
-}
-
-header nav .links li a:hover::after {
-    width: 100%;
-}
-
-/* ✅ أيقونات السوشيال */
-header nav .social-icons {
-    display: flex;
-    align-items: center;
-}
-
-header nav .social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    margin-left: 10px;
-    transition: var(--transition);
-}
-
-header nav .social-icons a i {
-    color: #e0e6f0;
-    font-size: 18px;
-    transition: var(--transition);
-}
-
-header nav .social-icons a:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-}
-
-header nav .social-icons a:hover i {
-    color: white;
-}
-
-/* ✅ زر النسخ */
-.social-icons button,
-.social-icon button {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    cursor: pointer;
-    margin-left: 10px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #e0e6f0;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icons button:hover,
-.social-icon button:hover {
-    background: var(--secondary);
-    color: var(--dark);
-    transform: translateY(-3px);
-}
-
-/* ✅ زر القائمة للجوال */
-#btnMenu {
-    display: none;
-    color: var(--secondary);
-    font-size: 28px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-#btnMenu:hover {
-    transform: scale(1.1);
-}
-
-/* ✅ الوضع الليلي */
-body.night-mode {
-    background-color: var(--dark);
-    color: var(--text-light);
-}
-
-body.night-mode header {
-    background-color: var(--dark-light);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-body.night-mode nav .links li a {
-    color: #b3c6e0;
-}
-
-body.night-mode .main {
-    background: linear-gradient(135deg, var(--dark-light), var(--dark));
-    color: var(--text-light);
-}
-
-body.night-mode .card {
-    background-color: var(--dark-light);
-    color: var(--text-light);
-    box-shadow: var(--shadow-dark);
-}
-
-body.night-mode #scrollToTopBtn {
-    background-color: var(--secondary);
-    color: var(--dark);
-}
-
-body.night-mode #scrollToTopBtn:hover {
-    background-color: var(--secondary-light);
-}
-
-body.night-mode .search-bar {
-    background: var(--dark-light);
-    color: var(--text-light);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* ✅ زر الوضع الليلي */
-.night-mode-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: #e0e6f0;
-    font-size: 18px;
-    cursor: pointer;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15px;
-}
-
-.night-mode-btn:hover {
-    background: var(--secondary);
-    color: var(--dark);
-    transform: rotate(15deg);
-}
-
-/* ✅ مربع البحث */
-.search-bar {
-    padding: 10px 15px;
-    margin-left: 10px;
-    font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    width: 220px;
-    transition: var(--transition);
-    background: rgba(255, 255, 255, 0.1);
-    color: #e0e6f0;
-}
-
-.search-bar:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(42, 91, 215, 0.2);
-    width: 250px;
-}
-
-.search-bar::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* ✅ القسم الرئيسي */
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--primary), #6c44a0);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-}
-
-.main > div {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-}
-
-.main h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 800;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    line-height: 1.2;
-}
-
-.main h1 span {
-    color: var(--secondary);
-    display: block;
-    margin-top: 10px;
-}
-
-.main h3 {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    font-weight: 400;
-    opacity: 0.9;
-}
-
-/* ✅ أيقونات السوشيال في الهيرو */
-.social-icon {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.social-icon a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    transition: var(--transition);
-    backdrop-filter: blur(10px);
-}
-
-.social-icon a:hover {
-    background-color: var(--secondary);
-    color: var(--dark);
-    transform: translateY(-5px) scale(1.1);
-}
-
-/* ✅ العناوين */
-.title {
-    text-align: center;
-    color: var(--primary);
-    font-size: 2.5em;
-    font-weight: 800;
-    margin-bottom: 40px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(to right, var(--primary), var(--secondary));
-    border-radius: 2px;
-}
-
-body.night-mode .title {
-    color: var(--secondary);
-}
-
-/* ✅ الكروت */
-.content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px 0;
-}
-
-.card {
-    background-color: var(--card-bg);
-    width: 320px;
-    box-shadow: var(--shadow);
-    border-radius: 15px;
-    padding: 0;
-    margin: 0;
-    transition: var(--transition);
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.card:hover img {
-    transform: scale(1.05);
-}
-
-.info {
-    padding: 20px;
-    text-align: center;
-}
-
-.info h3 a {
-    color: var(--primary);
-    font-size: 1.4em;
-    font-weight: 700;
-    text-decoration: none;
-    transition: var(--transition);
-    display: block;
-    margin-bottom: 10px;
-}
-
-.info h3 a:hover {
-    color: var(--secondary);
-}
-
-.info p {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.6;
-}
-
-body.night-mode .info p {
-    color: #b3c6e0;
-}
-
-/* ✅ زر العودة لأعلى */
-#scrollToTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    display: none;
-    transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 99;
-}
-
-#scrollToTopBtn:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-3px);
-}
-
-/* ✅ الفوتر */
-.footer {
-    background-color: var(--dark);
-    color: var(--text-light);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-}
-
-.footer p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-}
-
-.footer a {
-    color: var(--secondary);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer a:hover {
-    color: var(--secondary-light);
-    text-decoration: underline;
-}
-
-.footer div {
-    margin-top: 15px;
-}
-
-.footer div a {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 1.2em;
-    transition: var(--transition);
-}
-
-.footer div a:hover {
-    transform: translateY(-3px);
-}
-
-/* ✅ قسم من أنا */
-.about-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 80px 20px;
-    margin: 40px auto;
-    border-radius: 20px;
-    max-width: 1200px;
-    box-shadow: var(--shadow);
-}
-
-body.night-mode .about-section {
-    background: linear-gradient(135deg, var(--dark-light) 0%, var(--dark) 100%);
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.about-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 5px solid var(--primary);
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: var(--transition);
-}
-
-.about-img:hover {
-    transform: scale(1.03);
-    border-color: var(--secondary);
-}
-
-.about-text {
-    max-width: 600px;
-    text-align: right;
-    line-height: 1.8;
-}
-
-.about-text h3 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    color: var(--primary);
-}
-
-body.night-mode .about-text h3 {
-    color: var(--secondary);
-}
-
-.about-text h3 span {
-    color: var(--secondary);
-}
-
-body.night-mode .about-text h3 span {
-    color: var(--primary-light);
-}
-
-.about-text p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #555;
-}
-
-body.night-mode .about-text p {
-    color: #e0e6f0;
-}
-
-.about-text strong {
-    color: var(--primary);
-}
-
-body.night-mode .about-text strong {
-    color: var(--secondary);
-}
-
-.about-text a {
-    color: var(--primary);
-    font-weight: 600;
-    transition: var(--transition);
-}
-
-.about-text a:hover {
-    color: var(--secondary);
-}
-
-.about-social {
-    margin-top: 25px;
-}
-
-.about-social a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    background: var(--primary);
-    color: white;
-    border-radius: 50%;
-    font-size: 1.2em;
-    margin-left: 10px;
-    transition: var(--transition);
-}
-
-.about-social a:hover {
-    background: var(--secondary);
-    color: var(--dark);
-    transform: translateY(-5px);
-}
-
-/* ✅ نموذج الاتصال */
-.contact-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 60px 20px;
-    border-radius: 20px;
-    margin: 60px auto 0 auto;
-    max-width: 600px;
-    box-shadow: var(--shadow);
-}
-
-body.night-mode .contact-section {
-    background: linear-gradient(135deg, var(--dark-light) 0%, var(--dark) 100%);
-}
-
-.contact-section .title {
-    color: var(--primary);
-    margin-bottom: 30px;
-}
-
-body.night-mode .contact-section .title {
-    color: var(--secondary);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    background: white;
-    color: var(--text-dark);
-    border: 2px solid #e0e6f0;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 1em;
-    transition: var(--transition);
-    outline: none;
-    resize: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-body.night-mode .contact-form input,
-body.night-mode .contact-form textarea {
-    background: var(--dark-light);
-    color: var(--text-light);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(42, 91, 215, 0.1);
-}
-
-.contact-form textarea {
-    min-height: 120px;
-}
-
-.contact-form button[type="submit"] {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(42, 91, 215, 0.3);
-}
-
-.contact-form button[type="submit"]:hover {
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(42, 91, 215, 0.4);
-}
-
-#contactMsg {
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 500;
-}
-
-/* ✅ التجاوب */
-@media (max-width: 980px) {
-    header nav {
-        width: 90%;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    header nav .links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        flex-direction: column;
-        background: var(--dark-light);
-        width: 280px;
-        height: calc(100vh - 80px);
-        transition: 0.4s;
-        padding: 30px 20px;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        z-index: 99;
-    }
+    <!-- ✅ تحسين SEO المتقدم -->
+    <title>المبرمج عيسى شايع - مطور تطبيقات Flutter ومواقع ويب احترافية</title>
+    <meta name="description" content="عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. تخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب. أقدم خدمات برمجية ودورات تعليمية احترافية.">
+    <meta name="keywords" content="مطور ويب, مبرمج تطبيقات, Flutter, برمجة مواقع, تعلم البرمجة, تطوير تطبيقات موبايل, HTML, CSS, JavaScript, Python, دورات برمجة">
+    <meta name="author" content="عيسى إبراهيم شايع">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://eissashaya.github.io/eissaa/">
     
-    header nav .links.active {
-        right: 0;
-    }
+    <!-- ✅ Open Graph لشبكات التواصل الاجتماعي -->
+    <meta property="og:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
+    <meta property="og:description" content="خدمات تطوير مواقع وتطبيقات موبايل، دروس برمجة، كورسات، وأعمال احترافية.">
+    <meta property="og:image" content="https://eissashaya.github.io/eissaa/1.jpg">
+    <meta property="og:url" content="https://eissashaya.github.io/eissaa/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:site_name" content="موقع المبرمج عيسى شايع">
     
-    header nav .links li {
-        margin: 15px 0;
-    }
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
+    <meta name="twitter:description" content="خدمات تطوير مواقع وتطبيقات موبايل، دروس برمجة، كورسات، وأعمال احترافية.">
+    <meta name="twitter:image" content="https://eissashaya.github.io/eissaa/1.jpg">
     
-    header nav .links li a {
-        font-size: 18px;
-        padding: 10px 0;
-        display: block;
-    }
+    <!-- ✅ تحسين رؤية Google -->
+    <meta name="google-site-verification" content="b-6zY1_e7PuuYkq-VMB1gA_kcIEIxUHpAEFM_BJbfTc">
     
-    #btnMenu {
-        display: block;
-    }
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="1.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="1.jpg">
     
-    .search-bar {
-        width: 180px;
-        margin: 10px 0;
-    }
+    <!-- ✅ Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    .search-bar:focus {
-        width: 200px;
-    }
+    <!-- ✅ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    .main h1 {
-        font-size: 2.5rem;
-    }
-    
-    .main h3 {
-        font-size: 1.2rem;
-    }
-    
-    section {
-        padding: 60px 20px;
-    }
-    
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .about-text {
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .main h1 {
-        font-size: 2rem;
-    }
-    
-    .main h3 {
-        font-size: 1rem;
-    }
-    
-    .title {
-        font-size: 2rem;
-    }
-    
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .contact-section {
-        max-width: 100%;
-        margin: 40px 10px 0 10px;
-        padding: 40px 20px;
-    }
-}
-
-/* ✅ تأثيرات إضافية */
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.section-padding {
-    padding: 80px 0;
-}
-
-/* ✅ Toast للإشعارات */
-#toast {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--dark);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none;
-    font-weight: 500;
-}
-</style>
-
-<!-- ✅ Schema.org (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "عيسى شايع",
-  "url": "https://eissashaya.github.io/eissaa/",
-  "image": "https://eissashaya.github.io/eissaa/1.jpg",
-  "jobTitle": "مبرمج ومطور ويب",
-  "description": "موقع المبرمج عيسى شايع - تطوير مواقع ويب وتطبيقات موبايل ودروس برمجة.",
-  "sameAs": [
-    "https://instagram.com/3d_.td",
-    "https://github.com/eissashaya"
-  ]
-}
-</script>
-
-<!-- ✅ Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-GEB43FT1P2');
-</script>
+    <!-- ✅ CSS -->
+    <style>
+        /* ✅ CSS Variables */
+        :root {
+            --primary: #2a5bd7;
+            --primary-dark: #1a4bc7;
+            --primary-light: #4a7bff;
+            --secondary: #ffc107;
+            --secondary-dark: #e6ac00;
+            --accent: #6c44a0;
+            --dark: #121826;
+            --dark-light: #1e2536;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --success: #28a745;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --border-radius: 10px;
+            --container-width: 1200px;
+        }
+        
+        /* ✅ General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+            font-size: 16px;
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
+        
+        body.night-mode {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--primary);
+            font-weight: 800;
+        }
+        
+        body.night-mode .section-title {
+            color: var(--secondary);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to left, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        body.night-mode .section-title::after {
+            background: linear-gradient(to left, var(--secondary), var(--accent));
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(42, 91, 215, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(42, 91, 215, 0.4);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ✅ Header & Navigation */
+        header {
+            background-color: rgba(18, 24, 38, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        body.night-mode header {
+            background-color: rgba(30, 37, 54, 0.95);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: #e0e6f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .search-bar {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            width: 200px;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6f0;
+        }
+        
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(42, 91, 215, 0.2);
+            width: 250px;
+        }
+        
+        .night-mode-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: #e0e6f0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .night-mode-btn:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: rotate(15deg);
+        }
+        
+        /* ✅ Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            right: 0;
+            left: 0;
+            background: var(--dark-light);
+            z-index: 999;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 15px 15px;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .mobile-links {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .mobile-links li {
+            margin-bottom: 15px;
+        }
+        
+        .mobile-links a {
+            color: #e0e6f0;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            padding: 10px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .mobile-links a:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--secondary);
+        }
+        
+        .mobile-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .mobile-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6f0;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .mobile-social a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* ✅ Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--secondary);
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        
+        .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-social a:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+        
+        /* ✅ About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        body.night-mode .about {
+            background-color: var(--dark);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-dark);
+            transition: var(--transition);
+        }
+        
+        .about-img:hover {
+            transform: scale(1.02);
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        body.night-mode .about-text h3 {
+            color: var(--secondary);
+        }
+        
+        .about-text h3 span {
+            color: var(--secondary);
+        }
+        
+        body.night-mode .about-text h3 span {
+            color: var(--primary-light);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+        
+        body.night-mode .about-text p {
+            color: #b3c6e0;
+        }
+        
+        .about-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .skill-tag {
+            background: rgba(42, 91, 215, 0.1);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: 1px solid rgba(42, 91, 215, 0.2);
+        }
+        
+        body.night-mode .skill-tag {
+            background: rgba(255, 193, 7, 0.1);
+            color: var(--secondary);
+            border-color: rgba(255, 193, 7, 0.2);
+        }
+        
+        /* ✅ Services/Courses Section */
+        .services {
+            background-color: #f8f9fa;
+        }
+        
+        body.night-mode .services {
+            background-color: var(--dark-light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        body.night-mode .service-card {
+            background-color: var(--dark-light);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-info {
+            padding: 25px;
+        }
+        
+        .service-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        body.night-mode .service-info h3 {
+            color: var(--secondary);
+        }
+        
+        .service-info h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .service-info h3 a:hover {
+            color: var(--secondary);
+        }
+        
+        .service-info p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        body.night-mode .service-info p {
+            color: #b3c6e0;
+        }
+        
+        /* ✅ Contact Section */
+        .contact {
+            background-color: var(--light);
+        }
+        
+        body.night-mode .contact {
+            background-color: var(--dark);
+        }
+        
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        body.night-mode .form-group label {
+            color: var(--secondary);
+        }
+        
+        .form-control {
+            padding: 15px;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: white;
+            color: var(--dark);
+        }
+        
+        body.night-mode .form-control {
+            background-color: var(--dark-light);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 91, 215, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* ✅ Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-right: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-contact i {
+            color: var(--secondary);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background: var(--secondary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* ✅ Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+        }
+        
+        /* ✅ Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 50%;
+            transform: translateX(50%);
+            background: var(--dark);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            font-weight: 500;
+            max-width: 90%;
+        }
+        
+        .toast.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* ✅ Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-img {
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links, .search-bar {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 130px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-    <nav>
-        <ul class="links">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-            <li><a href="abut.html">من أنا</a></li>
-        </ul>
-        
-        
-        
-        <input type="text" id="searchBar" class="search-bar" placeholder="ابحث عن الكورس...">
-        <button id="nightModeBtn" class="night-mode-btn"><i class="fa fa-moon"></i></button>
-        <i id="btnMenu" class="fa fa-bars"></i>
-    </nav>
-</header>
-
-<!-- ✅ Main Section -->
-<section class="main fade-in">
-    <div>
-        <h1>موقع المبرمج<br><span>م/عيسى شايع</span></h1>
-        <h3>مبرمج تطبيقات Flutter، Python، وDart<br>
-        تطوير مواقع ويب باستخدام HTML، CSS، JavaScript، وPHP.</h3>
-        <div class="social-icon" id="icn">
-            <a href="https://facebook.com/profile.php?id=100031199948943"><i class="fab fa-facebook"></i></a>
-            <a href="https://t.me/EissaCodes"><i class="fab fa-telegram"></i></a>
-            <a href="https://instagram.com/v_b.j"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/967776295164" id="copyWhatsapp2" data-copy="967776295164"><i class="fab fa-whatsapp"></i></a>
-            <button id="copyWhatsappBtn2" title="نسخ الرقم"><i class="fa fa-copy"></i></button>
+    <!-- ✅ Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo" >عيسى <span>شايع</span></a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من أنا</a></li>
+                    <li><a href="#services">الدورات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <input type="text" class="search-bar" id="searchBar" placeholder="ابحث عن الكورس...">
+                    <button class="night-mode-btn" id="nightModeBtn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
         </div>
-    </div>
-</section>
-
-<!-- ✅ About Me Section -->
-<section class="about-section section-padding fade-in" id="about">
-    <h2 class="title">من أنا؟</h2>
-    <div class="about-content">
-        <img src="1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy">
-        <div class="about-text">
-            <h3>مرحبًا، أنا <span>عيسى إبراهيم شايع</span></h3>
-            <p>
-                مبرمج تطبيقات ومصمم مواقع ويب بخبرة في تطوير المشاريع البرمجية الحديثة.
-                متخصص في <strong>تطوير تطبيقات الموبايل باستخدام Flutter وDart</strong>،
-                وكذلك <strong>تصميم وبرمجة مواقع الويب باستخدام HTML، CSS، JavaScript، وPHP</strong>.
-            </p>
-            <p>
-                أقدم خدمات البرمجة الاحترافية، تصميم الأنظمة، تطوير التطبيقات،
-                وإعداد المشاريع بأعلى معايير الجودة والأمان.
-                يمكنك متابعة أعمالي من خلال موقعي الشخصي
-                <a href="https://eissashaya.github.io/eissaa/" target="_blank">اضغط هنا</a>
-                أو عبر حساباتي على السوشيال ميديا.
-            </p>
-            <div class="about-social">
-                <a href="https://www.instagram.com/v_b.j" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/eissashaya" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://wa.me/967776295164" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ✅ Courses -->
-<section class="cards section-padding fade-in" id="services">
-    <h2 class="title">الدورات</h2>
-    <div class="content">
-        <div class="card fade-in">
-            <img src="image.png" alt="Python Course" loading="lazy">
-            <div class="info">
-                <h3><a href="pyhon.html">أساسيات بايثون</a></h3>
-                <p>تعلم لغة البرمجة بايثون بسهولة وبشكل عملي. هذه الدورة تغطي المفاهيم الأساسية للبرمجة باستخدام بايثون.</p>
-            </div>
-        </div>
-        <div class="card fade-in">
-            <img src="image44.jpg" alt="C++ Course" loading="lazy">
-            <div class="info">
-                <h3><a href="c++.html">أساسيات C++</a></h3>
-                <p>لغة قوية لتطوير البرامج عالية الأداء. تعلم البرمجة الكائنية والتركيز على الأداء باستخدام C++.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ✅ Contact Form -->
-<section class="contact-section fade-in" id="contact">
-    <h2 class="title">تواصل معنا</h2>
-    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjkwrwpp" method="POST">
-        <input type="text" name="الاسم" placeholder="الاسم" required>
-        <input type="email" name="البريد الإلكتروني" placeholder="البريد الإلكتروني" required>
-        <textarea name="الرسالة" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال</button>
-    </form>
-    <div id="contactMsg" style="display:none;"></div>
-</section>
-
-<!-- ✅ Footer -->
-<footer class="footer">
-    <p>
-        <i class="fa fa-copyright"></i> جميع الحقوق محفوظة - المبرمج <a href="index.html">م/عيسى شايع</a> 2025
-    </p>
-    <div>
-        تابعني على:
-        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-        <a href="https://t.me/EissaCodes"><i class="fab fa-telegram"></i></a>
-        <a href="https://instagram.com/v_b.j"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
-    </div>
-</footer>
-
-<!-- ✅ Scroll to Top -->
-<button id="scrollToTopBtn" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
-
-<!-- ✅ Toast Notification -->
-<div id="toast"></div>
-
-<!-- ✅ JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // تفعيل الوضع الليلي تلقائياً في المساء
-    const hour = new Date().getHours();
-    if (hour >= 18 || hour < 6) {
-        document.body.classList.add('night-mode');
-        document.querySelector('#nightModeBtn i').className = 'fa fa-sun';
-    }
-    
-    // زر الوضع الليلي
-    document.getElementById('nightModeBtn').addEventListener('click', () => {
-        document.body.classList.toggle('night-mode');
-        const icon = document.querySelector('#nightModeBtn i');
-        icon.className = document.body.classList.contains('night-mode') ? 'fa fa-sun' : 'fa fa-moon';
-    });
-    
-    // القائمة المتحركة للجوال
-    document.getElementById('btnMenu').addEventListener('click', () => {
-        document.querySelector('.links').classList.toggle('active');
-    });
-    
-    // إظهار/إخفاء زر العودة للأعلى
-    window.addEventListener('scroll', () => {
-        const scrollBtn = document.getElementById('scrollToTopBtn');
-        if (window.scrollY > 300) {
-            scrollBtn.style.display = 'flex';
-        } else {
-            scrollBtn.style.display = 'none';
-        }
         
-        // تأثير التلاشي للعناصر عند التمرير
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => {
-            const elementTop = el.getBoundingClientRect().top;
-            const elementVisible = 150;
-            if (elementTop < window.innerHeight - elementVisible) {
-                el.classList.add('active');
-            }
-        });
-    });
-    
-    // البحث
-    document.getElementById('searchBar').addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        const cards = document.querySelectorAll('.card');
-        
-        cards.forEach(card => {
-            const title = card.querySelector('h3 a').textContent.toLowerCase();
-            const description = card.querySelector('p').textContent.toLowerCase();
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من أنا</a></li>
+                <li><a href="#services">الدورات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
             
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
+            <div class="mobile-social">
+                <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://t.me/EissaCodes" aria-label="تيليجرام">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://instagram.com/v_b.j" aria-label="انستغرام">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/967776295164" aria-label="واتساب">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- ✅ Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>مرحبًا، أنا <span>عيسى شايع</span></h1>
+                <p>مبرمج ومطور ويب وتطبيقات موبايل محترف. أقدم خدمات برمجية احترافية ودورات تعليمية في مجالات تطوير الويب وتطبيقات الموبايل.</p>
+                
+                <div class="hero-btns">
+                    <a href="#services" class="btn">تصفح الدورات</a>
+                    <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+                </div>
+                
+                <div class="hero-social">
+                    <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/EissaCodes" aria-label="تيليجرام">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://instagram.com/v_b.j" aria-label="انستغرام">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/967776295164" aria-label="واتساب" id="whatsappLink">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <button class="night-mode-btn" id="copyWhatsappBtn" title="نسخ رقم الواتساب">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ✅ About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title fade-in">من أنا؟</h2>
+            
+            <div class="about-content fade-in">
+                <div class="about-img-container">
+                    <img src="1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy">
+                </div>
+                
+                <div class="about-text">
+                    <h3>مرحبًا، أنا <span>عيسى إبراهيم شايع</span></h3>
+                    <p>أنا مبرمج تطبيقات موبايل ومواقع ويب بخبرة في تطوير المشاريع البرمجية الحديثة. متخصص في تطوير تطبيقات الموبايل باستخدام Flutter وDart، وكذلك تصميم وبرمجة مواقع الويب باستخدام HTML، CSS، JavaScript، وPHP.</p>
+                    <p>أقدم خدمات البرمجة الاحترافية، تصميم الأنظمة، تطوير التطبيقات، وإعداد المشاريع بأعلى معايير الجودة والأمان. يمكنك متابعة أعمالي من خلال موقعي الشخصي أو عبر حساباتي على السوشيال ميديا.</p>
+                    
+                    <div class="about-skills">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">تطوير الويب</span>
+                        <span class="skill-tag">تطبيقات الموبايل</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ✅ Services/Courses Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title fade-in">الدورات التعليمية</h2>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <img src="image.png" alt="Python Course" class="service-img" loading="lazy">
+                    <div class="service-info">
+                        <h3><a href="pyhon.html">أساسيات بايثون للمبتدئين</a></h3>
+                        <p>تعلم لغة البرمجة بايثون بسهولة وبشكل عملي. هذه الدورة تغطي المفاهيم الأساسية للبرمجة باستخدام بايثون مع تطبيقات عملية.</p>
+                        <a href="pyhon.html" class="btn">تعلم الآن</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <img src="image44.jpg" alt="C++ Course" class="service-img" loading="lazy">
+                    <div class="service-info">
+                        <h3><a href="c++.html">أساسيات C++ المتقدمة</a></h3>
+                        <p>لغة قوية لتطوير البرامج عالية الأداء. تعلم البرمجة الكائنية والتركيز على الأداء باستخدام C++ مع مشاريع عملية.</p>
+                        <a href="c++.html" class="btn">تعلم الآن</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Web Development" class="service-img" loading="lazy">
+                    <div class="service-info">
+                        <h3><a href="#">تطوير الويب الكامل</a></h3>
+                        <p>تعلم كيفية بناء مواقع ويب كاملة باستخدام HTML، CSS، JavaScript. الدورة تشمل تصميم الواجهات وبرمجة الوظائف.</p>
+                        <a href="#" class="btn">قريبًا</a>
+                    </div>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Flutter Course" class="service-img" loading="lazy">
+                    <div class="service-info">
+                        <h3><a href="#">تطوير تطبيقات Flutter</a></h3>
+                        <p>تعلم بناء تطبيقات موبايل احترافية تعمل على iOS و Android باستخدام إطار عمل Flutter و لغة Dart.</p>
+                        <a href="#" class="btn">قريبًا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ✅ Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">تواصل معنا</h2>
+            
+            <div class="contact-content fade-in">
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjkwrwpp" method="POST">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="الاسم" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="البريد الإلكتروني" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">الرسالة</label>
+                        <textarea id="message" name="الرسالة" class="form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">إرسال الرسالة</button>
+                </form>
+                
+                <div id="contactMsg" style="display:none; margin-top:20px; padding:15px; border-radius:10px;"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ✅ Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">عيسى<span>شايع</span></div>
+                    <p>مبرمج ومطور ويب وتطبيقات موبايل. أقدم خدمات برمجية احترافية ودورات تعليمية في مختلف مجالات البرمجة.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/EissaCodes" aria-label="تيليجرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://instagram.com/v_b.j" aria-label="انستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/967776295164" aria-label="واتساب">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من أنا</a></li>
+                        <li><a href="#services">الدورات</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>معلومات الاتصال</h4>
+                    <p><i class="fas fa-phone"></i> +967 776 295 164</p>
+                    <p><i class="fas fa-envelope"></i> eissashaya@example.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> اليمن</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; <span id="currentYear"></span> - المبرمج عيسى شايع</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ✅ Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- ✅ Toast Notification -->
+    <div class="toast" id="toast"></div>
+    
+    <!-- ✅ JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // ✅ تهيئة السنة الحالية في الفوتر
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // ✅ تفعيل الوضع الليلي تلقائياً في المساء
+            const hour = new Date().getHours();
+            if (hour >= 18 || hour < 6) {
+                document.body.classList.add('night-mode');
+                document.querySelector('#nightModeBtn i').className = 'fas fa-sun';
             }
+            
+            // ✅ زر الوضع الليلي
+            document.getElementById('nightModeBtn').addEventListener('click', function() {
+                document.body.classList.toggle('night-mode');
+                const icon = this.querySelector('i');
+                icon.className = document.body.classList.contains('night-mode') ? 'fas fa-sun' : 'fas fa-moon';
+                showToast(document.body.classList.contains('night-mode') ? 'تم تفعيل الوضع الليلي' : 'تم تفعيل الوضع النهاري');
+            });
+            
+            // ✅ قائمة الجوال
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                this.querySelector('i').className = mobileMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+            });
+            
+            // إغلاق القائمة عند النقر خارجها
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.querySelector('i').className = 'fas fa-bars';
+                }
+            });
+            
+            // ✅ البحث عن الدورات
+            const searchBar = document.getElementById('searchBar');
+            if (searchBar) {
+                searchBar.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase().trim();
+                    const serviceCards = document.querySelectorAll('.service-card');
+                    
+                    serviceCards.forEach(card => {
+                        const title = card.querySelector('h3 a').textContent.toLowerCase();
+                        const description = card.querySelector('p').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || description.includes(searchTerm) || searchTerm === '') {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            }
+            
+            // ✅ نسخ رقم الواتساب
+            const copyWhatsappBtn = document.getElementById('copyWhatsappBtn');
+            if (copyWhatsappBtn) {
+                copyWhatsappBtn.addEventListener('click', function() {
+                    const phoneNumber = '967776295164';
+                    navigator.clipboard.writeText(phoneNumber).then(() => {
+                        showToast('تم نسخ رقم الواتساب: ' + phoneNumber);
+                    }).catch(err => {
+                        showToast('حدث خطأ أثناء النسخ');
+                        console.error('Failed to copy: ', err);
+                    });
+                });
+            }
+            
+            // ✅ تأثيرات التمرير
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => observer.observe(el));
+            
+            // ✅ زر العودة للأعلى
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    scrollTopBtn.classList.add('active');
+                } else {
+                    scrollTopBtn.classList.remove('active');
+                }
+                
+                // إضافة تأثير التمرير للعناصر
+                fadeElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) {
+                        el.classList.add('visible');
+                    }
+                });
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // ✅ إرسال نموذج الاتصال
+            const contactForm = document.getElementById('contactForm');
+            const contactMsg = document.getElementById('contactMsg');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    // تعطيل الزر وإظهار التحميل
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'جاري الإرسال...';
+                    
+                    // جمع بيانات النموذج
+                    const formData = new FormData(this);
+                    
+                    try {
+                        const response = await fetch(this.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        
+                        if (response.ok) {
+                            contactMsg.textContent = '✅ تم إرسال رسالتك بنجاح! سأرد عليك في أقرب وقت.';
+                            contactMsg.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
+                            contactMsg.style.color = '#28a745';
+                            contactMsg.style.display = 'block';
+                            contactForm.reset();
+                        } else {
+                            throw new Error('فشل الإرسال');
+                        }
+                    } catch (error) {
+                        contactMsg.textContent = '❌ حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.';
+                        contactMsg.style.backgroundColor = 'rgba(220, 53, 69, 0.2)';
+                        contactMsg.style.color = '#dc3545';
+                        contactMsg.style.display = 'block';
+                    } finally {
+                        // إعادة تفعيل الزر
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                        
+                        // إخفاء الرسالة بعد 5 ثوانٍ
+                        setTimeout(() => {
+                            contactMsg.style.display = 'none';
+                        }, 5000);
+                    }
+                });
+            }
+            
+            // ✅ وظيفة عرض الإشعارات
+            window.showToast = function(message) {
+                const toast = document.getElementById('toast');
+                toast.textContent = message;
+                toast.classList.add('active');
+                
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 3000);
+            };
+            
+            // ✅ إغلاق القائمة عند النقر على رابط
+            const mobileLinks = document.querySelectorAll('.mobile-links a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    menuToggle.querySelector('i').className = 'fas fa-bars';
+                });
+            });
         });
-    });
-});
-
-// وظيفة إظهار الإشعارات
-function showToast(msg) {
-    const toast = document.getElementById('toast');
-    toast.textContent = msg;
-    toast.style.display = 'block';
-    setTimeout(() => toast.style.display = 'none', 3000);
-}
-
-// نسخ رقم الواتساب
-function copyWhatsapp(btnId, linkId) {
-    const btn = document.getElementById(btnId);
-    const link = document.getElementById(linkId);
-    if (btn && link) {
-        btn.addEventListener('click', () => {
-            navigator.clipboard.writeText(link.getAttribute('data-copy'));
-            showToast('تم نسخ الرقم: ' + link.getAttribute('data-copy'));
-        });
-    }
-}
-
-copyWhatsapp('copyWhatsappBtn', 'copyWhatsapp');
-copyWhatsapp('copyWhatsappBtn2', 'copyWhatsapp2');
-
-// التمرير إلى الأعلى
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// إرسال نموذج الاتصال
-document.getElementById('contactForm').addEventListener('submit', async e => {
-    e.preventDefault();
-    const form = e.target;
-    const msg = document.getElementById('contactMsg');
-    msg.textContent = 'جاري الإرسال...';
-    msg.style.display = 'block';
-    msg.style.background = '#fff3cd';
-    msg.style.color = '#856404';
+    </script>
     
-    try {
-        const res = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        });
-        
-        if (res.ok) {
-            msg.textContent = '✅ تم إرسال الرسالة بنجاح!';
-            msg.style.background = '#d4edda';
-            msg.style.color = '#155724';
-            form.reset();
-        } else {
-            msg.textContent = '❌ حدث خطأ أثناء الإرسال!';
-            msg.style.background = '#f8d7da';
-            msg.style.color = '#721c24';
-        }
-    } catch {
-        msg.textContent = '❌ تعذر الاتصال بالخادم!';
-        msg.style.background = '#f8d7da';
-        msg.style.color = '#721c24';
+    <!-- ✅ Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "عيسى إبراهيم شايع",
+      "url": "https://eissashaya.github.io/eissaa/",
+      "image": "https://eissashaya.github.io/eissaa/1.jpg",
+      "jobTitle": "مبرمج ومطور ويب وتطبيقات موبايل",
+      "description": "عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. تخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب.",
+      "knowsAbout": ["Flutter", "Dart", "Python", "HTML", "CSS", "JavaScript", "PHP", "تطوير الويب", "تطبيقات الموبايل"],
+      "sameAs": [
+        "https://facebook.com/profile.php?id=100031199948943",
+        "https://t.me/EissaCodes",
+        "https://instagram.com/v_b.j",
+        "https://github.com/eissashaya"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Yemen"
+      }
     }
+    </script>
     
-    setTimeout(() => msg.style.display = 'none', 5000);
-});
-
-// تأثيرات التلاشي عند التمرير
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-});
-</script>
+    <!-- ✅ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GEB43FT1P2');
+    </script>
 </body>
 </html>
