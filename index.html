@@ -157,6 +157,10 @@
             background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
         }
         
+        .btn-success {
+            background: linear-gradient(135deg, var(--success), #20c997);
+        }
+        
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -598,6 +602,100 @@
             color: #b3c6e0;
         }
         
+        /* ✅ تطبيقاتي Section (New) */
+        .my-apps {
+            background-color: var(--light);
+        }
+        
+        body.night-mode .my-apps {
+            background-color: var(--dark);
+        }
+        
+        .app-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .app-screenshot {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-dark);
+            transition: var(--transition);
+            border: 5px solid white;
+        }
+        
+        body.night-mode .app-screenshot {
+            border-color: var(--dark-light);
+        }
+        
+        .app-screenshot:hover {
+            transform: scale(1.02) rotate(1deg);
+        }
+        
+        .app-details h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        body.night-mode .app-details h3 {
+            color: var(--secondary);
+        }
+        
+        .app-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+        
+        body.night-mode .app-description {
+            color: #b3c6e0;
+        }
+        
+        .app-features {
+            margin-bottom: 30px;
+        }
+        
+        .app-features h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        body.night-mode .app-features h4 {
+            color: var(--secondary);
+        }
+        
+        .app-features ul {
+            list-style-position: inside;
+            margin-right: 15px;
+        }
+        
+        .app-features li {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+        
+        body.night-mode .app-features li {
+            color: #b3c6e0;
+        }
+        
+        .app-features li i {
+            color: var(--secondary);
+            margin-left: 10px;
+        }
+        
+        .app-download-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
         /* ✅ Contact Section */
         .contact {
             background-color: var(--light);
@@ -828,6 +926,11 @@
             .about-img {
                 margin: 0 auto;
             }
+            
+            .app-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
         }
         
         @media (max-width: 768px) {
@@ -860,6 +963,11 @@
                 width: 100%;
                 max-width: 250px;
                 text-align: center;
+            }
+            
+            .app-download-btns {
+                flex-direction: column;
+                align-items: center;
             }
         }
         
@@ -897,6 +1005,7 @@
                     <li><a href="#home">الرئيسية</a></li>
                     <li><a href="#about">من أنا</a></li>
                     <li><a href="#services">الدورات</a></li>
+                    <li><a href="#apps">تطبيقاتي</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
                 
@@ -918,6 +1027,7 @@
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#about">من أنا</a></li>
                 <li><a href="#services">الدورات</a></li>
+                <li><a href="#apps">تطبيقاتي</a></li>
                 <li><a href="#contact">اتصل بنا</a></li>
             </ul>
             
@@ -947,7 +1057,8 @@
                 
                 <div class="hero-btns">
                     <a href="#services" class="btn">تصفح الدورات</a>
-                    <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+                    <a href="#apps" class="btn btn-secondary">تطبيقاتي</a>
+                    <a href="#contact" class="btn btn-success">تواصل معي</a>
                 </div>
                 
                 <div class="hero-social">
@@ -1046,6 +1157,54 @@
         </div>
     </section>
     
+    <!-- ✅ تطبيقاتي Section (New) -->
+    <section class="my-apps" id="apps">
+        <div class="container">
+            <h2 class="section-title fade-in">تطبيقاتي</h2>
+            
+            <div class="app-container fade-in">
+                <div class="app-screenshot-container">
+                    <!-- صورة افتراضية - يمكن استبدالها بصورة حقيقية -->
+                    <img src="apk.png" alt="تطبيق تحدي الويب" class="app-screenshot" loading="lazy">
+                </div>
+                
+                <div class="app-details">
+                    <h3>تطبيق تحدي الويب</h3>
+                    
+                    <div class="app-description">
+                        <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب! يتضمن سلسلة من التحديات البرمجية التي تساعدك على صقل مهاراتك في HTML، CSS، JavaScript و PHP.</p>
+                        
+                        <p>سواء كنت مبتدئاً أو مطوراً محترفاً، هذا التطبيق سيساعدك على تحسين مهاراتك من خلال تحديات عملية وتمارين تفاعلية تغطي جميع جوانب تطوير الويب.</p>
+                    </div>
+                    
+                    <div class="app-features">
+                        <h4>المميزات الرئيسية:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> تحديات HTML و CSS تفاعلية</li>
+                            <li><i class="fas fa-check-circle"></i> تمارين JavaScript عملية</li>
+                            <li><i class="fas fa-check-circle"></i> تحديات PHP و قواعد البيانات</li>
+                            <li><i class="fas fa-check-circle"></i> نظام نقاط وجوائز تحفيزية</li>
+                            <li><i class="fas fa-check-circle"></i> إحصائيات مفصلة لتقدمك</li>
+                            <li><i class="fas fa-check-circle"></i> تحديثات مستمرة بمحتوى جديد</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="app-download-btns">
+                        <a href="https://eissashaya.github.io/quiz" class="btn btn-success">
+                            <i class="fas fa-download"></i> تحميل التطبيق
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <!-- يمكن إضافة تطبيقات إضافية هنا في المستقبل -->
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--gray); font-size: 1.1rem;">المزيد من التطبيقات قريباً...</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- ✅ Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -1105,6 +1264,7 @@
                         <li><a href="#home">الرئيسية</a></li>
                         <li><a href="#about">من أنا</a></li>
                         <li><a href="#services">الدورات</a></li>
+                        <li><a href="#apps">تطبيقاتي</a></li>
                         <li><a href="#contact">اتصل بنا</a></li>
                     </ul>
                 </div>
@@ -1319,6 +1479,18 @@
                     menuToggle.querySelector('i').className = 'fas fa-bars';
                 });
             });
+            
+            // ✅ تأثير خاص لصورة التطبيق
+            const appScreenshot = document.querySelector('.app-screenshot');
+            if (appScreenshot) {
+                appScreenshot.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.03) rotate(2deg)';
+                });
+                
+                appScreenshot.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                });
+            }
         });
     </script>
     
