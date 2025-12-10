@@ -1,311 +1,1504 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="pyhon.css">
-    <title>كورس بايثون  </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <!-- ✅ تحسين SEO -->
+    <title>كورس بايثون للمبتدئين | تعلم البرمجة مع عيسى شايع</title>
+    <meta name="description" content="تعلم لغة بايثون من الصفر مع كورس متكامل للمبتدئين. شامل مفاهيم أساسية، أمثلة عملية، وتمارين تفاعلية.">
+    <meta name="keywords" content="بايثون, Python, تعلم البرمجة, كورس بايثون, برمجة للمبتدئين, عيسى شايع">
+    <meta name="author" content="عيسى إبراهيم شايع">
+    
+    <style>
+        /* ✅ تحسين CSS شامل */
+        :root {
+            /* ألوان جديدة أكثر احترافية */
+            --primary: #2A5BD7;
+            --primary-dark: #1A4BC7;
+            --primary-light: #4A7BFF;
+            --secondary: #FF6B35;
+            --secondary-dark: #E65A2B;
+            --accent: #6C44A0;
+            --accent-light: #8A5FD3;
+            --dark: #121826;
+            --dark-light: #1E2536;
+            --light: #F8F9FA;
+            --light-gray: #E9ECEF;
+            --gray: #6C757D;
+            --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
+            --info: #17A2B8;
+            
+            /* تدرجات جديدة */
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-light));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-light));
+            --gradient-dark: linear-gradient(135deg, var(--dark), var(--dark-light));
+            --gradient-light: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            
+            /* ظلال محسنة */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+            
+            /* تأثيرات */
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            --border-radius-xl: 30px;
+        }
+        
+        /* ✅ إعادة ضبط CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background: var(--gradient-light);
+            color: var(--dark);
+            line-height: 1.8;
+            font-size: 18px;
+            transition: var(--transition);
+            padding-top: 80px;
+        }
+        
+        body.night-mode {
+            background: var(--gradient-dark);
+            color: #e0e6f0;
+        }
+        
+        /* ✅ Header محسن */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 10px 0;
+        }
+        
+        body.night-mode header {
+            background: rgba(30, 37, 54, 0.98);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        body.night-mode .nav-links a {
+            color: #e0e6f0;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        body.night-mode .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-secondary);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .search-bar {
+            padding: 10px 15px;
+            padding-right: 40px;
+            border: 2px solid var(--light-gray);
+            border-radius: 50px;
+            width: 200px;
+            transition: var(--transition);
+            background: white;
+            font-family: 'Cairo', sans-serif;
+            color: var(--dark);
+        }
+        
+        body.night-mode .search-bar {
+            background: var(--dark-light);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #e0e6f0;
+        }
+        
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(42, 91, 215, 0.2);
+            width: 250px;
+        }
+        
+        .night-mode-btn {
+            background: var(--gradient-primary);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .night-mode-btn:hover {
+            transform: rotate(15deg) scale(1.1);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--light-gray);
+            color: var(--dark);
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        body.night-mode .social-icons a {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e6f0;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .social-icons a:nth-child(1):hover { background: #1877F2; } /* فيسبوك */
+        .social-icons a:nth-child(2):hover { background: #0088cc; } /* تيليجرام */
+        .social-icons a:nth-child(3):hover { background: #E1306C; } /* انستغرام */
+        .social-icons a:nth-child(4):hover { background: #25D366; } /* واتساب */
+        
+        #btnMenu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* ✅ Index Menu - تصميم حديث */
+        .container-index {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+        
+        .course-index {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            position: sticky;
+            top: 100px;
+        }
+        
+        body.night-mode .course-index {
+            background: var(--dark-light);
+        }
+        
+        .index-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+            font-weight: 800;
+        }
+        
+        body.night-mode .index-title {
+            color: var(--secondary);
+        }
+        
+        .links-index {
+            list-style: none;
+        }
+        
+        .links-index a {
+            display: block;
+            padding: 15px 20px;
+            margin: 8px 0;
+            background: rgba(42, 91, 215, 0.08);
+            color: var(--dark);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border-right: 4px solid transparent;
+        }
+        
+        body.night-mode .links-index a {
+            background: rgba(255, 107, 53, 0.1);
+            color: #e0e6f0;
+        }
+        
+        .links-index a:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateX(-10px);
+            border-right-color: var(--secondary);
+            padding-right: 30px;
+        }
+        
+        .links-index a i {
+            margin-left: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* ✅ محتوى الدورة */
+        .course-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+        }
+        
+        .course-main {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        body.night-mode .course-main {
+            background: var(--dark-light);
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        body.night-mode .course-header {
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .course-header h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        
+        body.night-mode .course-header h1 {
+            color: var(--secondary);
+        }
+        
+        .course-header .subtitle {
+            font-size: 1.3rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        body.night-mode .course-header .subtitle {
+            color: #b3c6e0;
+        }
+        
+        /* ✅ محتوى الدروس */
+        .lesson-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        body.night-mode .lesson-section {
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .lesson-section:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: inline-block;
+            font-weight: 800;
+        }
+        
+        body.night-mode .lesson-title {
+            color: var(--secondary);
+        }
+        
+        .lesson-content {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--dark);
+        }
+        
+        body.night-mode .lesson-content {
+            color: #e0e6f0;
+        }
+        
+        .lesson-content p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.05) 100%);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--secondary);
+            margin: 25px 0;
+        }
+        
+        body.night-mode .highlight {
+            background: rgba(255, 107, 53, 0.1);
+        }
+        
+        .python-keyword {
+            color: #DC3545;
+            font-weight: 700;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .python-builtin {
+            color: #6F42C1;
+            font-weight: 600;
+        }
+        
+        .python-string {
+            color: #22863A;
+        }
+        
+        .python-comment {
+            color: #6A737D;
+            font-style: italic;
+        }
+        
+        /* ✅ قسم الكود */
+        .code-section {
+            margin: 30px 0;
+        }
+        
+        .code-block {
+            background: #1E1E1E;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            margin-bottom: 20px;
+        }
+        
+        .code-header {
+            background: #252526;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3E3E42;
+        }
+        
+        .code-title {
+            color: #D4D4D4;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .code-title i {
+            color: var(--secondary);
+        }
+        
+        .copy-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .copy-btn:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-2px);
+        }
+        
+        .copy-btn.copied {
+            background: var(--success);
+        }
+        
+        pre {
+            padding: 25px;
+            margin: 0;
+            overflow-x: auto;
+            font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #D4D4D4;
+        }
+        
+        code {
+            font-family: inherit;
+        }
+        
+        .code-output {
+            background: #0D1117;
+            color: #8B949E;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 15px;
+            border-left: 4px solid var(--success);
+            font-family: 'Cascadia Code', 'Consolas', monospace;
+            font-size: 1.1rem;
+        }
+        
+        /* ✅ أنواع البيانات */
+        .data-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .data-type-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+        
+        body.night-mode .data-type-card {
+            background: var(--dark-light);
+        }
+        
+        .data-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .data-type-card:nth-child(2) { border-top-color: var(--secondary); }
+        .data-type-card:nth-child(3) { border-top-color: var(--accent); }
+        .data-type-card:nth-child(4) { border-top-color: var(--success); }
+        .data-type-card:nth-child(5) { border-top-color: var(--warning); }
+        
+        .data-type-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .data-type-title i {
+            font-size: 1.3rem;
+        }
+        
+        .data-type-desc {
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        body.night-mode .data-type-desc {
+            color: #b3c6e0;
+        }
+        
+        /* ✅ علم اليمن */
+        .yemen-flag-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.9));
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body.night-mode .yemen-flag-section {
+            background: linear-gradient(135deg, rgba(30, 37, 54, 0.9), rgba(18, 24, 38, 0.9));
+        }
+        
+        .yemen-flag-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                rgba(206, 17, 38, 0.1) 0%, 
+                rgba(255, 255, 255, 0.1) 25%, 
+                rgba(0, 0, 0, 0.1) 50%);
+            z-index: 0;
+        }
+        
+        .yemen-flag-section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .yemen-flag-title {
+            font-size: 2.2rem;
+            color: #CE1126;
+            margin-bottom: 30px;
+            font-weight: 900;
+        }
+        
+        .flag-description {
+            font-size: 1.3rem;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        
+        body.night-mode .flag-description {
+            color: #e0e6f0;
+        }
+        
+        .flag-preview {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        body.night-mode .flag-preview {
+            background: var(--dark-light);
+        }
+        
+        /* ✅ Footer */
+        .course-footer {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .course-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-secondary);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .instructor-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .instructor-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .instructor-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .instructor-title {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .course-info, .quick-links {
+            text-align: right;
+        }
+        
+        .course-info h3, .quick-links h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        
+        .course-info ul, .quick-links ul {
+            list-style: none;
+        }
+        
+        .course-info li, .quick-links li {
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .course-info a, .quick-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .course-info a:hover, .quick-links a:hover {
+            color: var(--secondary);
+            padding-right: 10px;
+        }
+        
+        .course-info i, .quick-links i {
+            font-size: 0.9rem;
+            color: var(--secondary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+        }
+        
+        .footer-bottom a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        /* ✅ زر العودة للأعلى */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--gradient-primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #scrollToTopBtn.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scrollToTopBtn:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* ✅ Responsive Design */
+        @media (max-width: 1024px) {
+            .course-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .course-index {
+                position: static;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            #btnMenu {
+                display: block;
+            }
+            
+            .nav-controls .search-bar {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                padding-top: 70px;
+            }
+            
+            .course-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .lesson-title {
+                font-size: 1.7rem;
+            }
+            
+            .course-main {
+                padding: 25px;
+            }
+            
+            .data-types-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .yemen-flag-section {
+                padding: 25px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .course-info, .quick-links {
+                text-align: center;
+            }
+            
+            pre {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 15px;
+            }
+            
+            .course-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .course-header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .lesson-title {
+                font-size: 1.5rem;
+            }
+            
+            .course-index, .course-main {
+                padding: 20px;
+            }
+            
+            #scrollToTopBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.1rem;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+        
+        /* ✅ Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; opacity: 0; }
+        .stagger-2 { animation-delay: 0.2s; opacity: 0; }
+        .stagger-3 { animation-delay: 0.3s; opacity: 0; }
+        .stagger-4 { animation-delay: 0.4s; opacity: 0; }
+        .stagger-5 { animation-delay: 0.5s; opacity: 0; }
+    </style>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GEB43FT1P2');
-</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GEB43FT1P2');
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <button id="nightModeBtn" class="night-mode-btn"><i class="fa fa-moon"></i></button>
-            <input type="text" id="searchBar" class="search-bar" placeholder="ابحث عن الكورس...">
-        
-           <ul class="links">
-            <li><a href="index.html">الصفحة الرئيسية</a> </li>
-            <li><a href="index.html">الكورسات</a> </li>
-            <li><a href="#">اتصل بنا</a> </li>
-            <li><a href="abut.html">About Me</a> </li>
-           </ul>
-           <div class="social-icons">
-            <a href=" https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        <i id="btnMenu" class="fa fa-bars"></i>
+            <ul class="nav-links">
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="index.html">الكورسات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+                <li><a href="abut.html">عني</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <input type="text" id="searchBar" class="search-bar" placeholder="ابحث في الدورة...">
+                <button class="night-mode-btn" id="nightModeBtn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="تيليجرام">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/3d_.td" aria-label="انستغرام">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/967776295164" aria-label="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <i id="btnMenu" class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-	
-
-    <div class="container-index">
-        <div class="col-index" >
-            <ul class="links-index" >
-                <br>
-               <a href="#1">ما هي لغة بايثون</a>
-               <a href="#2">مميزات لغة بايثون بالنسبة للمطورين</a>
-               <a href="#3">مميزات لغة بايثون عن باقي لغات البرمجة</a>
-               <a href="#4">استخدامات لغة بايثون</a>
-               <a href="#5"> انواع المتغيرات في بايثون </a>
-               <a href="#6">تحديد نوع المتغير  </a>
-               <a href="#7">كود رسم علم اليمن  </a>
-               <br>
+    <div class="course-content">
+        <!-- الفهرس الجانبي -->
+        <aside class="course-index fade-in">
+            <h2 class="index-title">فهرس الدورة</h2>
+            <ul class="links-index">
+                <li><a href="#section1"><i class="fas fa-play-circle"></i> ما هي لغة بايثون</a></li>
+                <li><a href="#section2"><i class="fas fa-star"></i> مميزات بايثون للمطورين</a></li>
+                <li><a href="#section3"><i class="fas fa-chart-line"></i> مميزات عن باقي اللغات</a></li>
+                <li><a href="#section4"><i class="fas fa-laptop-code"></i> استخدامات لغة بايثون</a></li>
+                <li><a href="#section5"><i class="fas fa-code"></i> أنواع المتغيرات</a></li>
+                <li><a href="#section6"><i class="fas fa-cog"></i> تحديد نوع المتغير</a></li>
+                <li><a href="#section7"><i class="fas fa-flag"></i> رسم علم اليمن</a></li>
             </ul>
+        </aside>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="course-main fade-in stagger-1">
+            <div class="course-header">
+                <h1>كورس بايثون للمبتدئين</h1>
+                <p class="subtitle">
+                    ابدأ رحلة البرمجة مع لغة بايثون - اللغة الأكثر طلباً في سوق العمل. تعلم الأساسيات، 
+                    كتابة الأكواد، وحل المشكلات البرمجية من خلال أمثلة عملية وتطبيقات حقيقية.
+                </p>
             </div>
-        </div>
-            <!-- Header Close -->	
-    <div class="body-text" dir="auto">
-        <div class="box-wrap">
-        <div class="items" id="1">
-        <h4>ما هي لغة بايثون</h4>
-        <p>هي لغة برمجة عالية المستوى إبتكرها <span class="pythonkeywordcolor">Guido Van Rossum</span> أثناء عمله في مركز أبحاث <span class="pythonkeywordcolor">Centrum Wiskunde & Informatica</span> عام 1986.
-    
-    عام 1991 تم نشر أول إصدار منها لتصبح في متناول الجميع.
-    
-    إستمر تطوير هذه اللغة و إضافة الكثير من المزايا عليها في كل إصدار جديد منها إلى يومنا هذا حتى اصبحت إحدى أهم لغات العصر و التي يمكن إستخدامها لبناء برامج سطح المكتب, تطبيقات الويب, الألعاب, سكريبتات إلخ..
-    
-    بايثون تعمل على جميع و أهم أنظمة التشغيل مثل <span class="pythonkeywordcolor">Windows, Mac OS, Linux, Unix </span> إلخ.. و تعتبر من أشهر لغات البرمجة على الإطلاق.</p>
-        
+
+            <!-- القسم 1: ما هي بايثون -->
+            <section id="section1" class="lesson-section">
+                <h2 class="lesson-title">ما هي لغة بايثون؟</h2>
+                <div class="lesson-content">
+                    <p>
+                        <span class="python-keyword">بايثون (Python)</span> هي لغة برمجة عالية المستوى تم ابتكارها بواسطة 
+                        <span class="python-keyword">Guido van Rossum</span> أثناء عمله في مركز أبحاث 
+                        <span class="python-keyword">Centrum Wiskunde & Informatica</span> عام 1986.
+                    </p>
+                    
+                    <div class="highlight">
+                        <p>
+                            في عام 1991 تم نشر أول إصدار منها لتصبح في متناول الجميع. منذ ذلك الحين، 
+                            استمر تطوير هذه اللغة وإضافة الكثير من المزايا عليها في كل إصدار جديد 
+                            حتى أصبحت إحدى أهم لغات العصر الحديث.
+                        </p>
+                    </div>
+                    
+                    <p>
+                        تعمل بايثون على جميع أنظمة التشغيل الرئيسية مثل 
+                        <span class="python-keyword">Windows</span>, 
+                        <span class="python-keyword">macOS</span>, 
+                        <span class="python-keyword">Linux</span>, 
+                        <span class="python-keyword">Unix</span> وتعتبر من أشهر لغات البرمجة على الإطلاق.
+                    </p>
+                </div>
+            </section>
+
+            <!-- القسم 2: مميزات للمطورين -->
+            <section id="section2" class="lesson-section">
+                <h2 class="lesson-title">مميزات بايثون للمطورين</h2>
+                <div class="lesson-content">
+                    <div class="data-types-grid">
+                        <div class="data-type-card">
+                            <h3 class="data-type-title"><i class="fas fa-users"></i> شعبية كبيرة</h3>
+                            <p class="data-type-desc">مجتمع كبير مع الكثير من المراجع والدروس للمبتدئين والمحترفين</p>
+                        </div>
+                        <div class="data-type-card">
+                            <h3 class="data-type-title"><i class="fas fa-graduation-cap"></i> سهلة التعلم</h3>
+                            <p class="data-type-desc">بناء جملة بسيط وسهل القراءة مقارنة باللغات الأخرى</p>
+                        </div>
+                        <div class="data-type-card">
+                            <h3 class="data-type-title"><i class="fas fa-globe"></i> متعددة المنصات</h3>
+                            <p class="data-type-desc">تعمل على جميع أنظمة التشغيل دون الحاجة لتعديلات كبيرة</p>
+                        </div>
+                        <div class="data-type-card">
+                            <h3 class="data-type-title"><i class="fas fa-briefcase"></i> سوق العمل</h3>
+                            <p class="data-type-desc">من أكثر اللغات طلباً في سوق العمل التقني حالياً</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- القسم 3: مميزات عن باقي اللغات -->
+            <section id="section3" class="lesson-section">
+                <h2 class="lesson-title">مميزات بايثون عن باقي اللغات</h2>
+                <div class="lesson-content">
+                    <p>تتميز بايثون بعدة مزايا تجعلها الخيار الأمثل للعديد من المطورين:</p>
+                    
+                    <ul style="margin: 20px 0; padding-right: 20px;">
+                        <li style="margin-bottom: 15px; padding: 10px; background: rgba(42, 91, 215, 0.05); border-radius: 8px;">
+                            <strong>مجانية بالكامل:</strong> لا تدفع أي مبلغ للعمل على بايثون
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 10px; background: rgba(42, 91, 215, 0.05); border-radius: 8px;">
+                            <strong>سهولة القراءة:</strong> بناء جملة واضح يمكن قراءته مثل اللغة الإنجليزية
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 10px; background: rgba(42, 91, 215, 0.05); border-radius: 8px;">
+                            <strong>التوافق:</strong> تتعامل بسهولة مع لغات برمجة أخرى مثل C++ وJava
+                        </li>
+                        <li style="margin-bottom: 15px; padding: 10px; background: rgba(42, 91, 215, 0.05); border-radius: 8px;">
+                            <strong>المكتبات:</strong> آلاف المكتبات المجانية لمختلف التطبيقات
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- القسم 4: استخدامات بايثون -->
+            <section id="section4" class="lesson-section">
+                <h2 class="lesson-title">استخدامات لغة بايثون</h2>
+                <div class="lesson-content">
+                    <p>تستخدم بايثون في العديد من المجالات الحديثة:</p>
+                    
+                    <div class="code-section">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-title">
+                                    <i class="fas fa-code"></i>
+                                    مجالات تطبيق بايثون
+                                </div>
+                            </div>
+                            <pre><code><span class="python-comment"># 1. تطوير الويب (Web Development)</span>
+Django, Flask <span class="python-comment"># أطر عمل قوية لبناء مواقع ويب</span>
+
+<span class="python-comment"># 2. علم البيانات (Data Science)</span>
+Pandas, NumPy <span class="python-comment"># معالجة وتحليل البيانات</span>
+
+<span class="python-comment"># 3. الذكاء الاصطناعي (AI & ML)</span>
+TensorFlow, PyTorch <span class="python-comment"># تعلم الآلة والذكاء الاصطناعي</span>
+
+<span class="python-comment"># 4. الأتمتة (Automation)</span>
+Selenium <span class="python-comment"># أتمتة المهام المتكررة</span>
+
+<span class="python-comment"># 5. تطوير الألعاب (Game Development)</span>
+Pygame <span class="python-comment"># بناء ألعاب ثنائية الأبعاد</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- القسم 5: أنواع المتغيرات -->
+            <section id="section5" class="lesson-section">
+                <h2 class="lesson-title">أنواع المتغيرات في بايثون</h2>
+                <div class="lesson-content">
+                    <p>تتعرف بايثون على عدة أنواع من البيانات:</p>
+                    
+                    <div class="code-section">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-title">
+                                    <i class="fas fa-list-alt"></i>
+                                    أنواع البيانات الأساسية
+                                </div>
+                                <button class="copy-btn" onclick="copyCode(this, 'code1')">
+                                    <i class="far fa-copy"></i> نسخ الكود
+                                </button>
+                            </div>
+                            <pre id="code1"><code><span class="python-comment"># 1. الأعداد الصحيحة (Integer)</span>
+age = 25
+print(<span class="python-string">f"age = </span>{type(age)}<span class="python-string">"</span>)
+
+<span class="python-comment"># 2. الأعداد العشرية (Float)</span>
+price = 19.99
+print(<span class="python-string">f"price = </span>{type(price)}<span class="python-string">"</span>)
+
+<span class="python-comment"># 3. النصوص (String)</span>
+name = <span class="python-string">"عيسى شايع"</span>
+print(<span class="python-string">f"name = </span>{type(name)}<span class="python-string">"</span>)
+
+<span class="python-comment"># 4. القيم المنطقية (Boolean)</span>
+is_active = True
+print(<span class="python-string">f"is_active = </span>{type(is_active)}<span class="python-string">"</span>)
+
+<span class="python-comment"># 5. القوائم (List)</span>
+fruits = [<span class="python-string">"تفاح"</span>, <span class="python-string">"موز"</span>, <span class="python-string">"برتقال"</span>]
+print(<span class="python-string">f"fruits = </span>{type(fruits)}<span class="python-string">"</span>)</code></pre>
+                        </div>
+                        
+                        <div class="code-output">
+                            <strong>النتيجة:</strong>
+                            <pre>age = &lt;class 'int'&gt;
+price = &lt;class 'float'&gt;
+name = &lt;class 'str'&gt;
+is_active = &lt;class 'bool'&gt;
+fruits = &lt;class 'list'&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- القسم 6: تحديد نوع المتغير -->
+            <section id="section6" class="lesson-section">
+                <h2 class="lesson-title">تحديد نوع المتغير</h2>
+                <div class="lesson-content">
+                    <p>يمكنك تحديد نوع المتغير باستخدام دوال التحويل:</p>
+                    
+                    <div class="code-section">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-title">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    تحويل أنواع البيانات
+                                </div>
+                                <button class="copy-btn" onclick="copyCode(this, 'code2')">
+                                    <i class="far fa-copy"></i> نسخ الكود
+                                </button>
+                            </div>
+                            <pre id="code2"><code><span class="python-comment"># تحويل الأنواع المختلفة</span>
+x = str(50)      <span class="python-comment"># تحويل إلى نص</span>
+y = int(50)      <span class="python-comment"># تحويل إلى عدد صحيح</span>
+z = float(50)    <span class="python-comment"># تحويل إلى عدد عشري</span>
+s = bool(0)      <span class="python-comment"># تحويل إلى قيمة منطقية (True/False)</span>
+
+<span class="python-comment"># عرض النتائج</span>
+print(<span class="python-string">'x ='</span>, x)
+print(<span class="python-string">'y ='</span>, y)
+print(<span class="python-string">'z ='</span>, z)
+print(<span class="python-string">'s ='</span>, s)
+
+<span class="python-comment"># عرض الأنواع</span>
+print(<span class="python-string">'نوع x هو:'</span>, type(x))
+print(<span class="python-string">'نوع y هو:'</span>, type(y))</code></pre>
+                        </div>
+                        
+                        <div class="code-output">
+                            <strong>النتيجة:</strong>
+                            <pre>x = '50'
+y = 50
+z = 50.0
+s = False
+نوع x هو: &lt;class 'str'&gt;
+نوع y هو: &lt;class 'int'&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- القسم 7: علم اليمن -->
+            <section id="section7" class="lesson-section">
+                <div class="yemen-flag-section">
+                    <h2 class="yemen-flag-title">كود رسم علم اليمن 🇾🇪</h2>
+                    <p class="flag-description">
+                        في هذا المثال سنستخدم مكتبة Turtle في بايثون لرسم علم الجمهورية اليمنية، 
+                        وهو يتكون من ثلاثة ألوان: الأحمر في الأعلى، الأبيض في الوسط، والأسود في الأسفل.
+                    </p>
+                    
+                    <div class="flag-preview">
+                        <div style="height: 60px; background: #CE1126; margin-bottom: 2px;"></div>
+                        <div style="height: 60px; background: white; margin-bottom: 2px;"></div>
+                        <div style="height: 60px; background: black;"></div>
+                        <p style="margin-top: 10px; color: var(--gray);">علم الجمهورية اليمنية</p>
+                    </div>
+                    
+                    <div class="code-section">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <div class="code-title">
+                                    <i class="fas fa-flag"></i>
+                                    رسم علم اليمن باستخدام بايثون
+                                </div>
+                                <button class="copy-btn" onclick="copyCode(this, 'code3')">
+                                    <i class="far fa-copy"></i> نسخ الكود
+                                </button>
+                            </div>
+                            <pre id="code3"><code><span class="python-keyword">import</span> turtle
+
+<span class="python-comment"># إعداد نافذة الرسم</span>
+screen = turtle.Screen()
+screen.setup(width=600, height=400)
+screen.title(<span class="python-string">"علم اليمن - Python Turtle"</span>)
+
+<span class="python-comment"># إنشاء قلم الرسم</span>
+pen = turtle.Turtle()
+pen.speed(0)  <span class="python-comment"># أقصى سرعة</span>
+pen.hideturtle()
+
+<span class="python-comment"># رسم الشريط الأحمر</span>
+pen.penup()
+pen.goto(-300, 133)
+pen.pendown()
+pen.color(<span class="python-string">"#CE1126"</span>)  <span class="python-comment"># اللون الأحمر</span>
+pen.begin_fill()
+<span class="python-keyword">for</span> _ <span class="python-keyword">in</span> range(2):
+    pen.forward(600)
+    pen.right(90)
+    pen.forward(133)
+    pen.right(90)
+pen.end_fill()
+
+<span class="python-comment"># رسم الشريط الأبيض</span>
+pen.penup()
+pen.goto(-300, 0)
+pen.pendown()
+pen.color(<span class="python-string">"white"</span>)
+pen.begin_fill()
+<span class="python-keyword">for</span> _ <span class="python-keyword">in</span> range(2):
+    pen.forward(600)
+    pen.right(90)
+    pen.forward(133)
+    pen.right(90)
+pen.end_fill()
+
+<span class="python-comment"># رسم الشريط الأسود</span>
+pen.penup()
+pen.goto(-300, -133)
+pen.pendown()
+pen.color(<span class="python-string">"black"</span>)
+pen.begin_fill()
+<span class="python-keyword">for</span> _ <span class="python-keyword">in</span> range(2):
+    pen.forward(600)
+    pen.right(90)
+    pen.forward(133)
+    pen.right(90)
+pen.end_fill()
+
+<span class="python-comment"># إضافة النص</span>
+pen.penup()
+pen.goto(0, -180)
+pen.color(<span class="python-string">"#333"</span>)
+pen.write(<span class="python-string">"علم الجمهورية اليمنية"</span>, align=<span class="python-string">"center"</span>, 
+          font=(<span class="python-string">"Arial"</span>, 16, <span class="python-string">"bold"</span>))
+
+<span class="python-comment"># إبقاء النافذة مفتوحة</span>
+turtle.done()</code></pre>
+                        </div>
+                        
+                        <div class="code-output">
+                            <strong>ملاحظة:</strong>
+                            <p>قم بتشغيل هذا الكود في بيئة بايثون لتشاهد العلم مرسوماً أمامك!</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 20px; font-size: 1.1rem; color: var(--gray);">
+                        <i class="fas fa-lightbulb"></i> تلميح: يمكنك تعديل الألوان والأبعاد لرسم أعلام دول أخرى!
+                    </p>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="items" id="2">
-    <h4 id="2">مميزات لغة بايثون بالنسبة للمطورين
-    </h4>
-    <p>
-    1 - لها شعبية هائلة و هناك الكثير من المراجع لمن يريد تعلمها.<br>
-    2 - بسيطة و تعلمها سهل جداً مقارنةً مع غيرها من اللغات.<br>
-    3 - إذا أنشأت برنامجاً باستخدام لغة بايثون فإنه يعمل على أي نظام في العالم و هذا من أهم ما يدفعك لتعلمها.<br>
-    4 - في وقتنا الحالي, تعتبر من أكثر اللغات طلباً في سوق العمل, أي إذا كنت تريد دخول سوق العمل فلغة بايثون توفر لك الكثير من الفرص.<br>
-    5 - إحدى أهم اللغات التي يستخدمها المهمتين بمجال أمن المعلومات و الإختراق الأخلاقي.
-    </p>
-    </div>
-    <div class="items" id="3">
-    <h4 id="3">مميزات لغة بايثون عن باقي لغات البرمجة
-    </h4>
-    <p>
-        1 - مادياً <br>
-        &ensp;لن تدفع أي مبلغ لتعمل على لغة بايثون, فهي مصدر مفتوح و مجانية و ستبقى مجانية مدى الحياة.<br>
-        2 - تقنياً<br>
-        &ensp;	تستطيع البرمجة بها حتى و لو كان حاسوبك ضعيفاً أو قديماً.<br>
-    
-        3 - سهولة القراءة و التعديل<br>
-        &ensp;تعلمها سهل جداً و يمكن قراءة و تعديل الكود المكتوب فيها بسهولة.<br>
-        4 - العمل على أكثر من منصة<br>
-        &ensp;	البرنامج الذي تبنيه بواسطة لغة بايثون يعمل على كما على أهم أنظمة التشغيل مثل <span class="pythonkeywordcolor">Windows, Mac OS, Linux, Unix</span>.<br>
-        5 - كائينة التوجه<br>
-        &ensp;تدعم مفهوم الكلاس, الكائن, التغليف, الوراثة إلخ..<br>
-        6 - تعدد المهام<br>
-        &ensp;	بايثون توفر لك تقنية الـ <span class="pythonkeywordcolor">Multithreading</span> و التي تسمح لك بجعل برنامجك قادراً على تنفيذ عدة أوامر مع بعض و بنفس الوقت.<br>
-        7 - قواعد البيانات<br>
-        &ensp;	بايثون توفر إنترفيسات جاهزة للتعامل مع أهم قواعد البيانات.<br>
-        8 - واجهة المستخدم<br>
-        &ensp;	يمكن بناء تطبيقات فيها واجهة مستخدم فيها.<br>
-        9 - التعامل مع لغات برمجة أخرى<br>
-        &ensp;	يمكنك التعامل مع لغات برمجة أخرى ( مثل <span class="pythonkeywordcolor">C, C++, Java</span> ) ضمن برنامجك المكتوب في الأساس بلغة بايثون.<br>
-    
-        10 - تعامل لغات البرمجة الأخرى مع لغة بايثون<br>
-        &ensp;	أغلب لغات البرمجة تدعم التعامل مع لغة بايثون, أي أنهم يتيحون لك إستخدام كود مكتوب بلغة بايثون في برامج مكتوبة في الأساس بلغات برمجة أخرى ( مثل <span class="pythonkeywordcolor">C, C++, Java</span> ).<br>
-        </p>
-        <div class="container" id="4">
-            <h2 id="4">استخدامات لغة بايثون</h2>
-            <ul>
-                <li><span>تطوير الويب:</span> باستخدام أطر مثل Flask وDjango.</li>
-                <li><span>تحليل البيانات:</span> مع مكتبات مثل Pandas وNumPy.</li>
-                <li><span>الذكاء الاصطناعي وتعلم الآلة:</span> باستخدام مكتبات مثل TensorFlow وPyTorch.</li>
-                <li><span>أتمتة المهام:</span> كتابة سكريبتات لأتمتة العمليات اليومية.</li>
-                <li><span>الألعاب:</span> تطوير الألعاب باستخدام مكتبات مثل Pygame.</li>
-            </ul>
-        </div>
-    </div>
-        </div>
-    
-    </div>
-    
-    <div class="containe" id="5">
-        <h1>أنواع المتغيرات في بايثون</h1>
 
-        <div class="code-block">
-            <h2>1. أعداد صحيحة (Integer)</h2>
-            <pre><code>age = 25  # نوع المتغير int
-print("age =", type(age))</code></pre>
-            <div class="output">
-                <pre><code>age = int </code></pre>
+    <!-- Footer -->
+    <footer class="course-footer">
+        <div class="footer-content">
+            <div class="instructor-card">
+                <img src="1.jpg" alt="المبرمج عيسى شايع" class="instructor-avatar">
+                <h3 class="instructor-name">عيسى شايع</h3>
+                <p class="instructor-title">مطور مواقع ويب وتطبيقات موبايل</p>
+                <p style="color: rgba(255, 255, 255, 0.8); margin: 15px 0;">
+                    أقدم دورات برمجة احترافية للمبتدئين والمحترفين. هدفي هو نشر المعرفة وتمكين الشباب العربي من دخول عالم البرمجة.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="تيليجرام">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/3d_.td" aria-label="انستغرام">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/967776295164" aria-label="واتساب">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="code-block">
-            <h2>2. أعداد عشرية (Float)</h2>
-            <pre><code>price = 19.99  # نوع المتغير float
-print("price =", type(price))</code></pre>
-            <div class="output">
-                <pre><code>price = float </code></pre>
+            
+            <div class="course-info">
+                <h3>معلومات الدورة</h3>
+                <ul>
+                    <li><a href="#section1"><i class="fas fa-chevron-left"></i> المقدمة إلى بايثون</a></li>
+                    <li><a href="#section5"><i class="fas fa-chevron-left"></i> أنواع البيانات</a></li>
+                    <li><a href="#section6"><i class="fas fa-chevron-left"></i> تحويل الأنواع</a></li>
+                    <li><a href="#section7"><i class="fas fa-chevron-left"></i> مشروع عملي</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="code-block">
-            <h2>3. نصوص (String)</h2>
-            <pre><code>name = "Ali"  # نوع المتغير str
-print("name =", type(name))</code></pre>
-            <div class="output">
-                <pre><code>name = str </code></pre>
+            
+            <div class="quick-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chevron-left"></i> الصفحة الرئيسية</a></li>
+                    <li><a href="index.html"><i class="fas fa-chevron-left"></i> جميع الكورسات</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                    <li><a href="abut.html"><i class="fas fa-chevron-left"></i> عني</a></li>
+                </ul>
             </div>
-        </div>
-
-        <div class="code-block">
-            <h2>4. قيم منطقية (Boolean)</h2>
-            <pre><code>is_active = True  # نوع المتغير bool
-print("is_active =", type(is_active))</code></pre>
-            <div class="output">
-                <pre><code>is_active = bool</code></pre>
-            </div>
-        </div>
-
-        <div class="code-block">
-            <h2>5. قائمة (List)</h2>
-            <pre><code>fruits = ["apple", "banana", "cherry"]  # نوع المتغير list
-  print("fruits =", type(fruits))</code></pre>
-            <div class="output">
-                <pre><code>fruits = list</code></pre>
-            </div>
-     </div>
-    
-     <div class="contain" id="6">
-    <h1>تحديد نوع المتغير</h1>
-        <div class="code-text"   >
-        <div class="code"  >
-            <code  class="code-width">
-                <p>x = <span class="comment">str</span>(<span >50</span>) <span class="comment-code"># str أنه نص x هنا قمنا بتعريف نوع المتغير</span></p>
-                <p>y = <span class="comment">int</span>(<span >50</span>) <span class="comment-code"># int أنه عدد صحيح y هنا قمنا بتعريف نوع المتغير</span></p>
-                <p>z = <span class="comment">float</span>(<span >50</span>) <span class="comment-code"># float أنه عدد عشري z هنا قمنا بتعريف نوع المتغير</span></p>
-                <p>s = <span class="comment">bool</span>(<span >0</span>) <span class="comment-code"># (True او 1  False 0) bool أنه s هنا قمنا بتعريف نوع المتغير</span></p>
-                <p><span class="print"> print</span>(<span class="comment">'x =' </span>,<span>x</span>)</p>
-                <p><span class="print"> print</span>(<span class="comment">'y =' </span>,<span>y</span>)</p>
-                <p><span class="print"> print</span>(<span class="comment">'z =' </span>,<span>z</span>)</p>
-                <p><span class="print"> print</span>(<span class="comment">'s =' </span>,<span>s</span>)</p>
-            </code>
-            </div>
-            <be>Result:</be>
-            <div class="code">
-            <code>
-            <pre>
-             x = '50'
-             y = 50
-             z = 50.0
-             s = False
-            </pre>
-            </code>
-       </div>
-        </div>
-        </div>
-    
-        <h1>كود رسم علم اليمن</h1>
-
-        <div class="cod" id="7">
-            <button class="copy-btn" onclick="copyCode('code-block')">
-                نسخ الكود <span class="arrow-icon">↗</span>
-            </button>
-            <pre id="code-block">
-            import turtle
-            # إعداد نافذة التفاعل
-            screen = turtle.Screen()
-            screen.setup(width=600, height=400)
-        
-            pen = turtle.Turtle()
-            pen.speed(0)  # تعيين السرعة لأقصى سرعة
-        
-            # رسم الشريط الأحمر
-            pen.penup()
-            pen.goto(-300, 100)
-            pen.pendown()
-            pen.begin_fill()
-            pen.color("red")
-            pen.setheading(0)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.right(90)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.end_fill()
-        
-            # رسم الشريط الأبيض
-            pen.penup()
-            pen.goto(-300, -33.33)
-            pen.pendown()
-            pen.begin_fill()
-            pen.color("white")
-            pen.setheading(0)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.right(90)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.end_fill()
-        
-            # رسم الشريط الأسود
-            pen.penup()
-            pen.goto(-300, -166.66)
-            pen.pendown()
-            pen.begin_fill()
-            pen.color("black")
-            pen.setheading(0)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.right(90)
-            pen.forward(600)
-            pen.right(90)
-            pen.forward(133.33)
-            pen.end_fill()
-            pen.hideturtle()
-            # إبقاء نافذة التفاعل مفتوحة
-            turtle.done()
-            </pre>
         </div>
         
-
-
-</div>
-
-    <div class="widget-content">
-        <div class="about-content">
-            <div class="footer-logo custom-image">
-                <a href="indax.html">
-                    <img 
-                        alt="موقع المبرمج عيسى شايع" 
-                        height="100" 
-                        src="1.jpg" 
-                        width="100" 
-                    />
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href=" https://www.facebook.com/profile.php?id=100031199948943&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="https://www.instagram.com/3d_.td/?utm_source=qr&r=nametag"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/967776295164"><i class="fab fa-whatsapp"></i></a>
-            </div>
-            <div class="bio-data">
-                <h3 class="title">موقع المبرمج عيسى شايع</h3>
-                <span class="image-caption">مطور مواقع ويب -احترافي برمجة تطبيقات موبايل</span>
-            </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة © <span id="currentYear"></span> - تصميم وتطوير <a href="index.html">المبرمج عيسى شايع</a></p>
         </div>
-    </div>
-    <footer class="footer">
-        <p class="footer-title">حقوق النشر محفوظة لدى المبرمج 
-            <span>
-                <a href="indax.html">م/عيسى شايع</a>
-            </span>
-        </p>
     </footer>
     
     <button id="scrollToTopBtn" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>  
+        <i class="fas fa-arrow-up"></i>
     </button>
     
-    <script src="eissa.js"></script>
+    <script>
+        // ✅ تهيئة السنة الحالية
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // ✅ وضع الليل
+        const nightModeBtn = document.getElementById('nightModeBtn');
+        const body = document.body;
+        
+        if (localStorage.getItem('nightMode') === 'enabled') {
+            body.classList.add('night-mode');
+        }
+        
+        nightModeBtn.addEventListener('click', () => {
+            body.classList.toggle('night-mode');
+            localStorage.setItem('nightMode', body.classList.contains('night-mode') ? 'enabled' : 'disabled');
+        });
+        
+        // ✅ نسخ الكود
+        function copyCode(button, codeId) {
+            const codeElement = document.getElementById(codeId);
+            const codeText = codeElement.textContent;
+            
+            navigator.clipboard.writeText(codeText).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> تم النسخ!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+        
+        // ✅ زر العودة للأعلى
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('active');
+            } else {
+                scrollToTopBtn.classList.remove('active');
+            }
+        });
+        
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // ✅ البحث
+        const searchBar = document.getElementById('searchBar');
+        
+        searchBar.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const searchTerm = searchBar.value.toLowerCase();
+                const sections = document.querySelectorAll('.lesson-section');
+                
+                sections.forEach(section => {
+                    const text = section.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                        section.style.animation = 'none';
+                        setTimeout(() => {
+                            section.style.animation = 'fadeIn 0.6s ease';
+                        }, 10);
+                    }
+                });
+            }
+        });
+        
+        // ✅ قائمة الجوال
+        const btnMenu = document.getElementById('btnMenu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        btnMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // ✅ تفعيل الرسوم المتحركة عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.lesson-section, .data-type-card').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // ✅ تمييز القسم النشط في الفهرس
+        const indexLinks = document.querySelectorAll('.links-index a');
+        const sections = document.querySelectorAll('.lesson-section');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            indexLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                    link.style.background = 'var(--gradient-primary)';
+                    link.style.color = 'white';
+                } else {
+                    link.style.background = '';
+                    link.style.color = '';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
