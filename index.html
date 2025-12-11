@@ -45,78 +45,780 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Compact card wrapper for التطبيقات section */
-        .app-card {
+      /* تحسينات قسم التطبيقات */
+/* تصميم متجاوب لعرض 3 تطبيقات في صف واحد */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+}
+
+@media (max-width: 992px) {
+    .apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .apps-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 30px auto;
+    }
+}
+
+/* تصميم البطاقات المضغوطة */
+.app-card-compact {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.app-card-compact:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+body.night-mode .app-card-compact {
+    background: var(--dark-light);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border-color: rgba(255,255,255,0.05);
+}
+
+/* رأس البطاقة */
+.app-card-header {
+    position: relative;
+    padding: 15px 15px 0;
+}
+
+.app-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+    color: white;
+}
+
+.app-badge.best {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+.app-badge.new {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+}
+
+.app-badge.premium {
+    background: linear-gradient(135deg, #9b59b6, #e74c3c);
+}
+
+.app-card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.app-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.app-card-compact:hover .app-card-image img {
+    transform: scale(1.05);
+}
+
+/* جسم البطاقة */
+.app-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+body.night-mode .app-card-body h3 {
+    color: white;
+}
+
+/* التقييم */
+.app-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.app-rating .stars {
+    color: #FFD700;
+    font-size: 0.9rem;
+}
+
+.rating-text {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+/* الوصف */
+.app-description {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.app-description p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+body.night-mode .app-description p {
+    color: #ccc;
+}
+
+/* المميزات المختصرة */
+.app-features-compact {
+    margin-bottom: 20px;
+}
+
+.app-features-compact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.app-features-compact ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.app-features-compact ul li i {
+    color: #2ecc71;
+    font-size: 0.85rem;
+}
+
+/* أزرار التحميل */
+.app-download-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.app-download-btns .btn {
+    padding: 10px 5px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* تذييل البطاقة */
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+body.night-mode .app-footer {
+    border-color: rgba(255,255,255,0.08);
+}
+
+.app-size, .app-update {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.app-update {
+    background: rgba(0,0,0,0.05);
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+body.night-mode .app-update {
+    background: rgba(255,255,255,0.1);
+}
+
+/* تذييل قسم التطبيقات */
+.apps-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.apps-footer .btn-primary {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apps-note {
+    margin-top: 20px;
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.apps-note .highlight {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.apps-note .highlight:hover {
+    border-bottom-color: var(--primary);
+}
+
+/* تأثيرات إضافية */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.app-card-compact:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.app-card-compact:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.app-card-compact:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* تحسينات للأزرار */
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #27ae60, #219653);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), #2980b9);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9, var(--primary));
+    transform: translateY(-2px);
+}
+
+.simple-card {
             background: white;
-            border-radius: 12px;
-            padding: 14px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-            margin: 18px auto 30px auto;
-            max-width: 920px; /* keep card narrow and centered */
-        }
-
-        body.night-mode .app-card {
-            background: var(--dark-light, #1e2536);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-
-        /* Slightly tighten the inner layout when inside a card */
-        .app-card .app-container {
-            gap: 20px;
-            align-items: center;
-        }
-
-        /* Make screenshot compact */
-        .app-card .app-screenshot {
-            border-radius: 10px;
-            box-shadow: var(--shadow-dark, 0 6px 20px rgba(0,0,0,0.12));
-            max-width: 260px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            max-width: 500px;
             width: 100%;
-            height: auto;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .simple-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .simple-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .card-overlay h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .card-overlay p {
+            opacity: 0.9;
+            font-size: 1rem;
+            max-width: 90%;
+        }
+
+        .card-content {
+            padding: 1.8rem;
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .card-content p {
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .show-details-btn {
             display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .show-details-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        /* النافذة المنبثقة */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            max-width: 1200px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: #E55A2B;
+            transform: rotate(90deg);
+        }
+
+        /* تصميم النافذة الداخلية - نفس تصميم البطاقة الكاملة */
+        .business-card {
+            background: white;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .card-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .app-card .app-details h3 {
-            margin-top: 0;
-            font-size: 1.4rem;
+        .card-icon-large {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            position: relative;
+            z-index: 1;
         }
 
-        .app-card .app-description p {
-            font-size: 0.98rem;
-            color: var(--gray);
-            margin-bottom: 8px;
+        .card-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
         }
 
-        .app-card .app-features ul li { 
-            font-size: 0.98rem;
-            margin-bottom: 8px;
+        .features-section {
+            padding: 2.5rem;
+            background-color: #f9fafc;
         }
 
-        .app-card .app-download-btns .btn {
-            padding: 10px 18px;
-            font-size: 0.98rem;
+        .features-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-section h2 i {
+            color: var(--secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: white;
             border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
         }
 
-        /* On narrow screens make the card full-width and button full-width */
-        @media (max-width: 576px) {
-            .app-card {
-                padding: 12px;
-                margin: 12px;
-                border-radius: 10px;
-            }
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-            .app-card .app-container {
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .screenshots-section {
+            padding: 2.5rem;
+            background: white;
+        }
+
+        .screenshots-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .screenshots-section h2 i {
+            color: var(--secondary);
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .screenshot-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 200px;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(42, 92, 170, 0.9);
+            color: white;
+            padding: 0.7rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .card-footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #E55A2B;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 992px) {
+            .card-body {
                 grid-template-columns: 1fr;
-                gap: 12px;
             }
-
-            .app-card .app-download-btns .btn {
-                width: 100%;
-                display: block;
+            
+            .card-header h1 {
+                font-size: 2rem;
+            }
+            
+            .card-header p {
+                font-size: 1rem;
             }
         }
+
+        @media (max-width: 768px) {
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .modal-content {
+                max-height: 95vh;
+            }
+        }
+ 
     </style>
     <!-- ✅ CSS -->
     
@@ -132,6 +834,7 @@
                     <li><a href="#home">الرئيسية</a></li>
                     <li><a href="#about">من أنا</a></li>
                     <li><a href="#services">الدورات</a></li>
+                     <li><a href="#works">اعمالي</a></li>
                     <li><a href="#apps">تطبيقاتي</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
@@ -170,6 +873,9 @@
             </a></li>
             <li><a href="#services" class="mobile-nav-link" data-section="services">
                 <i class="fas fa-graduation-cap"></i> الدورات
+            </a></li>
+            <li><a href="#works" class="mobile-nav-link" data-section="apps">
+                <i class="fas fa-mobile-alt"></i> اعمالي
             </a></li>
             <li><a href="#apps" class="mobile-nav-link" data-section="apps">
                 <i class="fas fa-mobile-alt"></i> تطبيقاتي
@@ -211,11 +917,7 @@
                     <span class="name"> عيسى شايع</span>
                     <span class="title">مبرمج ومطور ويب وتطبيقات موبايل</span>
                 </h1>
-                
-                <p>
-                    أرحب بك في رحلتك نحو إتقان عالم البرمجة والتطوير. معًا، سنبني مستقبلك الرقمي ونحول أفكارك إلى واقع ملموس.
-                </p>
-                
+               
                 <p class="tagline">
                     "البرمجة ليست مجرد كتابة أكواد، بل هي فن حل المشكلات وبناء المستقبل"
                 </p>
@@ -226,6 +928,9 @@
                     </a>
                     <a href="#apps" class="btn btn-secondary">
                         <i class="fas fa-mobile-alt"></i> اكتشف تطبيقاتي
+                    </a>
+                    <a href="#apps" class="btn btn-secondary">
+                        <i class="fas fa-mobile-alt"></i> اكتشف اعمالي
                     </a>
                     <a href="#contact" class="btn btn-success">
                         <i class="fas fa-comments"></i> تواصل معي الآن
@@ -318,73 +1023,264 @@
                     </div>
                 </div>
                 
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Web Development" class="service-img" loading="lazy">
-                    <div class="service-info">
-                        <h3><a href="#">تطوير الويب الكامل</a></h3>
-                        <p>تعلم كيفية بناء مواقع ويب كاملة باستخدام HTML، CSS، JavaScript. الدورة تشمل تصميم الواجهات وبرمجة الوظائف.</p>
-                        <a href="#" class="btn">قريبًا</a>
+              
+                
+               
+            </div>
+        </div>
+    </section>
+
+<section class="my-apps" id="works">
+
+  <h2 class="section-title fade-in">اعمالي</h2>
+    <div class="simple-card" id="mainCard">
+        <div class="card-image">
+            <img src="imgs/معرض1.jpg" alt="نظام إدارة معرض السيارات">
+            <div class="card-overlay">
+                <h2>نظام إدارة معرض السيارات</h2>
+                <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة</p>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="card-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <h3>نظام إدارة معرض السيارات</h3>
+            <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
+            <button class="show-details-btn" id="showDetailsBtn">
+                <i class="fas fa-external-link-alt"></i> عرض التفاصيل الكاملة
+            </button>
+        </div>
+    </div>
+
+    <!-- النافذة المنبثقة -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <!-- محتوى البطاقة الكاملة داخل النافذة -->
+            <div class="business-card">
+                <div class="card-header">
+                    <div class="card-icon-large">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h1>نظام إدارة معرض السيارات</h1>
+                    <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
+                </div>
+                
+                <div class="card-body">
+                    <div class="features-section">
+                        <h2><i class="fas fa-star"></i> المميزات الرئيسية</h2>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>لوحة تحكم ذكية</h3>
+                                    <p>إحصائيات فورية عن حالة المعرض، نظرة سريعة على المبيعات والمخزون، عرض السيارات والمبيعات الأخيرة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>إدارة السيارات المتكاملة</h3>
+                                    <p>إضافة وتعديل وحذف السيارات، تصنيف حسب النوع والحالة، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل سيارة</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>إدارة المبيعات</h3>
+                                    <p>تسجيل عمليات البيع بسهولة، تتبع العملاء وطرق الدفع، سجل كامل لجميع المعاملات، إدارة العمولات والمصاريف</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3>تقارير وتحليلات</h3>
+                                    <p>تقارير مبيعات مفصلة، تحليل أداء المعرض، تقارير مالية ورسوم بيانية، إمكانية التصدير والطباعة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="screenshots-section">
+                        <h2><i class="fas fa-images"></i> معاينة النظام</h2>
+                        <div class="screenshots-grid">
+                            <div class="screenshot-item">
+                                <img src="imgs/معرض1.jpg" alt="لوحة تحكم النظام">
+                                <div class="screenshot-label">لوحة التحكم الرئيسية</div>
+                            </div>
+                            
+                            <div class="screenshot-item">
+                                <img src="imgs/معرض2.jpg" alt="إدارة السيارات">
+                                <div class="screenshot-label">صفحة إدارة السيارات</div>
+                            </div>
+                            
+                            <div class="screenshot-item">
+                                <img src="imgs/معرض 3.jpg" alt="إدارة المبيعات">
+                                <div class="screenshot-label">صفحة إدارة المبيعات</div>
+                            </div>
+                            
+                            <div class="screenshot-item">
+                                <img src="imgs/معرض 4.jpg" alt="التقارير والتحليلات">
+                                <div class="screenshot-label">صفحة التقارير والتحليلات</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="service-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Flutter Course" class="service-img" loading="lazy">
-                    <div class="service-info">
-                        <h3><a href="#">تطوير تطبيقات Flutter</a></h3>
-                        <p>تعلم بناء تطبيقات موبايل احترافية تعمل على iOS و Android باستخدام إطار عمل Flutter و لغة Dart.</p>
-                        <a href="#" class="btn">قريبًا</a>
+                <div class="card-footer">
+                    <div class="cta-section">
+                        <h3>جاهز لتحويل إدارة معرضك إلى التجربة الرقمية؟</h3>
+                        <p>اطلب النظام الآن واحصل على إدارة متكاملة لمعرضك مع دعم فني مستمر</p>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/967776295164" class="btn btn-primary">
+                            <i class="fas fa-shopping-cart"></i> طلب النظام
+                        </a>
+                        <a href="https://eissashaya.github.io/Exhibition_cars/" class="btn btn-secondary">
+                            <i class="fas fa-play-circle"></i> مشاهدة تجريبية
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- ✅ تطبيقاتي Section -->
-    <section class="my-apps" id="apps">
-        <div class="container">
-            <h2 class="section-title fade-in">تطبيقاتي</h2>
-            
-            <div class="app-card">
-            <div class="app-container fade-in">
-                <div class="app-screenshot-container">
-                    <img src="apk.png" alt="تطبيق تحدي الويب" class="app-screenshot" loading="lazy">
+   <!-- استبدال قسم "تطبيقاتي" بالكود التالي -->
+<!-- استبدال قسم "تطبيقاتي" بالكود التالي -->
+<section class="my-apps" id="apps">
+    <div class="container">
+        <h2 class="section-title fade-in">تطبيقاتي</h2>
+        
+        
+        <div class="apps-grid">
+            <!-- تطبيق 1: تحدي الويب -->
+            <div class="app-card-compact fade-in">
+                <div class="app-card-header">
+                    <div class="app-badge best">الأكثر شهرة</div>
+                    <div class="app-card-image">
+                        <img src="apk.png" alt="تطبيق تحدي الويب" loading="lazy">
+                    </div>
                 </div>
                 
-                <div class="app-details">
-                    <h3>تطبيق تحدي الويب</h3>
+                <div class="app-card-body">
+                    <h3>تحدي الويب</h3>
                     
-                    <div class="app-description">
-                        <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب! يتضمن سلسلة من التحديات البرمجية التي تساعدك على صقل مهاراتك في HTML، CSS، JavaScript و PHP.</p>
-                        
-                        <p>سواء كنت مبتدئاً أو مطوراً محترفاً، هذا التطبيق سيساعدك على تحسين مهاراتك من خلال تحديات عملية وتمارين تفاعلية تغطي جميع جوانب تطوير الويب.</p>
+                    <div class="app-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">4.5 (120)</span>
                     </div>
                     
-                    <div class="app-features">
-                        <h4>المميزات الرئيسية:</h4>
+                    <div class="app-description">
+                        <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب!</p>
+                    </div>
+                    
+                    <div class="app-features-compact">
                         <ul>
-                            <li><i class="fas fa-check-circle"></i> تحديات HTML و CSS تفاعلية</li>
-                            <li><i class="fas fa-check-circle"></i> تمارين JavaScript عملية</li>
-                            <li><i class="fas fa-check-circle"></i> تحديات PHP و قواعد البيانات</li>
-                            <li><i class="fas fa-check-circle"></i> نظام نقاط وجوائز تحفيزية</li>
-                            <li><i class="fas fa-check-circle"></i> إحصائيات مفصلة لتقدمك</li>
-                            <li><i class="fas fa-check-circle"></i> تحديثات مستمرة بمحتوى جديد</li>
+                            <li><i class="fas fa-check"></i> تحديات HTML و CSS</li>
+                            <li><i class="fas fa-check"></i> تمارين JavaScript</li>
+                            <li><i class="fas fa-check"></i> تحديات PHP</li>
                         </ul>
                     </div>
                     
                     <div class="app-download-btns">
                         <a href="https://eissashaya.github.io/quiz" class="btn btn-success">
-                            <i class="fas fa-download"></i> تحميل التطبيق
+                            <i class="fas fa-external-link-alt"></i> تجربة
                         </a>
+                        <a href="https://github.com/eissashaya/quiz/releases" class="btn btn-outline">
+                            <i class="fas fa-download"></i> تحميل
+                        </a>
+                    </div>
+                    
+                    <div class="app-footer">
+                        <span class="app-size">20 MB</span>
+                        <span class="app-update">v2.1</span>
                     </div>
                 </div>
             </div>
+            
+            <!-- تطبيق 2: محرر الأكواد -->
+            <div class="app-card-compact fade-in">
+                <div class="app-card-header">
+                    <div class="app-badge new">جديد</div>
+                    <div class="app-card-image">
+                        <img src="EissaTv.jpg" alt="محرر الأكواد المصغر" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="app-card-body">
+                    <h3>تطبيق EissaTv</h3>
+                    
+                    <div class="app-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">4.0 (85)</span>
+                    </div>
+                    
+                    <div class="app-description">
+                        <p>تطبيق مباريات احترافي يعرض الدوريات الخمس الكبرى</p>
+                    </div>
+                    
+                    <div class="app-features-compact">
+                        <ul>
+                            <li><i class="fas fa-check"></i>يعرض المباريات المباشره</li>
+                            <li><i class="fas fa-check"></i>  المباريات القادمه</li>
+                            <li><i class="fas fa-check"></i> يعرض المباريات المنتهيه</li>
+                             <li><i class="fas fa-check"></i>  وترتيب الدوري</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="app-download-btns">
+    <a href="#" class="btn btn-success">
+    <i class="fas fa-mobile-alt"></i> جلكسي ستور
+</a>
+                        <a href="#" class="btn btn-outline">
+                            <i class="fab fa-app-store"></i> أب ستور
+                        </a>
+                        
+                    </div>
+                    
+                    <div class="app-footer">
+                        <span class="app-size">18 MB</span>
+                        <span class="app-update">v1.5</span>
+                    </div>
+                </div>
             </div>
             
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="color: var(--gray); font-size: 1.1rem;">المزيد من التطبيقات قريباً...</p>
-            </div>
-        </div>
-    </section>
+            <!-- تطبيق 3: مدير المهام -->
+            
+        <!-- زر لعرض المزيد من التطبيقات -->
+        
+    </div>
+</section>
     
     <!-- ✅ Contact Section -->
     <section class="contact" id="contact">

@@ -231,3 +231,56 @@
                 }
             });
         });
+
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainCard = document.getElementById('mainCard');
+            const showDetailsBtn = document.getElementById('showDetailsBtn');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const closeModal = document.getElementById('closeModal');
+            
+            // فتح النافذة عند النقر على البطاقة أو الزر
+            mainCard.addEventListener('click', function(e) {
+                if (!e.target.closest('.show-details-btn')) return;
+                modalOverlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // منع التمرير في الخلفية
+            });
+            
+            // إغلاق النافذة عند النقر على زر الإغلاق
+            closeModal.addEventListener('click', function() {
+                modalOverlay.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            // إغلاق النافذة عند النقر خارج المحتوى
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) {
+                    modalOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // إغلاق النافذة باستخدام مفتاح Esc
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+                    modalOverlay.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // تفعيل تأثيرات التمرير داخل النافذة
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(5px)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+            
+          
+          
+        });
