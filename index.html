@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <!-- ===================== Basic Meta ===================== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ✅ تحسين SEO المتقدم -->
+
+    <!-- ===================== SEO ===================== -->
     <title>المبرمج عيسى شايع - مطور تطبيقات Flutter ومواقع ويب احترافية</title>
-    <meta name="description" content="عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. تخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب. أقدم خدمات برمجية ودورات تعليمية احترافية.">
-    <meta name="keywords" content="مطور ويب, مبرمج تطبيقات, Flutter, برمجة مواقع, تعلم البرمجة, تطوير تطبيقات موبايل, HTML, CSS, JavaScript, Python, دورات برمجة">
+    <meta name="description" content="عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. متخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب. أقدم خدمات برمجية ودورات تعليمية احترافية.">
+    <meta name="keywords" content="مطور ويب, مبرمج تطبيقات, Flutter, تطوير مواقع, تطبيقات موبايل, HTML, CSS, JavaScript, Python, دورات برمجة">
     <meta name="author" content="عيسى إبراهيم شايع">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://eissashaya.github.io/eissaa/">
-    
-    <!-- ✅ Open Graph لشبكات التواصل الاجتماعي -->
+
+    <!-- ===================== Social Media - Open Graph ===================== -->
     <meta property="og:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
     <meta property="og:description" content="خدمات تطوير مواقع وتطبيقات موبايل، دروس برمجة، كورسات، وأعمال احترافية.">
     <meta property="og:image" content="https://eissashaya.github.io/eissaa/1.jpg">
@@ -22,447 +22,274 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ar_SA">
     <meta property="og:site_name" content="موقع المبرمج عيسى شايع">
-    
-    <!-- ✅ Twitter Card -->
+
+    <!-- ===================== Twitter Card ===================== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
     <meta name="twitter:description" content="خدمات تطوير مواقع وتطبيقات موبايل، دروس برمجة، كورسات، وأعمال احترافية.">
     <meta name="twitter:image" content="https://eissashaya.github.io/eissaa/1.jpg">
-    
-    <!-- ✅ تحسين رؤية Google -->
+
+    <!-- ===================== Google Verification ===================== -->
     <meta name="google-site-verification" content="b-6zY1_e7PuuYkq-VMB1gA_kcIEIxUHpAEFM_BJbfTc">
-    
-    <!-- ✅ Favicon -->
-    <link rel="icon" href="1.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="1.jpg">
-    
-    <!-- ✅ Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- ✅ Google Fonts -->
+
+    <!-- ===================== Favicon ===================== -->
+    <link rel="icon" href="imgs/1.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="imgs/1.jpg">
+
+    <!-- ===================== Fonts ===================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ===================== Icons ===================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ===================== Main CSS ===================== -->
     <link rel="stylesheet" href="style.css">
+
     <style>
-      /* تحسينات قسم التطبيقات */
-/* تصميم متجاوب لعرض 3 تطبيقات في صف واحد */
-.apps-grid {
+        :root {
+            --primary: #2a5caa;
+            --primary-dark: #1e4080;
+            --secondary: #ff6b35;
+            --dark: #2c3e50;
+            --dark-light: #34495e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --gray-dark: #495057;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* تصميم قسم الأعمال */
+        .my-works {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .my-works .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .my-works .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .my-works .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* شبكة الأعمال */
+        .works-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin: 40px 0;
+    grid-template-columns: repeat(3, 1fr); /* 3 بطاقات في الصف */
+    gap: 30px;
+    margin-top: 40px;
 }
 
-@media (max-width: 992px) {
-    .apps-grid {
-        grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 بطاقة في الصف على الشاشات المتوسطة */
     }
 }
 
 @media (max-width: 768px) {
-    .apps-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 30px auto;
+    .works-grid {
+        grid-template-columns: 1fr; /* 1 بطاقة في الصف على الشاشات الصغيرة */
     }
 }
 
-/* تصميم البطاقات المضغوطة */
-.app-card-compact {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.app-card-compact:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-}
-
-body.night-mode .app-card-compact {
-    background: var(--dark-light);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    border-color: rgba(255,255,255,0.05);
-}
-
-/* رأس البطاقة */
-.app-card-header {
-    position: relative;
-    padding: 15px 15px 0;
-}
-
-.app-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 2;
-    color: white;
-}
-
-.app-badge.best {
-    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
-}
-
-.app-badge.new {
-    background: linear-gradient(135deg, #3498db, #2ecc71);
-}
-
-.app-badge.premium {
-    background: linear-gradient(135deg, #9b59b6, #e74c3c);
-}
-
-.app-card-image {
-    width: 100%;
-    height: 180px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.app-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.app-card-compact:hover .app-card-image img {
-    transform: scale(1.05);
-}
-
-/* جسم البطاقة */
-.app-card-body {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.app-card-body h3 {
-    margin: 0 0 10px 0;
-    font-size: 1.3rem;
-    color: var(--dark);
-}
-
-body.night-mode .app-card-body h3 {
-    color: white;
-}
-
-/* التقييم */
-.app-rating {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.app-rating .stars {
-    color: #FFD700;
-    font-size: 0.9rem;
-}
-
-.rating-text {
-    font-size: 0.85rem;
-    color: var(--gray);
-}
-
-/* الوصف */
-.app-description {
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
-
-.app-description p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: var(--gray-dark);
-    margin: 0;
-}
-
-body.night-mode .app-description p {
-    color: #ccc;
-}
-
-/* المميزات المختصرة */
-.app-features-compact {
-    margin-bottom: 20px;
-}
-
-.app-features-compact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.app-features-compact ul li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-}
-
-.app-features-compact ul li i {
-    color: #2ecc71;
-    font-size: 0.85rem;
-}
-
-/* أزرار التحميل */
-.app-download-btns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.app-download-btns .btn {
-    padding: 10px 5px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-/* تذييل البطاقة */
-.app-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
-    border-top: 1px solid rgba(0,0,0,0.08);
-}
-
-body.night-mode .app-footer {
-    border-color: rgba(255,255,255,0.08);
-}
-
-.app-size, .app-update {
-    font-size: 0.85rem;
-    color: var(--gray);
-}
-
-.app-update {
-    background: rgba(0,0,0,0.05);
-    padding: 3px 10px;
-    border-radius: 12px;
-}
-
-body.night-mode .app-update {
-    background: rgba(255,255,255,0.1);
-}
-
-/* تذييل قسم التطبيقات */
-.apps-footer {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.apps-footer .btn-primary {
-    padding: 12px 30px;
-    font-size: 1rem;
-    border-radius: 50px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.apps-note {
-    margin-top: 20px;
-    color: var(--gray);
-    font-size: 1rem;
-}
-
-.apps-note .highlight {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
-}
-
-.apps-note .highlight:hover {
-    border-bottom-color: var(--primary);
-}
-
-/* تأثيرات إضافية */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.app-card-compact:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.app-card-compact:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.app-card-compact:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-/* تحسينات للأزرار */
-.btn-success {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
-    border: none;
-}
-
-.btn-success:hover {
-    background: linear-gradient(135deg, #27ae60, #219653);
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-}
-
-.btn-outline:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateY(-2px);
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary), #2980b9);
-    color: white;
-    border: none;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #2980b9, var(--primary));
-    transform: translateY(-2px);
-}
-
-.simple-card {
-            background: white;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-lg);
-            max-width: 500px;
-            width: 100%;
+        /* بطاقة العمل */
+        .work-card {
+            background: rgb(136, 210, 235);
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: var(--shadow-lg);
             transition: all 0.4s ease;
-            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        .simple-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .card-image {
+        .work-image {
             height: 250px;
-            width: 100%;
             overflow: hidden;
             position: relative;
         }
 
-        .card-image img {
+        .work-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .simple-card:hover .card-image img {
+        .work-card:hover .work-image img {
             transform: scale(1.05);
         }
 
-        .card-overlay {
+        .work-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 20px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+
+        .work-overlay {
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 1.5rem;
+            padding: 25px;
             color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
-        .card-overlay h2 {
+        .work-card:hover .work-overlay {
+            opacity: 1;
+        }
+
+        .work-overlay h3 {
             font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
         }
 
-        .card-overlay p {
+        .work-card:hover .work-overlay h3 {
+            transform: translateY(0);
+        }
+
+        .work-overlay p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .work-card:hover .work-overlay p {
             opacity: 0.9;
-            font-size: 1rem;
-            max-width: 90%;
+            transform: translateY(0);
         }
 
-        .card-content {
-            padding: 1.8rem;
+        /* محتوى البطاقة */
+        .work-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .card-icon {
-            font-size: 2.2rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .card-content h3 {
+        .work-content h3 {
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-            text-align: center;
+            margin-bottom: 15px;
             font-size: 1.5rem;
         }
 
-        .card-content p {
+        .work-content p {
             color: var(--gray);
-            text-align: center;
-            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        .show-details-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
+        /* مميزات العمل */
+        .work-features {
+            margin-bottom: 20px;
+        }
+
+        .work-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .work-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+        }
+
+        .work-features i {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* أزرار العمل */
+        .work-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .work-btn {
+            flex: 1;
+            padding: 12px 20px;
             border-radius: 50px;
-            font-size: 1.1rem;
+            text-align: center;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 0.7rem;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .show-details-btn:hover {
-            background: var(--secondary);
+        .work-btn.primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .work-btn.primary:hover {
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .work-btn.secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .work-btn.secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
         }
 
         /* النافذة المنبثقة */
@@ -472,7 +299,7 @@ body.night-mode .app-update {
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             display: none;
             justify-content: center;
             align-items: center;
@@ -488,13 +315,12 @@ body.night-mode .app-update {
 
         .modal-content {
             background: white;
-            border-radius: var(--radius);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            max-width: 1200px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
             width: 100%;
             max-height: 90vh;
             overflow-y: auto;
-            position: relative;
             animation: slideUp 0.4s ease;
         }
 
@@ -509,42 +335,39 @@ body.night-mode .app-update {
             left: 20px;
             background: var(--secondary);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             cursor: pointer;
             z-index: 10;
             transition: all 0.3s ease;
         }
 
         .close-modal:hover {
-            background: #E55A2B;
+            background: #e55a2b;
             transform: rotate(90deg);
         }
 
-        /* تصميم النافذة الداخلية - نفس تصميم البطاقة الكاملة */
-        .business-card {
+        /* تصميم النافذة الداخلية */
+        .work-modal {
             background: white;
             width: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
 
-        .card-header {
+        .modal-header {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
             color: white;
-            padding: 2.5rem;
+            padding: 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .card-header::before {
+        .modal-header::before {
             content: '';
             position: absolute;
             top: 0;
@@ -555,69 +378,71 @@ body.night-mode .app-update {
             background-size: cover;
         }
 
-        .card-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .card-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .card-icon-large {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+        .modal-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
             color: var(--secondary);
             position: relative;
             z-index: 1;
         }
 
-        .card-body {
+        .modal-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .modal-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 0;
+            gap: 40px;
         }
 
-        .features-section {
-            padding: 2.5rem;
-            background-color: #f9fafc;
-        }
-
-        .features-section h2 {
+        .features-section h3,
+        .screenshots-section h3 {
             color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 3px solid var(--secondary);
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 10px;
         }
 
-        .features-section h2 i {
+        .features-section h3 i,
+        .screenshots-section h3 i {
             color: var(--secondary);
         }
 
         .feature-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 20px;
         }
 
         .feature-item {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
             transition: all 0.3s ease;
         }
 
@@ -629,63 +454,45 @@ body.night-mode .app-update {
         .feature-icon {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
         }
 
-        .feature-content h3 {
+        .feature-content h4 {
             color: var(--primary);
-            margin-bottom: 0.3rem;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
         .feature-content p {
             color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        .screenshots-section {
-            padding: 2.5rem;
-            background: white;
-        }
-
-        .screenshots-section h2 {
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .screenshots-section h2 i {
-            color: var(--secondary);
+            line-height: 1.6;
         }
 
         .screenshots-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 20px;
         }
 
         .screenshot-item {
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            position: relative;
             height: 200px;
+            position: relative;
         }
 
         .screenshot-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .screenshot-item img {
@@ -706,86 +513,90 @@ body.night-mode .app-update {
             left: 0;
             background: rgba(42, 92, 170, 0.9);
             color: white;
-            padding: 0.7rem;
+            padding: 12px;
             text-align: center;
-            font-weight: 500;
+            font-weight: 600;
         }
 
-        .card-footer {
+        .modal-footer {
             background: var(--dark);
             color: white;
-            padding: 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1.5rem;
+            padding: 40px;
+            text-align: center;
         }
 
-        .cta-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+        .modal-footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
 
-        .cta-section p {
+        .modal-footer p {
             opacity: 0.8;
-            font-size: 0.95rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .cta-buttons {
+        .modal-buttons {
             display: flex;
-            gap: 1rem;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .btn {
-            padding: 0.9rem 2rem;
+        .modal-btn {
+            padding: 15px 35px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 0.7rem;
+            gap: 10px;
             transition: all 0.3s ease;
-            font-size: 1rem;
-            cursor: pointer;
+            font-size: 1.1rem;
             border: none;
-            font-family: 'Tajawal', sans-serif;
+            cursor: pointer;
         }
 
-        .btn-primary {
+        .modal-btn.primary {
             background: var(--secondary);
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #E55A2B;
+        .modal-btn.primary:hover {
+            background: #e55a2b;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
         }
 
-        .btn-secondary {
+        .modal-btn.secondary {
             background: transparent;
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .btn-secondary:hover {
+        .modal-btn.secondary:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: white;
             transform: translateY(-3px);
         }
 
+        /* تحسينات للشاشات الصغيرة */
         @media (max-width: 992px) {
-            .card-body {
+            .modal-grid {
                 grid-template-columns: 1fr;
             }
             
-            .card-header h1 {
+            .modal-header h2 {
                 font-size: 2rem;
             }
             
-            .card-header p {
-                font-size: 1rem;
+            .works-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
@@ -794,17 +605,11 @@ body.night-mode .app-update {
                 grid-template-columns: 1fr;
             }
             
-            .card-footer {
+            .modal-buttons {
                 flex-direction: column;
-                text-align: center;
             }
             
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .btn {
+            .modal-btn {
                 width: 100%;
                 justify-content: center;
             }
@@ -812,16 +617,47 @@ body.night-mode .app-update {
             .feature-item {
                 flex-direction: column;
                 text-align: center;
+                align-items: center;
             }
             
-            .modal-content {
-                max-height: 95vh;
+            .work-buttons {
+                flex-direction: column;
+            }
+            
+            .work-btn {
+                width: 100%;
             }
         }
- 
+
+        /* تأثيرات الظهور */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .work-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .work-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .work-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
     </style>
-    <!-- ✅ CSS -->
-    
 </head>
 <body>
     <!-- ✅ Header -->
@@ -834,7 +670,7 @@ body.night-mode .app-update {
                     <li><a href="#home">الرئيسية</a></li>
                     <li><a href="#about">من أنا</a></li>
                     <li><a href="#services">الدورات</a></li>
-                     <li><a href="#works">اعمالي</a></li>
+                    <li><a href="#works">اعمالي</a></li>
                     <li><a href="#apps">تطبيقاتي</a></li>
                     <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
@@ -855,7 +691,7 @@ body.night-mode .app-update {
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     
-    <!-- ✅ Mobile Menu - تم التحسين -->
+    <!-- ✅ Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <a href="#home" class="mobile-menu-logo" id="mobileMenuLogo">عيسى <span>شايع</span></a>
@@ -874,8 +710,8 @@ body.night-mode .app-update {
             <li><a href="#services" class="mobile-nav-link" data-section="services">
                 <i class="fas fa-graduation-cap"></i> الدورات
             </a></li>
-            <li><a href="#works" class="mobile-nav-link" data-section="apps">
-                <i class="fas fa-mobile-alt"></i> اعمالي
+            <li><a href="#works" class="mobile-nav-link" data-section="works">
+                <i class="fas fa-briefcase"></i> اعمالي
             </a></li>
             <li><a href="#apps" class="mobile-nav-link" data-section="apps">
                 <i class="fas fa-mobile-alt"></i> تطبيقاتي
@@ -908,7 +744,7 @@ body.night-mode .app-update {
         </div>
     </div>
     
-    <!-- ✅ Hero Section مع رسالة ترحيب محسنة -->
+    <!-- ✅ Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content fade-in">
@@ -926,11 +762,11 @@ body.night-mode .app-update {
                     <a href="#services" class="btn">
                         <i class="fas fa-graduation-cap"></i> ابدأ رحلة التعلم
                     </a>
-                    <a href="#apps" class="btn btn-secondary">
-                        <i class="fas fa-mobile-alt"></i> اكتشف تطبيقاتي
+                    <a href="#works" class="btn btn-secondary">
+                        <i class="fas fa-briefcase"></i> استعرض أعمالي
                     </a>
                     <a href="#apps" class="btn btn-secondary">
-                        <i class="fas fa-mobile-alt"></i> اكتشف اعمالي
+                        <i class="fas fa-mobile-alt"></i> اكتشف تطبيقاتي
                     </a>
                     <a href="#contact" class="btn btn-success">
                         <i class="fas fa-comments"></i> تواصل معي الآن
@@ -962,7 +798,7 @@ body.night-mode .app-update {
             
             <div class="about-content fade-in">
                 <div class="about-img-container">
-                    <img src="1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy">
+                    <img src="imgs/1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy">
                 </div>
                 
                 <div class="about-text">
@@ -1006,7 +842,7 @@ body.night-mode .app-update {
             
             <div class="services-grid">
                 <div class="service-card fade-in">
-                    <img src="image.png" alt="Python Course" class="service-img" loading="lazy">
+                    <img src="imgs/image.png" alt="Python Course" class="service-img" loading="lazy">
                     <div class="service-info">
                         <h3><a href="pyhon.html">أساسيات بايثون للمبتدئين</a></h3>
                         <p>تعلم لغة البرمجة بايثون بسهولة وبشكل عملي. هذه الدورة تغطي المفاهيم الأساسية للبرمجة باستخدام بايثون مع تطبيقات عملية.</p>
@@ -1015,272 +851,210 @@ body.night-mode .app-update {
                 </div>
                 
                 <div class="service-card fade-in">
-                    <img src="image44.jpg" alt="C++ Course" class="service-img" loading="lazy">
+                    <img src="imgs/image44.jpg" alt="C++ Course" class="service-img" loading="lazy">
                     <div class="service-info">
                         <h3><a href="c++.html">أساسيات C++ المتقدمة</a></h3>
                         <p>لغة قوية لتطوير البرامج عالية الأداء. تعلم البرمجة الكائنية والتركيز على الأداء باستخدام C++ مع مشاريع عملية.</p>
                         <a href="c++.html" class="btn">تعلم الآن</a>
                     </div>
                 </div>
-                
-              
-                
-               
             </div>
         </div>
     </section>
 
-<section class="my-apps" id="works">
-
-  <h2 class="section-title fade-in">اعمالي</h2>
-    <div class="simple-card" id="mainCard">
-        <div class="card-image">
-            <img src="imgs/معرض1.jpg" alt="نظام إدارة معرض السيارات">
-            <div class="card-overlay">
-                <h2>نظام إدارة معرض السيارات</h2>
-                <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة</p>
-            </div>
-        </div>
-        <div class="card-content">
-            <div class="card-icon">
-                <i class="fas fa-car"></i>
-            </div>
-            <h3>نظام إدارة معرض السيارات</h3>
-            <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
-            <button class="show-details-btn" id="showDetailsBtn">
-                <i class="fas fa-external-link-alt"></i> عرض التفاصيل الكاملة
-            </button>
-        </div>
-    </div>
-
-    <!-- النافذة المنبثقة -->
-    <div class="modal-overlay" id="modalOverlay">
-        <div class="modal-content">
-            <div class="close-modal" id="closeModal">
-                <i class="fas fa-times"></i>
-            </div>
+    <!-- ✅ أعمالي Section -->
+    <section class="my-works" id="works">
+        <div class="container">
+            <h2 class="section-title fade-in">أعمالي</h2>
+            <p style="text-align: center; color: var(--gray-dark); font-size: 1.1rem; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                إليك بعض الأعمال التي قمت بتطويرها مؤخراً، يمكنك النقر على أي عمل لمشاهدة التفاصيل الكاملة
+            </p>
             
-            <!-- محتوى البطاقة الكاملة داخل النافذة -->
-            <div class="business-card">
-                <div class="card-header">
-                    <div class="card-icon-large">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h1>نظام إدارة معرض السيارات</h1>
-                    <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
-                </div>
-                
-                <div class="card-body">
-                    <div class="features-section">
-                        <h2><i class="fas fa-star"></i> المميزات الرئيسية</h2>
-                        <div class="feature-grid">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h3>لوحة تحكم ذكية</h3>
-                                    <p>إحصائيات فورية عن حالة المعرض، نظرة سريعة على المبيعات والمخزون، عرض السيارات والمبيعات الأخيرة</p>
-                                </div>
-                            </div>
-                            
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-car"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h3>إدارة السيارات المتكاملة</h3>
-                                    <p>إضافة وتعديل وحذف السيارات، تصنيف حسب النوع والحالة، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل سيارة</p>
-                                </div>
-                            </div>
-                            
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h3>إدارة المبيعات</h3>
-                                    <p>تسجيل عمليات البيع بسهولة، تتبع العملاء وطرق الدفع، سجل كامل لجميع المعاملات، إدارة العمولات والمصاريف</p>
-                                </div>
-                            </div>
-                            
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="fas fa-file-alt"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <h3>تقارير وتحليلات</h3>
-                                    <p>تقارير مبيعات مفصلة، تحليل أداء المعرض، تقارير مالية ورسوم بيانية، إمكانية التصدير والطباعة</p>
-                                </div>
-                            </div>
+            <div class="works-grid">
+                <!-- عمل 1: نظام معرض السيارات -->
+                <div class="work-card fade-in" data-work="cars">
+                    <div class="work-image">
+                        <img src="imgs/معرض1.jpg" alt="نظام إدارة معرض السيارات" loading="lazy">
+                        <div class="work-badge">نظام معرض سيارات متكامل</div>
+                        <div class="work-overlay">
+                            <h3>نظام إدارة معرض السيارات</h3>
+                            <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة</p>
                         </div>
                     </div>
                     
-                    <div class="screenshots-section">
-                        <h2><i class="fas fa-images"></i> معاينة النظام</h2>
-                        <div class="screenshots-grid">
-                            <div class="screenshot-item">
-                                <img src="imgs/معرض1.jpg" alt="لوحة تحكم النظام">
-                                <div class="screenshot-label">لوحة التحكم الرئيسية</div>
-                            </div>
-                            
-                            <div class="screenshot-item">
-                                <img src="imgs/معرض2.jpg" alt="إدارة السيارات">
-                                <div class="screenshot-label">صفحة إدارة السيارات</div>
-                            </div>
-                            
-                            <div class="screenshot-item">
-                                <img src="imgs/معرض 3.jpg" alt="إدارة المبيعات">
-                                <div class="screenshot-label">صفحة إدارة المبيعات</div>
-                            </div>
-                            
-                            <div class="screenshot-item">
-                                <img src="imgs/معرض 4.jpg" alt="التقارير والتحليلات">
-                                <div class="screenshot-label">صفحة التقارير والتحليلات</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card-footer">
-                    <div class="cta-section">
-                        <h3>جاهز لتحويل إدارة معرضك إلى التجربة الرقمية؟</h3>
-                        <p>اطلب النظام الآن واحصل على إدارة متكاملة لمعرضك مع دعم فني مستمر</p>
-                    </div>
-                    
-                    <div class="cta-buttons">
-                        <a href="https://wa.me/967776295164" class="btn btn-primary">
-                            <i class="fas fa-shopping-cart"></i> طلب النظام
-                        </a>
-                        <a href="https://eissashaya.github.io/Exhibition_cars/" class="btn btn-secondary">
-                            <i class="fas fa-play-circle"></i> مشاهدة تجريبية
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    
-    <!-- ✅ تطبيقاتي Section -->
-   <!-- استبدال قسم "تطبيقاتي" بالكود التالي -->
-<!-- استبدال قسم "تطبيقاتي" بالكود التالي -->
-<section class="my-apps" id="apps">
-    <div class="container">
-        <h2 class="section-title fade-in">تطبيقاتي</h2>
-        
-        
-        <div class="apps-grid">
-            <!-- تطبيق 1: تحدي الويب -->
-            <div class="app-card-compact fade-in">
-                <div class="app-card-header">
-                    <div class="app-badge best">الأكثر شهرة</div>
-                    <div class="app-card-image">
-                        <img src="apk.png" alt="تطبيق تحدي الويب" loading="lazy">
-                    </div>
-                </div>
-                
-                <div class="app-card-body">
-                    <h3>تحدي الويب</h3>
-                    
-                    <div class="app-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <span class="rating-text">4.5 (120)</span>
-                    </div>
-                    
-                    <div class="app-description">
-                        <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب!</p>
-                    </div>
-                    
-                    <div class="app-features-compact">
-                        <ul>
-                            <li><i class="fas fa-check"></i> تحديات HTML و CSS</li>
-                            <li><i class="fas fa-check"></i> تمارين JavaScript</li>
-                            <li><i class="fas fa-check"></i> تحديات PHP</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="app-download-btns">
-                        <a href="https://eissashaya.github.io/quiz" class="btn btn-success">
-                            <i class="fas fa-external-link-alt"></i> تجربة
-                        </a>
-                        <a href="https://github.com/eissashaya/quiz/releases" class="btn btn-outline">
-                            <i class="fas fa-download"></i> تحميل
-                        </a>
-                    </div>
-                    
-                    <div class="app-footer">
-                        <span class="app-size">20 MB</span>
-                        <span class="app-update">v2.1</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- تطبيق 2: محرر الأكواد -->
-            <div class="app-card-compact fade-in">
-                <div class="app-card-header">
-                    <div class="app-badge new">جديد</div>
-                    <div class="app-card-image">
-                        <img src="EissaTv.jpg" alt="محرر الأكواد المصغر" loading="lazy">
-                    </div>
-                </div>
-                
-                <div class="app-card-body">
-                    <h3>تطبيق EissaTv</h3>
-                    
-                    <div class="app-rating">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <span class="rating-text">4.0 (85)</span>
-                    </div>
-                    
-                    <div class="app-description">
-                        <p>تطبيق مباريات احترافي يعرض الدوريات الخمس الكبرى</p>
-                    </div>
-                    
-                    <div class="app-features-compact">
-                        <ul>
-                            <li><i class="fas fa-check"></i>يعرض المباريات المباشره</li>
-                            <li><i class="fas fa-check"></i>  المباريات القادمه</li>
-                            <li><i class="fas fa-check"></i> يعرض المباريات المنتهيه</li>
-                             <li><i class="fas fa-check"></i>  وترتيب الدوري</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="app-download-btns">
-    <a href="#" class="btn btn-success">
-    <i class="fas fa-mobile-alt"></i> جلكسي ستور
-</a>
-                        <a href="#" class="btn btn-outline">
-                            <i class="fab fa-app-store"></i> أب ستور
-                        </a>
+                    <div class="work-content">
+                        <h3>نظام إدارة معرض السيارات</h3>
+                        <p>نظام متكامل لإدارة معارض السيارات، يتيح إدارة المخزون والمبيعات والعملاء بكفاءة عالية مع واجهة مستخدم سهلة الاستخدام.</p>
                         
+                        <div class="work-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> إدارة كاملة للسيارات</li>
+                                <li><i class="fas fa-check"></i> تقارير المبيعات والمخزون</li>
+                                <li><i class="fas fa-check"></i> نظام متابعة العملاء</li>
+                                <li><i class="fas fa-check"></i> واجهة إدارية متطورة</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-buttons">
+                            <button class="work-btn primary view-details" data-work="cars">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                            <a href="https://eissashaya.github.io/Exhibition_cars/" target="_blank" class="work-btn secondary">
+                                <i class="fas fa-external-link-alt"></i> زيارة الموقع
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- عمل 2: نظام محلات الجوالات -->
+                <div class="work-card fade-in" data-work="mobiles">
+                    <div class="work-image">
+                        <img src="imgs/جوالات1.jpg" alt="نظام إدارة مخزون محل الجوالات" loading="lazy">
+                        <div class="work-badge">نظام إدارة المخزون</div>
+                        <div class="work-overlay">
+                            <h3>نظام إدارة مخزون الجوالات</h3>
+                            <p>حل متكامل لإدارة محلات الجوالات والاكسسوارات</p>
+                        </div>
                     </div>
                     
-                    <div class="app-footer">
-                        <span class="app-size">18 MB</span>
-                        <span class="app-update">v1.5</span>
+                    <div class="work-content">
+                        <h3>نظام إدارة مخزون الجوالات</h3>
+                        <p>نظام متطور لإدارة مخزون محلات الجوالات، يتيح تتبع المبيعات والمشتريات وإدارة العملاء والموردين بفعالية.</p>
+                        
+                        <div class="work-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> إدارة المخزون الشاملة</li>
+                                <li><i class="fas fa-check"></i> نظام المبيعات والمشتريات</li>
+                                <li><i class="fas fa-check"></i> إدارة العملاء والموردين</li>
+                                <li><i class="fas fa-check"></i> تقارير مالية مفصلة</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-buttons">
+                            <button class="work-btn primary view-details" data-work="mobiles">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                            <a href="javascript:void(0);" class="work-btn secondary demo-btn" data-work="mobiles">
+                                <i class="fas fa-play-circle"></i> تجربة النظام
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ✅ تطبيقاتي Section -->
+    <section class="my-apps" id="apps">
+        <div class="container">
+            <h2 class="section-title fade-in">تطبيقاتي</h2>
             
-            <!-- تطبيق 3: مدير المهام -->
-            
-        <!-- زر لعرض المزيد من التطبيقات -->
-        
-    </div>
-</section>
+            <div class="apps-grid">
+                <!-- تطبيق 1: تحدي الويب -->
+                <div class="app-card-compact fade-in">
+                    <div class="app-card-header">
+                        <div class="app-badge best">الأكثر شهرة</div>
+                        <div class="app-card-image">
+                            <img src="imgs/apk.png" alt="تطبيق تحدي الويب" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="app-card-body">
+                        <h3>تحدي الويب</h3>
+                        
+                        <div class="app-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-text">4.5 (120)</span>
+                        </div>
+                        
+                        <div class="app-description">
+                            <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب!</p>
+                        </div>
+                        
+                        <div class="app-features-compact">
+                            <ul>
+                                <li><i class="fas fa-check"></i> تحديات HTML و CSS</li>
+                                <li><i class="fas fa-check"></i> تمارين JavaScript</li>
+                                <li><i class="fas fa-check"></i> تحديات PHP</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="app-download-btns">
+                            <a href="https://eissashaya.github.io/quiz" target="_blank" class="btn btn-success">
+                                <i class="fas fa-external-link-alt"></i> تجربة
+                            </a>
+                            <a href="https://github.com/eissashaya/quiz/releases" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-download"></i> تحميل
+                            </a>
+                        </div>
+                        
+                        <div class="app-footer">
+                            <span class="app-size">20 MB</span>
+                            <span class="app-update">v2.1</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- تطبيق 2: EissaTv -->
+                <div class="app-card-compact fade-in">
+                    <div class="app-card-header">
+                        <div class="app-badge new">جديد</div>
+                        <div class="app-card-image">
+                            <img src="imgs/EissaTv.jpg" alt="تطبيق EissaTv" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="app-card-body">
+                        <h3>تطبيق EissaTv</h3>
+                        
+                        <div class="app-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-text">4.0 (85)</span>
+                        </div>
+                        
+                        <div class="app-description">
+                            <p>تطبيق مباريات احترافي يعرض الدوريات الخمس الكبرى</p>
+                        </div>
+                        
+                        <div class="app-features-compact">
+                            <ul>
+                                <li><i class="fas fa-check"></i>يعرض المباريات المباشره</li>
+                                <li><i class="fas fa-check"></i>  المباريات القادمه</li>
+                                <li><i class="fas fa-check"></i> يعرض المباريات المنتهيه</li>
+                                 <li><i class="fas fa-check"></i>  وترتيب الدوري</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="app-download-btns">
+                            <a href="#" class="btn btn-success">
+                                <i class="fas fa-mobile-alt"></i> جلكسي ستور
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fab fa-app-store"></i> أب ستور
+                            </a>
+                        </div>
+                        
+                        <div class="app-footer">
+                            <span class="app-size">18 MB</span>
+                            <span class="app-update">v1.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- ✅ Contact Section -->
     <section class="contact" id="contact">
@@ -1341,7 +1115,7 @@ body.night-mode .app-update {
                         <li><a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-left"></i> من أنا</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-left"></i> الدورات</a></li>
-                        <li><a href="#apps"><i class="fas fa-chevron-left"></i> تطبيقاتي</a></li>
+                        <li><a href="#works"><i class="fas fa-chevron-left"></i> اعمالي</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
@@ -1376,12 +1150,376 @@ body.night-mode .app-update {
     
     <!-- ✅ Toast Notification -->
     <div class="toast" id="toast"></div>
-    
+
+    <!-- ✅ Modals for Works -->
+    <!-- Modal 1: نظام معرض السيارات -->
+    <div class="modal-overlay" id="modalCars">
+        <div class="modal-content">
+            <div class="close-modal" id="closeModalCars">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h2>نظام إدارة معرض السيارات</h2>
+                    <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة مع واجهة إدارية متكاملة</p>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="features-section">
+                            <h3><i class="fas fa-star"></i> المميزات الرئيسية</h3>
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>لوحة تحكم ذكية</h4>
+                                        <p>إحصائيات فورية عن حالة المعرض، نظرة سريعة على المبيعات والمخزون، عرض السيارات والمبيعات الأخيرة</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>إدارة السيارات المتكاملة</h4>
+                                        <p>إضافة وتعديل وحذف السيارات، تصنيف حسب النوع والحالة، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل سيارة</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>إدارة المبيعات</h4>
+                                        <p>تسجيل عمليات البيع بسهولة، تتبع العملاء وطرق الدفع، سجل كامل لجميع المعاملات، إدارة العمولات والمصاريف</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>تقارير وتحليلات</h4>
+                                        <p>تقارير مبيعات مفصلة، تحليل أداء المعرض، تقارير مالية ورسوم بيانية، إمكانية التصدير والطباعة</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معاينة النظام</h3>
+                            <div class="screenshots-grid">
+                                <div class="screenshot-item">
+                                    <img src="imgs/معرض1.jpg" alt="لوحة تحكم النظام">
+                                    <div class="screenshot-label">لوحة التحكم الرئيسية</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/معرض2.jpg" alt="إدارة السيارات">
+                                    <div class="screenshot-label">صفحة إدارة السيارات</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/معرض 3.jpg" alt="إدارة المبيعات">
+                                    <div class="screenshot-label">صفحة إدارة المبيعات</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/معرض 4.jpg" alt="التقارير والتحليلات">
+                                    <div class="screenshot-label">صفحة التقارير والتحليلات</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <h3>جاهز لتحويل إدارة معرضك إلى التجربة الرقمية؟</h3>
+                    <p>اطلب النظام الآن واحصل على إدارة متكاملة لمعرضك مع دعم فني مستمر وتحديثات مجانية</p>
+                    
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fas fa-shopping-cart"></i> طلب النظام
+                        </a>
+                        <a href="https://eissashaya.github.io/Exhibition_cars/" target="_blank" class="modal-btn secondary">
+                            <i class="fas fa-play-circle"></i> مشاهدة النظام
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: نظام إدارة مخزون الجوالات -->
+    <div class="modal-overlay" id="modalMobiles">
+        <div class="modal-content">
+            <div class="close-modal" id="closeModalMobiles">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h2>نظام إدارة مخزون محل الجوالات</h2>
+                    <p>حل متكامل لإدارة مخزون وأعمال محلات الجوالات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="features-section">
+                            <h3><i class="fas fa-star"></i> المميزات الرئيسية</h3>
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>لوحة تحكم ذكية</h4>
+                                        <p>إحصائيات فورية عن حالة المخزون، نظرة سريعة على المبيعات والمشتريات، عرض الجوالات والمبيعات الأخيرة</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>إدارة المخزون المتكاملة</h4>
+                                        <p>إضافة وتعديل وحذف الجوالات والاكسسوارات، تصنيف حسب الماركة والنوع، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل منتج</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>إدارة المبيعات والمشتريات</h4>
+                                        <p>تسجيل عمليات البيع والشراء بسهولة، تتبع العملاء والموردين، سجل كامل لجميع المعاملات، إدارة المصاريف والأرباح</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h4>إدارة العملاء والموردين</h4>
+                                        <p>قاعدة بيانات كاملة للعملاء والموردين، نظام نقاط ومكافآت للعملاء، إرسال تنبيهات وعروض، تتبع تاريخ المشتريات</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معاينة النظام</h3>
+                            <div class="screenshots-grid">
+                                <div class="screenshot-item">
+                                    <img src="imgs/جوالات1.jpg" alt="لوحة تحكم النظام">
+                                    <div class="screenshot-label">لوحة التحكم الرئيسية</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/جوالات2.jpg" alt="إدارة المخزون">
+                                    <div class="screenshot-label">صفحة إدارة المخزون</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/جوالات3.jpg" alt="إدارة المبيعات">
+                                    <div class="screenshot-label">صفحة إدارة المبيعات</div>
+                                </div>
+                                
+                                <div class="screenshot-item">
+                                    <img src="imgs/جوالات4.jpg" alt="التقارير والتحليلات">
+                                    <div class="screenshot-label">صفحة التقارير والتحليلات</div>
+                                </div>
+
+                                 <div class="screenshot-item">
+                                    <img src="imgs/جوالات5.jpg" alt=" مؤشر الاداء">
+                                    <div class="screenshot-label">صفحة مؤشرات الاداء</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <h3>جاهز لتحويل إدارة متجر الجوالات إلى التجربة الرقمية؟</h3>
+                    <p>اطلب النظام الآن واحصل على إدارة متكاملة لمحلك مع دعم فني مستمر وتحديثات مجانية</p>
+                    
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fas fa-shopping-cart"></i> طلب النظام
+                        </a>
+                        <a href="https://eissashaya.github.io/Warehouse_pohn/" target="_blank" class="modal-btn secondary">
+                            <i class="fas fa-play-circle"></i> مشاهدة النظام
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="scrypt.js"></script>
     <!-- ✅ JavaScript -->
+    <script>
+        // تحديد العام الحالي للفوتر
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // إدارة النوافذ المنبثقة للأعمال
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر نظام السيارات
+            const viewDetailsBtns = document.querySelectorAll('.view-details');
+            const closeModalBtns = document.querySelectorAll('.close-modal');
+            const modalOverlays = document.querySelectorAll('.modal-overlay');
+            
+            // فتح نافذة معرض السيارات
+            document.querySelectorAll('[data-work="cars"]').forEach(btn => {
+                if (btn.classList.contains('view-details')) {
+                    btn.addEventListener('click', function() {
+                        document.getElementById('modalCars').style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                }
+            });
+            
+            // فتح نافذة نظام الجوالات
+            document.querySelectorAll('[data-work="mobiles"]').forEach(btn => {
+                if (btn.classList.contains('view-details')) {
+                    btn.addEventListener('click', function() {
+                        document.getElementById('modalMobiles').style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                    });
+                }
+            });
+            
+            // إغلاق النوافذ المنبثقة
+            closeModalBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const modal = this.closest('.modal-overlay');
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // إغلاق النافذة عند النقر خارج المحتوى
+            modalOverlays.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+            
+            // إغلاق النافذة بمفتاح Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modalOverlays.forEach(modal => {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    });
+                }
+            });
+            
+            // تجربة النظام
+            document.querySelectorAll('.demo-btn, .demo-system').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('تجربة النظام متاحة حالياً فقط عبر التواصل المباشر. يرجى التواصل على الرقم: +');
+                });
+            });
+            
+            // تأثيرات التمرير
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // مراقبة العناصر ذات تأثير الظهور
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // زر العودة للأعلى
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.style.display = 'flex';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // الوضع الليلي
+            const nightModeBtn = document.getElementById('nightModeBtn');
+            nightModeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('night-mode');
+                const icon = nightModeBtn.querySelector('i');
+                if (document.body.classList.contains('night-mode')) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            });
+            
+            // القائمة المتنقلة
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                mobileMenuOverlay.style.display = 'block';
+            });
+            
+            mobileCloseBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+            });
+            
+            mobileMenuOverlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.style.display = 'none';
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    mobileMenuOverlay.style.display = 'none';
+                });
+            });
+        });
+    </script>
 
-   
-     <script src="scrypt.js"></script>
     <!-- ✅ Schema.org Markup -->
     <script type="application/ld+json">
     {
@@ -1415,4 +1553,4 @@ body.night-mode .app-update {
       gtag('config', 'G-GEB43FT1P2');
     </script>
 </body>
-</html> 
+</html>
