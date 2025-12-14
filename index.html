@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
     <!-- ===================== Basic Meta ===================== -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +15,26 @@
     <meta name="author" content="عيسى إبراهيم شايع">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://eissashaya.github.io/eissaa/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "https://eissashaya.github.io/eissaa/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الدورات",
+      "item": "https://eissashaya.github.io/eissaa/#services"
+    }
+  ]
+}
+</script>
 
     <!-- ===================== Social Media - Open Graph ===================== -->
     <meta property="og:title" content="المبرمج عيسى شايع | تطوير مواقع وتطبيقات موبايل">
@@ -47,617 +69,7 @@
     <!-- ===================== Main CSS ===================== -->
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --primary: #2a5caa;
-            --primary-dark: #1e4080;
-            --secondary: #ff6b35;
-            --dark: #2c3e50;
-            --dark-light: #34495e;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --gray-dark: #495057;
-            --radius: 12px;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        /* تصميم قسم الأعمال */
-        .my-works {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
-        .my-works .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .my-works .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: var(--primary-dark);
-            position: relative;
-        }
-
-        .my-works .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            right: 50%;
-            transform: translateX(50%);
-            width: 100px;
-            height: 4px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-
-        /* شبكة الأعمال */
-        .works-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 بطاقات في الصف */
-    gap: 30px;
-    margin-top: 40px;
-}
-
-@media (max-width: 1200px) {
-    .works-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 بطاقة في الصف على الشاشات المتوسطة */
-    }
-}
-
-@media (max-width: 768px) {
-    .works-grid {
-        grid-template-columns: 1fr; /* 1 بطاقة في الصف على الشاشات الصغيرة */
-    }
-}
-
-        /* بطاقة العمل */
-        .work-card {
-            background: rgb(136, 210, 235);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transition: all 0.4s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .work-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .work-image {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .work-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .work-card:hover .work-image img {
-            transform: scale(1.05);
-        }
-
-        .work-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 8px 20px;
-            background: var(--secondary);
-            color: white;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            z-index: 2;
-        }
-
-        .work-overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 25px;
-            color: white;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .work-card:hover .work-overlay {
-            opacity: 1;
-        }
-
-        .work-overlay h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-
-        .work-card:hover .work-overlay h3 {
-            transform: translateY(0);
-        }
-
-        .work-overlay p {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease 0.1s;
-        }
-
-        .work-card:hover .work-overlay p {
-            opacity: 0.9;
-            transform: translateY(0);
-        }
-
-        /* محتوى البطاقة */
-        .work-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .work-content h3 {
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .work-content p {
-            color: var(--gray);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        /* مميزات العمل */
-        .work-features {
-            margin-bottom: 20px;
-        }
-
-        .work-features ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .work-features li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: var(--gray-dark);
-            font-size: 0.95rem;
-        }
-
-        .work-features i {
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-
-        /* أزرار العمل */
-        .work-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: auto;
-        }
-
-        .work-btn {
-            flex: 1;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .work-btn.primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .work-btn.primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-        }
-
-        .work-btn.secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .work-btn.secondary:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* النافذة المنبثقة */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-            max-width: 1000px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            animation: slideUp 0.4s ease;
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--secondary);
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            cursor: pointer;
-            z-index: 10;
-            transition: all 0.3s ease;
-        }
-
-        .close-modal:hover {
-            background: #e55a2b;
-            transform: rotate(90deg);
-        }
-
-        /* تصميم النافذة الداخلية */
-        .work-modal {
-            background: white;
-            width: 100%;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: white;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .modal-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
-        }
-
-        .modal-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: var(--secondary);
-            position: relative;
-            z-index: 1;
-        }
-
-        .modal-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .modal-header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .modal-body {
-            padding: 40px;
-        }
-
-        .modal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .features-section h3,
-        .screenshots-section h3 {
-            color: var(--primary-dark);
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid var(--secondary);
-            font-size: 1.8rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .features-section h3 i,
-        .screenshots-section h3 i {
-            color: var(--secondary);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-
-        .feature-content h4 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .feature-content p {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .screenshot-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            height: 200px;
-            position: relative;
-        }
-
-        .screenshot-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .screenshot-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .screenshot-label {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            background: rgba(42, 92, 170, 0.9);
-            color: white;
-            padding: 12px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .modal-footer {
-            background: var(--dark);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .modal-footer h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .modal-footer p {
-            opacity: 0.8;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .modal-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .modal-btn {
-            padding: 15px 35px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-        }
-
-        .modal-btn.primary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .modal-btn.primary:hover {
-            background: #e55a2b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
-        }
-
-        .modal-btn.secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .modal-btn.secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
-            transform: translateY(-3px);
-        }
-
-        /* تحسينات للشاشات الصغيرة */
-        @media (max-width: 992px) {
-            .modal-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-header h2 {
-                font-size: 2rem;
-            }
-            
-            .works-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .screenshots-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-buttons {
-                flex-direction: column;
-            }
-            
-            .modal-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .feature-item {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-            
-            .work-buttons {
-                flex-direction: column;
-            }
-            
-            .work-btn {
-                width: 100%;
-            }
-        }
-
-        /* تأثيرات الظهور */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .work-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .work-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .work-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-    </style>
+   
 </head>
 <body>
     <!-- ✅ Header -->
@@ -1369,156 +781,10 @@
             </div>
         </div>
     </div>
-<script src="scrypt.js"></script>
-    <!-- ✅ JavaScript -->
-    <script>
-        // تحديد العام الحالي للفوتر
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+<script src="scrypt.js" defer></script>
 
-        // إدارة النوافذ المنبثقة للأعمال
-        document.addEventListener('DOMContentLoaded', function() {
-            // عناصر نظام السيارات
-            const viewDetailsBtns = document.querySelectorAll('.view-details');
-            const closeModalBtns = document.querySelectorAll('.close-modal');
-            const modalOverlays = document.querySelectorAll('.modal-overlay');
-            
-            // فتح نافذة معرض السيارات
-            document.querySelectorAll('[data-work="cars"]').forEach(btn => {
-                if (btn.classList.contains('view-details')) {
-                    btn.addEventListener('click', function() {
-                        document.getElementById('modalCars').style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    });
-                }
-            });
-            
-            // فتح نافذة نظام الجوالات
-            document.querySelectorAll('[data-work="mobiles"]').forEach(btn => {
-                if (btn.classList.contains('view-details')) {
-                    btn.addEventListener('click', function() {
-                        document.getElementById('modalMobiles').style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
-                    });
-                }
-            });
-            
-            // إغلاق النوافذ المنبثقة
-            closeModalBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const modal = this.closest('.modal-overlay');
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            // إغلاق النافذة عند النقر خارج المحتوى
-            modalOverlays.forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            });
-            
-            // إغلاق النافذة بمفتاح Escape
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    modalOverlays.forEach(modal => {
-                        modal.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    });
-                }
-            });
-            
-            // تجربة النظام
-            document.querySelectorAll('.demo-btn, .demo-system').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('تجربة النظام متاحة حالياً فقط عبر التواصل المباشر. يرجى التواصل على الرقم: +');
-                });
-            });
-            
-            // تأثيرات التمرير
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                    }
-                });
-            }, observerOptions);
-            
-            // مراقبة العناصر ذات تأثير الظهور
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-            
-            // زر العودة للأعلى
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    scrollTopBtn.style.display = 'flex';
-                } else {
-                    scrollTopBtn.style.display = 'none';
-                }
-            });
-            
-            scrollTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // الوضع الليلي
-            const nightModeBtn = document.getElementById('nightModeBtn');
-            nightModeBtn.addEventListener('click', () => {
-                document.body.classList.toggle('night-mode');
-                const icon = nightModeBtn.querySelector('i');
-                if (document.body.classList.contains('night-mode')) {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
-            });
-            
-            // القائمة المتنقلة
-            const menuToggle = document.getElementById('menuToggle');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileCloseBtn = document.getElementById('mobileCloseBtn');
-            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-            
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                mobileMenuOverlay.style.display = 'block';
-            });
-            
-            mobileCloseBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.style.display = 'none';
-            });
-            
-            mobileMenuOverlay.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                mobileMenuOverlay.style.display = 'none';
-            });
-            
-            // إغلاق القائمة عند النقر على رابط
-            document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    mobileMenuOverlay.style.display = 'none';
-                });
-            });
-        });
-    </script>
+    <!-- ✅ JavaScript -->
+   
 
     <!-- ✅ Schema.org Markup -->
     <script type="application/ld+json">
@@ -1552,5 +818,59 @@
       gtag('js', new Date());
       gtag('config', 'G-GEB43FT1P2');
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "موقع المبرمج عيسى شايع",
+  "url": "https://eissashaya.github.io/eissaa/",
+  "description": "موقع شخصي لعرض خدمات تطوير المواقع والتطبيقات والدورات البرمجية",
+  "inLanguage": "ar",
+  "publisher": {
+    "@type": "Person",
+    "name": "عيسى إبراهيم شايع"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "تطبيق تحدي الويب",
+  "image": "https://eissashaya.github.io/eissaa/imgs/apk.png",
+  "description": "تطبيق تفاعلي لاختبار وتحسين مهارات تطوير الويب",
+  "brand": {
+    "@type": "Brand",
+    "name": "Eissa Shaya"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://eissashaya.github.io/quiz"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "120"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "أساسيات بايثون للمبتدئين",
+  "description": "دورة تعليمية لتعلم لغة Python من الصفر بأسلوب عملي",
+  "provider": {
+    "@type": "Organization",
+    "name": "عيسى شايع",
+    "sameAs": "https://eissashaya.github.io/eissaa/"
+  },
+  "inLanguage": "ar"
+}
+</script>
+
 </body>
 </html>

@@ -1,4 +1,5 @@
-     :root {
+/* ================== متغيرات الألوان والثيم ================== */
+    :root {
             --primary: #2a5bd7;
             --primary-dark: #1a4bc7;
             --primary-light: #4a7bff;
@@ -22,7 +23,7 @@
             --gradient-footer: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
         }
         
-        /* ✅ General Styles */
+        /* ================== أنماط عامة ================== */
         * {
             margin: 0;
             padding: 0;
@@ -131,7 +132,7 @@
             transform: translateY(0);
         }
         
-        /* ✅ Header & Navigation */
+        /* ================== الهيدر والقائمة الرئيسية ================== */
         header {
             background-color: rgba(18, 24, 38, 0.95);
             backdrop-filter: blur(10px);
@@ -248,7 +249,7 @@
             transform: rotate(15deg);
         }
         
-        /* ✅ Mobile Menu - تحسينات كبيرة */
+        /* ================== قائمة الجوال (موبايل) ================== */
         .menu-toggle {
             display: none;
             background: none;
@@ -440,7 +441,7 @@
             text-decoration: none;
         }
         
-        /* ✅ Hero Section مع تحسين رسالة الترحيب */
+        /* ================== قسم البطل (Hero) ================== */
         .hero {
             background: var(--gradient-footer);
             color: white;
@@ -595,7 +596,7 @@
             transform: translateY(-5px) scale(1.1);
         }
         
-        /* ✅ Animations */
+        /* ================== الحركات (Animations) ================== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -616,7 +617,7 @@
             }
         }
         
-        /* ✅ About Section */
+        /* ================== قسم من أنا ================== */
         .about {
             background-color: var(--light);
         }
@@ -694,7 +695,7 @@
             border-color: rgba(255, 193, 7, 0.2);
         }
         
-        /* ✅ Services/Courses Section */
+        /* ================== قسم الدورات / الخدمات ================== */
         .services {
             background-color: #f8f9fa;
         }
@@ -766,7 +767,7 @@
             color: #b3c6e0;
         }
         
-        /* ✅ تطبيقاتي Section */
+        /* ================== قسم تطبيقاتي ================== */
         .my-apps {
             background-color: var(--light);
         }
@@ -860,7 +861,7 @@
             flex-wrap: wrap;
         }
         
-        /* ✅ Contact Section */
+        /* ================== قسم التواصل ================== */
         .contact {
             background-color: var(--light);
         }
@@ -922,7 +923,7 @@
             resize: vertical;
         }
         
-        /* ✅ Footer */
+        /* ================== الفوتر ================== */
         footer {
             background: var(--gradient-footer);
             color: white;
@@ -1239,7 +1240,7 @@
             box-shadow: 0 10px 20px rgba(255, 193, 7, 0.5);
         }
         
-        /* ✅ Scroll to Top Button */
+        /* ================== زر العودة للأعلى ================== */
         .scroll-top {
             position: fixed;
             bottom: 30px;
@@ -1271,7 +1272,7 @@
             transform: translateY(-3px);
         }
         
-        /* ✅ Toast Notification */
+        /* ================== إشعار التوست ================== */
         .toast {
             position: fixed;
             bottom: 30px;
@@ -1295,7 +1296,7 @@
             visibility: visible;
         }
         
-        /* ✅ Responsive Design */
+        /* ================== تصميم متجاوب ================== */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.8rem;
@@ -1579,7 +1580,7 @@
     }
 }
 
-/* تصميم البطاقات المضغوطة */
+/* ================== بطاقات التطبيقات المضغوطة ================== */
 .app-card-compact {
     background: white;
     border-radius: 16px;
@@ -1603,7 +1604,7 @@ body.night-mode .app-card-compact {
     border-color: rgba(255,255,255,0.05);
 }
 
-/* رأس البطاقة */
+/* ================== رأس بطاقة التطبيق ================== */
 .app-card-header {
     position: relative;
     padding: 15px 15px 0;
@@ -1651,7 +1652,7 @@ body.night-mode .app-card-compact {
     transform: scale(1.05);
 }
 
-/* جسم البطاقة */
+/* ================== جسم بطاقة التطبيق ================== */
 .app-card-body {
     padding: 20px;
     flex-grow: 1;
@@ -1669,7 +1670,7 @@ body.night-mode .app-card-body h3 {
     color: white;
 }
 
-/* التقييم */
+/* ================== تقييم التطبيق ================== */
 .app-rating {
     display: flex;
     align-items: center;
@@ -1687,7 +1688,7 @@ body.night-mode .app-card-body h3 {
     color: var(--gray);
 }
 
-/* الوصف */
+/* ================== وصف التطبيق ================== */
 .app-description {
     margin-bottom: 20px;
     flex-grow: 1;
@@ -1704,7 +1705,7 @@ body.night-mode .app-description p {
     color: #ccc;
 }
 
-/* المميزات المختصرة */
+/* ================== مميزات التطبيق المختصرة ================== */
 .app-features-compact {
     margin-bottom: 20px;
 }
@@ -1728,7 +1729,7 @@ body.night-mode .app-description p {
     font-size: 0.85rem;
 }
 
-/* أزرار التحميل */
+/* ================== أزرار تحميل التطبيق ================== */
 .app-download-btns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1745,7 +1746,7 @@ body.night-mode .app-description p {
     gap: 5px;
 }
 
-/* تذييل البطاقة */
+/* ================== تذييل بطاقة التطبيق ================== */
 .app-footer {
     display: flex;
     justify-content: space-between;
@@ -1773,7 +1774,7 @@ body.night-mode .app-update {
     background: rgba(255,255,255,0.1);
 }
 
-/* تذييل قسم التطبيقات */
+/* ================== تذييل قسم التطبيقات ================== */
 .apps-footer {
     text-align: center;
     margin-top: 50px;
@@ -1806,7 +1807,7 @@ body.night-mode .app-update {
     border-bottom-color: var(--primary);
 }
 
-/* تأثيرات إضافية */
+/* ================== تأثيرات إضافية ================== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1834,7 +1835,7 @@ body.night-mode .app-update {
     animation-delay: 0.3s;
 }
 
-/* تحسينات للأزرار */
+/* ================== تحسينات للأزرار ================== */
 .btn-success {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
     border: none;
@@ -1867,3 +1868,615 @@ body.night-mode .app-update {
     background: linear-gradient(135deg, #2980b9, var(--primary));
     transform: translateY(-2px);
 }
+
+/* ================== متغيرات إضافية للألوان ================== */
+ :root {
+            --primary: #1752a3;
+            --primary-dark: #0f3a6b;
+            --secondary: #ff7b4a;
+            --accent: #18b3a3;
+            --dark: #233044;
+            --light: #ffffff;
+            --gray: #6c757d;
+            --gray-dark: #495057;
+            --radius: 14px;
+            --shadow-sm: 0 6px 18px rgba(15, 58, 107, 0.08);
+            --shadow-lg: 0 20px 40px rgba(15, 58, 107, 0.12);
+        }
+
+        /* ================== قسم الأعمال (أعمالي) ================== */
+        .my-works {
+            padding: 80px 0 100px;
+            background: radial-gradient(1200px 400px at 10% 10%, rgba(23,82,163,0.06), transparent 10%),
+                        linear-gradient(180deg, #fbfdff 0%, #eef6ff 100%);
+        }
+
+        .my-works .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .my-works .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary-dark);
+            position: relative;
+        }
+
+        .my-works .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        /* ================== شبكة الأعمال ================== */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 40px;
+            align-items: stretch;
+        }
+
+        /* ================== بطاقة العمل ================== */
+        .work-card {
+            background: rgba(255,255,255,0.72);
+            backdrop-filter: blur(6px) saturate(110%);
+            border: 1px solid rgba(23,82,163,0.06);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.32s ease, box-shadow 0.32s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: var(--shadow-lg);
+        }
+
+
+        .work-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(180deg, rgba(23,82,163,0.04), transparent);
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .work-card:hover .work-image img {
+            transform: scale(1.05);
+        }
+
+        .work-badge {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            padding: 8px 14px;
+            background: linear-gradient(90deg, rgba(255,123,74,0.95), rgba(255,96,62,0.95));
+            color: white;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            z-index: 2;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .work-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(2,10,23,0.65), rgba(2,10,23,0.08));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            color: white;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: all 0.28s ease;
+        }
+
+        .work-card:hover .work-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .work-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .work-card:hover .work-overlay h3 {
+            transform: translateY(0);
+        }
+
+        .work-overlay p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .work-card:hover .work-overlay p {
+            opacity: 0.9;
+            transform: translateY(0);
+        }
+
+        /* محتوى البطاقة */
+        .work-content {
+            padding: 22px 24px 26px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-content h3 {
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: 1.35rem;
+            letter-spacing: 0.2px;
+        }
+
+        .work-content p {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* ================== مميزات العمل ================== */
+        .work-features {
+            margin-bottom: 20px;
+        }
+
+        .work-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .work-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+        }
+
+        .work-features i {
+            color: var(--accent);
+            font-size: 0.95rem;
+            min-width: 18px;
+        }
+
+        /* ================== أزرار العمل ================== */
+        .work-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .work-btn {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .work-btn.primary {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 8px 20px rgba(23,82,163,0.12);
+        }
+
+        .work-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 36px rgba(23,82,163,0.16);
+        }
+
+        .work-btn.secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            border: 1px solid rgba(23,82,163,0.12);
+            backdrop-filter: blur(4px);
+        }
+
+        .work-btn.secondary:hover {
+            background: rgba(23,82,163,0.06);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ================== النافذة المنبثقة (Modal) ================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            background: #e55a2b;
+            transform: rotate(90deg);
+        }
+
+        /* ================== تصميم النافذة الداخلية ================== */
+        .work-modal {
+            background: white;
+            width: 100%;
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .modal-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .features-section h3,
+        .screenshots-section h3 {
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary);
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-section h3 i,
+        .screenshots-section h3 i {
+            color: var(--secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .screenshot-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 200px;
+            position: relative;
+        }
+
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .screenshot-label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: rgba(42, 92, 170, 0.9);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .modal-footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .modal-footer h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .modal-footer p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .modal-btn {
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .modal-btn.primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .modal-btn.primary:hover {
+            background: #e55a2b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .modal-btn.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-btn.secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ================== تحسينات للشاشات الصغيرة ================== */
+        @media (max-width: 992px) {
+            .modal-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-header h2 {
+                font-size: 2rem;
+            }
+            
+            .works-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+            
+            .modal-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .work-buttons {
+                flex-direction: column;
+            }
+            
+            .work-btn {
+                width: 100%;
+            }
+        }
+
+        /* ================== تأثيرات الظهور ================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .work-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .work-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .work-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
