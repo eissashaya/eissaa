@@ -3,17 +3,44 @@
 
   <url>
     <loc>https://eissashaya.github.io/eissaa/</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://eissashaya.github.io/eissaa/pyhon.html</loc>
+    <loc>https://eissashaya.github.io/eissaa/#about</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eissashaya.github.io/eissaa/#services</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://eissashaya.github.io/eissaa/#projects</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://eissashaya.github.io/eissaa/c++.html</loc>
+    <loc>https://eissashaya.github.io/eissaa/#courses</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://eissashaya.github.io/eissaa/#contact</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

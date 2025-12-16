@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# السماح بأرشفة الصور والملفات
+Allow: /imgs/
+Allow: /*.css$
+Allow: /*.js$
+
+# خريطة الموقع
+Sitemap: https://eissashaya.github.io/eissaa/sitemap.xml
