@@ -74,98 +74,128 @@
 
     <!-- ===================== Main CSS ===================== -->
     <style>
-        /* ✅ CSS Variables - نظام ألوان جديد */
+        /* ✅ CSS Variables - لوحة ألوان محسنة ومنسجمة */
         :root {
-            /* الألوان الأساسية - نظام أزرق وبنفسجي حديث */
-            --primary: #4361ee;
-            --primary-dark: #3a56d4;
-            --primary-light: #4895ef;
-            --primary-soft: #e7f1ff;
+            /* ✅ الألوان الأساسية - نظام أزرق مع لمسات ذهبية دافئة */
+            --primary: #2563eb; /* أزرق غني وأنيق */
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --primary-soft: #eff6ff;
+            --primary-contrast: #ffffff;
             
-            --secondary: #7209b7;
-            --secondary-dark: #560bad;
-            --secondary-light: #9d4edd;
-            --secondary-soft: #f3e8ff;
+            /* الذهب الدافئ - متناسق مع الأزرق */
+            --gold: #d97706; /* ذهبي دافئ (برتقالي ذهبي) */
+            --gold-dark: #b45309;
+            --gold-light: #f59e0b;
+            --gold-soft: #fef3c7;
             
-            --accent: #f72585;
-            --accent-dark: #e11575;
-            --accent-light: #ff70a6;
-            --accent-soft: #ffe4ee;
+            --secondary: var(--gold);
+            --secondary-dark: var(--gold-dark);
+            --secondary-light: var(--gold-light);
+            --secondary-soft: var(--gold-soft);
             
-            /* الألوان المحايدة */
-            --dark: #1a1a2e;
-            --dark-light: #16213e;
-            --darker: #0f1419;
+            /* لون ثانوي تكاملي - تركوازي ناعم */
+            --accent: #0d9488; /* تركوازي/أخضر مزرق */
+            --accent-dark: #0f766e;
+            --accent-light: #14b8a6;
+            --accent-soft: #ccfbf1;
             
-            --light: #f8f9fa;
+            /* ✅ الألوان المحايدة المحسنة */
+            --dark: #111827; /* أسود مزرق داكن للنص */
+            --dark-light: #1f2937;
+            --darker: #0f172a;
+            
+            --light: #f8fafc; /* خلفية فاتحة ناعمة */
             --lighter: #ffffff;
-            --light-gray: #f1f3f5;
+            --light-gray: #f1f5f9;
             
-            --gray: #6c757d;
-            --gray-light: #e9ecef;
-            --gray-dark: #495057;
+            --gray: #6b7280; /* رمادي متوسط */
+            --gray-light: #e5e7eb;
+            --gray-dark: #4b5563;
             
-            /* ألوان الحالة */
-            --success: #4cc9f0;
-            --success-dark: #38b9e0;
-            --warning: #ff9e00;
-            --warning-dark: #e68a00;
-            --danger: #f72585;
-            --danger-dark: #e11575;
-            --info: #4361ee;
+            /* ✅ ألوان الحالة المحسنة */
+            --success: #10b981; /* أخضر ناعم */
+            --success-dark: #059669;
+            --success-soft: #d1fae5;
             
-            /* التأثيرات */
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.12);
-            --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.15);
-            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
-            --shadow-primary: 0 5px 20px rgba(67, 97, 238, 0.3);
-            --shadow-secondary: 0 5px 20px rgba(114, 9, 183, 0.3);
+            --warning: #f59e0b; /* برتقالي ذهبي */
+            --warning-dark: #d97706;
+            --warning-soft: #fef3c7;
             
-            /* التحولات */
-            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --danger: #ef4444; /* أحمر ناعم */
+            --danger-dark: #dc2626;
+            --danger-soft: #fee2e2;
             
-            /* الزوايا */
-            --radius-sm: 8px;
-            --radius: 12px;
-            --radius-md: 16px;
-            --radius-lg: 20px;
-            --radius-xl: 30px;
-            --radius-full: 9999px;
+            --info: var(--primary);
+            --info-soft: var(--primary-soft);
             
-            /* التدرجات */
+            /* ✅ التأثيرات المحسنة */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            
+            /* ظلال ملونة محسنة */
+            --shadow-primary: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+            --shadow-secondary: 0 10px 15px -3px rgba(217, 119, 6, 0.1), 0 4px 6px -2px rgba(217, 119, 6, 0.05);
+            --shadow-accent: 0 10px 15px -3px rgba(13, 148, 136, 0.1), 0 4px 6px -2px rgba(13, 148, 136, 0.05);
+            
+            /* ✅ التدرجات المحسنة */
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-            --gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            --gradient-success: linear-gradient(135deg, var(--success) 0%, #4cc9f0 100%);
-            --gradient-warning: linear-gradient(135deg, var(--warning) 0%, #ffb347 100%);
+            --gradient-hero: linear-gradient(135deg, var(--darker) 0%, var(--dark-light) 50%, var(--primary) 100%);
+            --gradient-success: linear-gradient(135deg, var(--success) 0%, var(--accent-light) 100%);
+            --gradient-warning: linear-gradient(135deg, var(--warning) 0%, var(--secondary-light) 100%);
+            --gradient-gold-blue: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             
-            /* الأبعاد */
+            /* ✅ التحولات */
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* ✅ الزوايا المحسنة */
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* ✅ الأبعاد */
             --container-width: 1200px;
             --header-height: 80px;
         }
 
-        /* ✅ وضع الليل */
+        /* ✅ وضع الليل المحسن */
         body.night-mode {
-            --dark: #0f1419;
-            --dark-light: #1e2732;
-            --light: #15202b;
-            --lighter: #192734;
-            --light-gray: #22303c;
-            --gray: #8899a6;
-            --gray-light: #38444d;
-            --gray-dark: #cccccc;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --darker: #0a0f1a;
             
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            --shadow-md: 0 8px 25px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.6);
-            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.7);
+            --light: #1e293b;
+            --lighter: #334155;
+            --light-gray: #475569;
+            
+            --gray: #94a3b8;
+            --gray-light: #475569;
+            --gray-dark: #cbd5e1;
+            
+            --primary-soft: rgba(37, 99, 235, 0.15);
+            --secondary-soft: rgba(217, 119, 6, 0.15);
+            --accent-soft: rgba(13, 148, 136, 0.15);
+            
+            /* ظلال داكنة أكثر */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            
+            --shadow-primary: 0 10px 15px -3px rgba(37, 99, 235, 0.2), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+            --shadow-secondary: 0 10px 15px -3px rgba(217, 119, 6, 0.2), 0 4px 6px -2px rgba(217, 119, 6, 0.1);
         }
 
         /* ✅ Reset & Base Styles */
@@ -182,18 +212,20 @@
         }
 
         body {
-            background-color: var(--light);
+            background: linear-gradient(180deg, var(--light) 0%, #f0f6ff 100%);
             color: var(--dark);
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 1rem;
             transition: var(--transition-slow);
             overflow-x: hidden;
             min-height: 100vh;
             font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body.night-mode {
-            background-color: var(--dark);
+            background: linear-gradient(180deg, var(--dark) 0%, var(--darker) 100%);
             color: var(--gray-dark);
         }
 
@@ -233,7 +265,7 @@
             transform: translateX(50%);
             width: 4rem;
             height: 4px;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             border-radius: var(--radius-full);
         }
 
@@ -254,7 +286,7 @@
             color: var(--gray);
         }
 
-        /* ✅ Buttons */
+        /* ✅ Buttons المحسنة */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -262,14 +294,14 @@
             gap: 0.5rem;
             background: var(--gradient-primary);
             color: white;
-            padding: 0.875rem 2rem;
-            border-radius: var(--radius-xl);
+            padding: 0.9rem 2rem;
+            border-radius: var(--radius-lg);
             font-weight: 700;
             text-decoration: none;
             border: none;
             cursor: pointer;
             transition: var(--transition);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-primary);
             font-size: 1rem;
             position: relative;
             overflow: hidden;
@@ -283,7 +315,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-secondary);
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
             z-index: -1;
             transition: var(--transition);
             opacity: 0;
@@ -291,7 +323,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: var(--shadow-primary);
+            box-shadow: var(--shadow-md);
             color: white;
         }
 
@@ -299,31 +331,42 @@
             opacity: 1;
         }
 
-        .btn-secondary {
-            background: var(--gradient-secondary);
+        .btn:active {
+            transform: translateY(-1px);
         }
 
-        .btn-secondary::before {
-            background: var(--gradient-primary);
+        /* ✅ تنسيقات الأزرار المختلفة */
+        .btn-secondary {
+            background: var(--gradient-secondary);
+            color: var(--darker);
+            box-shadow: var(--shadow-secondary);
+        }
+
+        .btn-secondary:hover {
+            color: var(--darker);
         }
 
         .btn-accent {
             background: var(--gradient-accent);
-        }
-
-        .btn-accent::before {
-            background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+            box-shadow: var(--shadow-accent);
         }
 
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
+            box-shadow: none;
         }
 
         .btn-outline:hover {
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
+            border-color: transparent;
+        }
+
+        .btn-success {
+            background: var(--gradient-success);
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2), 0 2px 4px -1px rgba(16, 185, 129, 0.1);
         }
 
         .btn-sm {
@@ -334,6 +377,25 @@
         .btn-lg {
             padding: 1rem 2.5rem;
             font-size: 1.1rem;
+        }
+
+        /* ✅ Card component محسن */
+        .card {
+            background: var(--lighter);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+
+        body.night-mode .card {
+            border-color: var(--gray);
         }
 
         /* ✅ Animations */
@@ -388,27 +450,6 @@
             }
         }
 
-        @keyframes shimmer {
-            0% {
-                background-position: -1000px 0;
-            }
-            100% {
-                background-position: 1000px 0;
-            }
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
         .fade-in {
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
@@ -432,9 +473,9 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        /* ✅ Header & Navigation */
+        /* ✅ Header & Navigation المحسن */
         header {
-            background-color: rgba(26, 26, 46, 0.95);
+            background-color: rgba(17, 24, 39, 0.95);
             backdrop-filter: blur(10px);
             position: fixed;
             top: 0;
@@ -442,7 +483,7 @@
             left: 0;
             z-index: 1000;
             box-shadow: var(--shadow);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             transition: var(--transition);
             height: var(--header-height);
             display: flex;
@@ -450,16 +491,16 @@
         }
 
         body.night-mode header {
-            background-color: rgba(15, 20, 25, 0.95);
+            background-color: rgba(15, 23, 42, 0.95);
         }
 
         header.scrolled {
             height: 70px;
-            background-color: rgba(26, 26, 46, 0.98);
+            background-color: rgba(17, 24, 39, 0.98);
         }
 
         body.night-mode header.scrolled {
-            background-color: rgba(15, 20, 25, 0.98);
+            background-color: rgba(15, 23, 42, 0.98);
         }
 
         .navbar {
@@ -481,7 +522,7 @@
         }
 
         .logo span {
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -490,7 +531,7 @@
         .logo-icon {
             width: 2.5rem;
             height: 2.5rem;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             border-radius: var(--radius);
             display: flex;
             align-items: center;
@@ -517,7 +558,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-light);
+            color: var(--secondary-light);
         }
 
         .nav-links a::after {
@@ -527,7 +568,7 @@
             right: 0;
             width: 0;
             height: 2px;
-            background: var(--gradient-primary);
+            background: var(--gradient-secondary);
             transition: var(--transition);
             border-radius: var(--radius-full);
         }
@@ -542,6 +583,7 @@
 
         .nav-links a.active::after {
             width: 100%;
+            background: var(--gradient-primary);
         }
 
         .nav-actions {
@@ -564,7 +606,7 @@
         .search-bar:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
             width: 15.625rem;
         }
 
@@ -671,7 +713,7 @@
         }
 
         .mobile-menu-logo span {
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -794,7 +836,7 @@
             color: var(--primary-light);
         }
 
-        /* ✅ Hero Section */
+        /* ✅ Hero Section المحسن */
         .hero {
             background: var(--gradient-hero);
             color: white;
@@ -815,9 +857,9 @@
             bottom: 0;
             left: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(67, 97, 238, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(114, 9, 183, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(247, 37, 133, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
         }
 
         .hero-content {
@@ -839,7 +881,7 @@
             display: block;
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, var(--primary-light), var(--accent));
+            background: linear-gradient(45deg, var(--primary-light), var(--accent-light));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -857,10 +899,10 @@
 
         .hero h1 .title {
             font-size: 2.2rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
             font-weight: 600;
             margin-top: 1.5rem;
-            background: linear-gradient(45deg, #ffffff, #b3e5fc);
+            background: linear-gradient(45deg, #ffffff, var(--gold-light));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -868,7 +910,7 @@
 
         .hero .tagline {
             font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.9);
             font-style: italic;
             margin: 1.5rem auto;
             padding: 1rem 2rem;
@@ -935,7 +977,7 @@
             opacity: 1;
         }
 
-        /* ✅ About Section */
+        /* ✅ About Section المحسن */
         .about {
             background-color: var(--lighter);
             position: relative;
@@ -989,7 +1031,7 @@
         }
 
         .about-text h3 span {
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -998,7 +1040,7 @@
         .about-text p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
-            color: var(--gray);
+            color: var(--gray-dark);
             line-height: 1.8;
         }
 
@@ -1019,28 +1061,28 @@
             padding: 0.5rem 1.25rem;
             border-radius: var(--radius-xl);
             font-weight: 600;
-            border: 1px solid rgba(67, 97, 238, 0.2);
+            border: 1px solid rgba(37, 99, 235, 0.2);
             transition: var(--transition);
             cursor: default;
         }
 
         .skill-tag:hover {
             transform: translateY(-2px);
-            background: rgba(67, 97, 238, 0.2);
+            background: rgba(37, 99, 235, 0.2);
             box-shadow: var(--shadow);
         }
 
         body.night-mode .skill-tag {
-            background: rgba(67, 97, 238, 0.15);
+            background: rgba(37, 99, 235, 0.15);
             color: var(--primary-light);
-            border-color: rgba(67, 97, 238, 0.3);
+            border-color: rgba(37, 99, 235, 0.3);
         }
 
         body.night-mode .skill-tag:hover {
-            background: rgba(67, 97, 238, 0.25);
+            background: rgba(37, 99, 235, 0.25);
         }
 
-        /* ✅ Services/Courses Section */
+        /* ✅ Services/Courses Section المحسن */
         .services {
             background-color: var(--light-gray);
             position: relative;
@@ -1066,16 +1108,18 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            border: 1px solid var(--gray-light);
         }
 
         body.night-mode .service-card {
             background-color: var(--dark-light);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: var(--gray);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
         }
 
         .service-card::before {
@@ -1128,7 +1172,7 @@
         }
 
         .service-info p {
-            color: var(--gray);
+            color: var(--gray-dark);
             margin-bottom: 1.5rem;
             flex-grow: 1;
         }
@@ -1137,7 +1181,7 @@
             color: var(--gray);
         }
 
-        /* ✅ أعمالي Section */
+        /* ✅ أعمالي Section المحسن */
         .my-works {
             background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 100%);
             position: relative;
@@ -1164,15 +1208,18 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            border: 1px solid var(--gray-light);
         }
 
         body.night-mode .work-card {
             background: var(--dark-light);
+            border-color: var(--gray);
         }
 
         .work-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
         }
 
         .work-image {
@@ -1255,7 +1302,7 @@
         }
 
         .work-content p {
-            color: var(--gray);
+            color: var(--gray-dark);
             line-height: 1.6;
             margin-bottom: 1.5rem;
             flex-grow: 1;
@@ -1276,7 +1323,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 0.5rem;
-            color: var(--gray);
+            color: var(--gray-dark);
             font-size: 0.95rem;
         }
 
@@ -1330,7 +1377,7 @@
             box-shadow: var(--shadow);
         }
 
-        /* ✅ تطبيقاتي Section */
+        /* ✅ تطبيقاتي Section المحسن */
         .my-apps {
             background-color: var(--lighter);
             position: relative;
@@ -1357,15 +1404,18 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            border: 1px solid var(--gray-light);
         }
 
         body.night-mode .app-card-compact {
             background: var(--dark-light);
+            border-color: var(--gray);
         }
 
         .app-card-compact:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
         }
 
         .app-card-header {
@@ -1442,13 +1492,13 @@
 
         .rating-text {
             font-size: 0.85rem;
-            color: var(--gray);
+            color: var(--gray-dark);
         }
 
         .app-description p {
             font-size: 0.95rem;
             line-height: 1.5;
-            color: var(--gray);
+            color: var(--gray-dark);
             margin-bottom: 1rem;
             flex-grow: 1;
         }
@@ -1465,7 +1515,7 @@
             gap: 0.5rem;
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
-            color: var(--gray);
+            color: var(--gray-dark);
         }
 
         .app-features-compact ul li i {
@@ -1485,16 +1535,16 @@
             justify-content: space-between;
             align-items: center;
             padding-top: 1rem;
-            border-top: 1px solid rgba(0,0,0,0.08);
+            border-top: 1px solid var(--gray-light);
         }
 
         body.night-mode .app-footer {
-            border-color: rgba(255,255,255,0.08);
+            border-color: var(--gray);
         }
 
         .app-size, .app-update {
             font-size: 0.85rem;
-            color: var(--gray);
+            color: var(--gray-dark);
         }
 
         .app-update {
@@ -1507,7 +1557,7 @@
             background: rgba(255,255,255,0.1);
         }
 
-        /* ✅ Contact Section */
+        /* ✅ Contact Section المحسن */
         .contact {
             background-color: var(--light-gray);
             position: relative;
@@ -1557,14 +1607,14 @@
 
         body.night-mode .form-control {
             background-color: var(--dark-light);
-            border-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--gray);
             color: var(--gray-dark);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
 
         textarea.form-control {
@@ -1572,13 +1622,14 @@
             resize: vertical;
         }
 
-        /* ✅ Footer */
+        /* ✅ Footer المحسن */
         footer {
-            background: var(--gradient-dark);
-            color: white;
+            background: linear-gradient(180deg, rgba(17,24,39,1) 0%, rgba(11,17,31,1) 100%);
+            color: rgba(255,255,250,0.95);
             padding-top: 4rem;
             position: relative;
             overflow: hidden;
+            border-top: 6px solid rgba(217, 119, 6, 0.08);
         }
 
         footer::before {
@@ -1587,8 +1638,9 @@
             top: 0;
             right: 0;
             width: 100%;
-            height: 5px;
-            background: var(--gradient-primary);
+            height: 6px;
+            background: var(--gradient-gold-blue);
+            pointer-events: none;
         }
 
         .footer-content {
@@ -1608,7 +1660,7 @@
             font-size: 2.2rem;
             font-weight: 900;
             margin-bottom: 1.25rem;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -1624,8 +1676,9 @@
             right: 0;
             width: 3.75rem;
             height: 3px;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             border-radius: 3px;
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.2);
         }
 
         .footer-about p {
@@ -1647,14 +1700,15 @@
             justify-content: center;
             width: 3rem;
             height: 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(255,255,255,0.03);
+            color: rgba(255,255,250,0.95);
             border-radius: var(--radius);
             font-size: 1.3rem;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
             z-index: 1;
+            border: 1px solid rgba(217,119,6,0.1);
         }
 
         .footer-social a::before {
@@ -1664,15 +1718,16 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             opacity: 0;
             transition: var(--transition);
             z-index: -1;
         }
 
         .footer-social a:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 12px 30px rgba(217,119,6,0.2);
+            color: var(--darker);
         }
 
         .footer-social a:hover::before {
@@ -1686,7 +1741,7 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.75rem;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -1702,7 +1757,7 @@
             right: 0;
             width: 2.5rem;
             height: 3px;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             border-radius: 3px;
         }
 
@@ -1715,7 +1770,7 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.88);
             text-decoration: none;
             transition: var(--transition);
             display: flex;
@@ -1739,13 +1794,13 @@
             right: 0;
             width: 0;
             height: 2px;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             transition: var(--transition);
             border-radius: 2px;
         }
 
         .footer-links a:hover {
-            color: var(--primary-light);
+            color: var(--secondary-light);
             padding-right: 0.625rem;
         }
 
@@ -1814,12 +1869,12 @@
             font-weight: 700;
         }
 
-        /* ✅ Scroll to Top Button */
+        /* ✅ Scroll to Top Button المحسن */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
             left: 2rem;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             color: white;
             width: 3.5rem;
             height: 3.5rem;
@@ -1843,12 +1898,12 @@
         }
 
         .scroll-top:hover {
-            background: var(--gradient-secondary);
+            background: var(--gradient-primary);
             transform: translateY(-5px) scale(1.1);
             box-shadow: var(--shadow-lg);
         }
 
-        /* ✅ Toast Notification */
+        /* ✅ Toast Notification المحسن */
         .toast {
             position: fixed;
             bottom: 2rem;
@@ -1874,7 +1929,7 @@
             visibility: visible;
         }
 
-        /* ✅ Modal Windows */
+        /* ✅ Modal Windows المحسن */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -2075,7 +2130,7 @@
         }
 
         .feature-content p {
-            color: var(--gray);
+            color: var(--gray-dark);
             line-height: 1.6;
         }
 
@@ -2115,7 +2170,7 @@
             bottom: 0;
             right: 0;
             left: 0;
-            background: rgba(67, 97, 238, 0.9);
+            background: rgba(37, 99, 235, 0.9);
             color: white;
             padding: 0.75rem;
             text-align: center;
@@ -2164,14 +2219,14 @@
         }
 
         .modal-btn.primary {
-            background: var(--primary);
-            color: white;
+            background: var(--gradient-gold-blue);
+            color: var(--darker);
         }
 
         .modal-btn.primary:hover {
-            background: var(--primary-dark);
+            background: var(--gradient-primary);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+            box-shadow: var(--shadow-md);
         }
 
         .modal-btn.secondary {
@@ -2223,7 +2278,7 @@
         .stat-number {
             font-size: 3rem;
             font-weight: 900;
-            background: var(--gradient-primary);
+            background: var(--gradient-gold-blue);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -2235,7 +2290,7 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        /* ✅ CTA Section */
+        /* ✅ CTA Section المحسن */
         .cta-section {
             background: var(--gradient-primary);
             color: white;
@@ -3040,7 +3095,7 @@
                     <div class="app-card-header">
                         <div class="app-badge new">EissaTv</div>
                         <div class="app-card-image">
-                            <img src="imgs/EissaTv.jpg" alt="تطبيق EissaTv" loading="lazy" width="300" height="180">
+                            <img src="imgs/EissaTv.png" alt="تطبيق EissaTv" loading="lazy" width="300" height="180">
                         </div>
                     </div>
                     
@@ -3075,8 +3130,8 @@
                             <a href="#" class="btn btn-success">
                                 <i class="fas fa-mobile-alt"></i> جلكسي ستور
                             </a>
-                            <a href="#" class="btn btn-outline">
-                                <i class="fab fa-app-store"></i> أب ستور
+                            <a href="EissaTv.html" class="btn btn-outline">
+                                <i class="fab fa-app-store"></i> تحميل مباشر
                             </a>
                         </div>
                         
@@ -3204,7 +3259,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <div class="footer-logo">عيسى <span>شايع</span></div>
+                    <div class="footer-logo"> م/ عيسى <span>شايع</span></div>
                     <p>مبرمج ومطور ويب وتطبيقات موبايل بخبرة واسعة. أقدم خدمات برمجية احترافية ودورات تعليمية في مختلف مجالات البرمجة، مع التركيز على تقديم حلول مبتكرة وعملية.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك" target="_blank">
@@ -3253,8 +3308,8 @@
                     <h4>اشترك في النشرة</h4>
                     <p>اشترك في نشرتنا البريدية لتكون أول من يعلم بالدورات الجديدة والعروض الخاصة.</p>
                     <div class="newsletter-form">
-                        <input type="email" placeholder="بريدك الإلكتروني" class="form-control" style="margin-bottom: 1rem;">
-                        <button class="btn btn-sm">اشترك الآن</button>
+                        <input id="newsletterEmail" name="newsletterEmail" type="email" placeholder="بريدك الإلكتروني" class="form-control" aria-label="بريدك الإلكتروني" style="margin-bottom: 1rem;">
+                        <button type="button" id="newsletterBtn" class="btn btn-sm">اشترك الآن</button>
                     </div>
                 </div>
             </div>
@@ -3948,6 +4003,44 @@
                     // Handle scroll events
                 }, 100);
             });
+
+            // ✅ Newsletter subscription handler (local simulation)
+            const newsletterEmail = document.getElementById('newsletterEmail');
+            const newsletterBtn = document.getElementById('newsletterBtn');
+            if (newsletterBtn && newsletterEmail) {
+                newsletterBtn.addEventListener('click', function() {
+                    const email = newsletterEmail.value.trim();
+                    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email) {
+                        showToast('الرجاء إدخال البريد الإلكتروني', 'warning');
+                        return;
+                    }
+                    if (!emailRe.test(email)) {
+                        showToast('الرجاء إدخال بريد إلكتروني صالح', 'warning');
+                        return;
+                    }
+
+                    // Disable button briefly to prevent repeated clicks
+                    newsletterBtn.disabled = true;
+                    newsletterBtn.textContent = '...جارٍ الاشتراك';
+
+                    // Simulate saving subscription locally
+                    try {
+                        const subs = JSON.parse(localStorage.getItem('newsletterSubs') || '[]');
+                        subs.push({ email: email, date: new Date().toISOString() });
+                        localStorage.setItem('newsletterSubs', JSON.stringify(subs));
+                        showToast('شكراً للاشتراك! تم التسجيل.', 'success');
+                        newsletterEmail.value = '';
+                    } catch (e) {
+                        showToast('حدث خطأ، حاول مرة أخرى', 'error');
+                    } finally {
+                        setTimeout(() => {
+                            newsletterBtn.disabled = false;
+                            newsletterBtn.textContent = 'اشترك الآن';
+                        }, 1200);
+                    }
+                });
+            }
         });
 
         // ✅ Error Handling
