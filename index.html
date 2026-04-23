@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- ===================== Icons ===================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="me" href="https://github.com/eissashaya">
@@ -76,29 +76,29 @@
     <style>
         /* ✅ CSS Variables - لوحة ألوان محسنة ومنسجمة */
         :root {
-            /* ✅ الألوان الأساسية - نظام أزرق مع لمسات ذهبية دافئة */
-            --primary: #2563eb; /* أزرق غني وأنيق */
-            --primary-dark: #1d4ed8;
-            --primary-light: #3b82f6;
-            --primary-soft: #eff6ff;
+            /* ✅ الألوان الأساسية - نظام تركوازي هادئ مع لمسات ذهبية */
+            --primary: #0ea5a4; /* تركوازي حديث */
+            --primary-dark: #0b8b86;
+            --primary-light: #2dd4bf;
+            --primary-soft: #ecfeff;
             --primary-contrast: #ffffff;
-            
-            /* الذهب الدافئ - متناسق مع الأزرق */
-            --gold: #d97706; /* ذهبي دافئ (برتقالي ذهبي) */
+
+            /* الذهب الدافئ - لمسة تمييز */
+            --gold: #f59e0b; /* ذهبي/أمبر */
             --gold-dark: #b45309;
-            --gold-light: #f59e0b;
-            --gold-soft: #fef3c7;
-            
+            --gold-light: #fbbf24;
+            --gold-soft: #fff7ed;
+
             --secondary: var(--gold);
             --secondary-dark: var(--gold-dark);
             --secondary-light: var(--gold-light);
             --secondary-soft: var(--gold-soft);
-            
-            /* لون ثانوي تكاملي - تركوازي ناعم */
-            --accent: #0d9488; /* تركوازي/أخضر مزرق */
-            --accent-dark: #0f766e;
-            --accent-light: #14b8a6;
-            --accent-soft: #ccfbf1;
+
+            /* لون تكاملي ثانوي - أرجواني هادئ للاطارات واللمسات */
+            --accent: #7c3aed; /* أرجواني ناعم */
+            --accent-dark: #5b21b6;
+            --accent-light: #a78bfa;
+            --accent-soft: #f3e8ff;
             
             /* ✅ الألوان المحايدة المحسنة */
             --dark: #111827; /* أسود مزرق داكن للنص */
@@ -130,23 +130,23 @@
             --info-soft: var(--primary-soft);
             
             /* ✅ التأثيرات المحسنة */
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+            --shadow: 0 6px 18px -6px rgba(15, 23, 42, 0.08), 0 3px 6px -2px rgba(15, 23, 42, 0.06);
+            --shadow-md: 0 10px 20px -6px rgba(15, 23, 42, 0.12), 0 6px 12px -4px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.18), 0 10px 20px -8px rgba(15, 23, 42, 0.12);
+            --shadow-xl: 0 30px 60px -18px rgba(15, 23, 42, 0.25);
+
             /* ظلال ملونة محسنة */
-            --shadow-primary: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
-            --shadow-secondary: 0 10px 15px -3px rgba(217, 119, 6, 0.1), 0 4px 6px -2px rgba(217, 119, 6, 0.05);
-            --shadow-accent: 0 10px 15px -3px rgba(13, 148, 136, 0.1), 0 4px 6px -2px rgba(13, 148, 136, 0.05);
+            --shadow-primary: 0 10px 25px -6px rgba(14, 165, 164, 0.12), 0 6px 12px -4px rgba(14, 165, 164, 0.06);
+            --shadow-secondary: 0 10px 25px -6px rgba(245, 158, 11, 0.12), 0 6px 12px -4px rgba(245, 158, 11, 0.06);
+            --shadow-accent: 0 10px 25px -6px rgba(124, 58, 237, 0.12), 0 6px 12px -4px rgba(124, 58, 237, 0.06);
             
             /* ✅ التدرجات المحسنة */
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-            --gradient-hero: linear-gradient(135deg, var(--darker) 0%, var(--dark-light) 50%, var(--primary) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--darker) 0%, var(--dark-light) 40%, rgba(14,165,164,0.9) 100%);
             --gradient-success: linear-gradient(135deg, var(--success) 0%, var(--accent-light) 100%);
             --gradient-warning: linear-gradient(135deg, var(--warning) 0%, var(--secondary-light) 100%);
             --gradient-gold-blue: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
@@ -2889,7 +2889,102 @@
                 إليك بعض الأعمال التي قمت بتطويرها مؤخراً، يمكنك النقر على أي عمل لمشاهدة التفاصيل الكاملة
             </p>
             
+<div class="container py-5">
+
+    <div class="row g-4">
+
+        <!-- البطاقة الأولى -->
+        <div class="col-md-6">
+            <div class="card shadow h-100">
+                <img src="imgs/ساعات/ساعات 1.PNG" class="card-img-top" style="height:220px; object-fit:cover;">
+                <div class="card-body">
+                    <h4 class="card-title">مواقع TimeMasters لبيع الساعات الفاخرة</h4>
+                    <p class="card-text text-muted">يعرض أحدث الساعات الكلاسيكية والفاخرة</p>
+
+                    <button class="btn btn-primary"
+                    onclick="showDetails(
+                    'تفاصيل موقع الساعات',
+                    'موقع TimeMasters متخصص في عرض وبيع الساعات الفاخرة بأحدث التصاميم.',
+                    ['imgs/ساعات/ساعات2.PNG','imgs/ساعات/ساعات3.PNG','imgs/ساعات/ساعات4.PNG','imgs/ساعات/ساعات5.PNG']
+                    )">
+                    عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- البطاقة الثانية -->
+        <div class="col-md-6">
+            <div class="card shadow h-100">
+                <img src="imgs/سحاب/التقاط.PNG" class="card-img-top" style="height:220px; object-fit:cover;">
+                <div class="card-body">
+                    <h4 class="card-title">نظام مجموعة سحاب لتربية المواشي</h4>
+                    <p class="card-text text-muted">
+                        مجموعة سحاب النموذجية لتربية المواشي - نظام إدارة تربية المواشي
+                    </p>
+
+                    <button class="btn btn-success"
+                    onclick="showDetails(
+                    'تفاصيل نظام سحاب',
+                    'نظام متكامل لإدارة المواشي ومتابعة التغذية والإنتاج والسجلات. يدير جميع بيانات الحظائر والمواليد وتلقيح الأغنام النظام يعمل لموسسة في المملكة العربية السعودية لعرض بقيه التفاصيل تواصل مع المبرمج. ',
+                    ['imgs/سحاب/سحاب2.png','imgs/سحاب/سحاب3.png','imgs/سحاب/سحاب4.png','imgs/سحاب/سحاب5.png']
+                    )">
+                    عرض التفاصيل
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modalDesc"></p>
+
+        <div class="row g-3" id="gallery"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function showDetails(title, desc, images){
+
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDesc").innerText = desc;
+
+    let gallery = document.getElementById("gallery");
+    gallery.innerHTML = "";
+
+    images.forEach(img => {
+        gallery.innerHTML += `
+            <div class="col-md-6">
+                <img src="${img}" class="img-fluid rounded shadow-sm w-100" style="height:180px; object-fit:cover;">
+            </div>
+        `;
+    });
+
+    let modal = new bootstrap.Modal(document.getElementById('detailsModal'));
+    modal.show();
+}
+</script>
             <div class="works-grid">
+                
                 <!-- عمل 1: نظام معرض السيارات -->
                 <div class="work-card fade-in" data-work="cars">
                     <div class="work-image">
@@ -2995,8 +3090,10 @@
                     </div>
                 </div>
     
-                <!-- موقع تعريفي -->
-                <div class="work-card fade-in" data-work="about">
+              
+
+
+                  <div class="work-card fade-in" data-work="about">
                     <div class="work-image">
                         <img src="imgs/abut1.jpeg" alt=" مواقع تعريفي " loading="lazy" width="400" height="250">
                         <div class="work-badge"> مواقع تعريفي</div>
@@ -3028,6 +3125,15 @@
                         </div>
                     </div>
                 </div>
+                
+
+                
+               
+
+
+                
+
+
             </div>
         </div>
     </section>
