@@ -15,6 +15,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <link rel="canonical" href="https://eissashaya.github.io/eissaa/">
     <meta name="google-site-verification" content="JEwrBkb7chhvNEMMViMHyDyB22aGOl9S-_UVpXA2Btw" />
+
     <!-- ===================== Language ===================== -->
     <meta http-equiv="content-language" content="ar">
 
@@ -48,6 +49,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- ===================== Icons ===================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="me" href="https://github.com/eissashaya">
@@ -56,149 +58,114 @@
 
     <!-- ===================== Schema SEO Branding ===================== -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "عيسى شايع",
-      "alternateName": ["عيسى", "Eissa Shaya", "Issa Shaya"],
-      "url": "https://eissashaya.github.io/eissaa/",
-      "image": "https://eissashaya.github.io/eissaa/1.jpg",
-      "jobTitle": "مبرمج ومطور تطبيقات Flutter",
-      "description": "عيسى شايع المعروف باسم عيسى، مبرمج ومطور تطبيقات Flutter ومواقع ويب احترافية.",
-      "sameAs": [
-        "https://www.instagram.com/v_b.j/",
-        "https://www.linkedin.com/in/eissashaya"
-      ]
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "عيسى شايع",
+            "alternateName": ["عيسى", "Eissa Shaya", "Issa Shaya"],
+            "url": "https://eissashaya.github.io/eissaa/",
+            "image": "https://eissashaya.github.io/eissaa/1.jpg",
+            "jobTitle": "مبرمج ومطور تطبيقات Flutter",
+            "description": "عيسى شايع المعروف باسم عيسى، مبرمج ومطور تطبيقات Flutter ومواقع ويب احترافية.",
+            "sameAs": [
+                "https://www.instagram.com/v_b.j/",
+                "https://www.linkedin.com/in/eissashaya"
+            ]
+        }
     </script>
 
     <!-- ===================== Main CSS ===================== -->
     <style>
         /* ✅ CSS Variables - لوحة ألوان محسنة ومنسجمة */
         :root {
-            /* ✅ الألوان الأساسية - نظام تركوازي هادئ مع لمسات ذهبية */
-            --primary: #0ea5a4; /* تركوازي حديث */
+            --primary: #0ea5a4;
             --primary-dark: #0b8b86;
             --primary-light: #2dd4bf;
             --primary-soft: #ecfeff;
             --primary-contrast: #ffffff;
-
-            /* الذهب الدافئ - لمسة تمييز */
-            --gold: #f59e0b; /* ذهبي/أمبر */
+            --gold: #f59e0b;
             --gold-dark: #b45309;
             --gold-light: #fbbf24;
             --gold-soft: #fff7ed;
-
             --secondary: var(--gold);
             --secondary-dark: var(--gold-dark);
             --secondary-light: var(--gold-light);
             --secondary-soft: var(--gold-soft);
-
-            /* لون تكاملي ثانوي - أرجواني هادئ للاطارات واللمسات */
-            --accent: #7c3aed; /* أرجواني ناعم */
+            --accent: #7c3aed;
             --accent-dark: #5b21b6;
             --accent-light: #a78bfa;
             --accent-soft: #f3e8ff;
-            
-            /* ✅ الألوان المحايدة المحسنة */
-            --dark: #111827; /* أسود مزرق داكن للنص */
+            --dark: #111827;
             --dark-light: #1f2937;
             --darker: #0f172a;
-            
-            --light: #f8fafc; /* خلفية فاتحة ناعمة */
+            --light: #f8fafc;
             --lighter: #ffffff;
             --light-gray: #f1f5f9;
-            
-            --gray: #6b7280; /* رمادي متوسط */
+            --gray: #6b7280;
             --gray-light: #e5e7eb;
             --gray-dark: #4b5563;
-            
-            /* ✅ ألوان الحالة المحسنة */
-            --success: #10b981; /* أخضر ناعم */
+            --success: #10b981;
             --success-dark: #059669;
             --success-soft: #d1fae5;
-            
-            --warning: #f59e0b; /* برتقالي ذهبي */
+            --warning: #f59e0b;
             --warning-dark: #d97706;
             --warning-soft: #fef3c7;
-            
-            --danger: #ef4444; /* أحمر ناعم */
+            --danger: #ef4444;
             --danger-dark: #dc2626;
             --danger-soft: #fee2e2;
-            
             --info: var(--primary);
             --info-soft: var(--primary-soft);
-            
-            /* ✅ التأثيرات المحسنة */
             --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
             --shadow: 0 6px 18px -6px rgba(15, 23, 42, 0.08), 0 3px 6px -2px rgba(15, 23, 42, 0.06);
             --shadow-md: 0 10px 20px -6px rgba(15, 23, 42, 0.12), 0 6px 12px -4px rgba(15, 23, 42, 0.08);
             --shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.18), 0 10px 20px -8px rgba(15, 23, 42, 0.12);
             --shadow-xl: 0 30px 60px -18px rgba(15, 23, 42, 0.25);
-
-            /* ظلال ملونة محسنة */
             --shadow-primary: 0 10px 25px -6px rgba(14, 165, 164, 0.12), 0 6px 12px -4px rgba(14, 165, 164, 0.06);
             --shadow-secondary: 0 10px 25px -6px rgba(245, 158, 11, 0.12), 0 6px 12px -4px rgba(245, 158, 11, 0.06);
             --shadow-accent: 0 10px 25px -6px rgba(124, 58, 237, 0.12), 0 6px 12px -4px rgba(124, 58, 237, 0.06);
-            
-            /* ✅ التدرجات المحسنة */
             --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
             --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
             --gradient-dark: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
-            --gradient-hero: linear-gradient(135deg, var(--darker) 0%, var(--dark-light) 40%, rgba(14,165,164,0.9) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--darker) 0%, var(--dark-light) 40%, rgba(14, 165, 164, 0.9) 100%);
             --gradient-success: linear-gradient(135deg, var(--success) 0%, var(--accent-light) 100%);
             --gradient-warning: linear-gradient(135deg, var(--warning) 0%, var(--secondary-light) 100%);
             --gradient-gold-blue: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            
-            /* ✅ التحولات */
             --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            
-            /* ✅ الزوايا المحسنة */
             --radius-sm: 6px;
             --radius: 10px;
             --radius-md: 12px;
             --radius-lg: 16px;
             --radius-xl: 24px;
             --radius-full: 9999px;
-            
-            /* ✅ الأبعاد */
             --container-width: 1200px;
             --header-height: 80px;
         }
 
-        /* ✅ وضع الليل المحسن */
         body.night-mode {
             --dark: #0f172a;
             --dark-light: #1e293b;
             --darker: #0a0f1a;
-            
             --light: #1e293b;
             --lighter: #334155;
             --light-gray: #475569;
-            
             --gray: #94a3b8;
             --gray-light: #475569;
             --gray-dark: #cbd5e1;
-            
             --primary-soft: rgba(37, 99, 235, 0.15);
             --secondary-soft: rgba(217, 119, 6, 0.15);
             --accent-soft: rgba(13, 148, 136, 0.15);
-            
-            /* ظلال داكنة أكثر */
             --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
             --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
             --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
             --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            
             --shadow-primary: 0 10px 15px -3px rgba(37, 99, 235, 0.2), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
             --shadow-secondary: 0 10px 15px -3px rgba(217, 119, 6, 0.2), 0 4px 6px -2px rgba(217, 119, 6, 0.1);
         }
 
-        /* ✅ Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -229,7 +196,6 @@
             color: var(--gray-dark);
         }
 
-        /* ✅ Container */
         .container {
             width: 100%;
             max-width: var(--container-width);
@@ -237,7 +203,6 @@
             padding: 0 1.25rem;
         }
 
-        /* ✅ Sections */
         section {
             padding: 5rem 0;
             position: relative;
@@ -286,7 +251,6 @@
             color: var(--gray);
         }
 
-        /* ✅ Buttons المحسنة */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -315,7 +279,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
             z-index: -1;
             transition: var(--transition);
             opacity: 0;
@@ -335,7 +299,6 @@
             transform: translateY(-1px);
         }
 
-        /* ✅ تنسيقات الأزرار المختلفة */
         .btn-secondary {
             background: var(--gradient-secondary);
             color: var(--darker);
@@ -379,7 +342,6 @@
             font-size: 1.1rem;
         }
 
-        /* ✅ Card component محسن */
         .card {
             background: var(--lighter);
             border-radius: var(--radius-lg);
@@ -398,7 +360,6 @@
             border-color: var(--gray);
         }
 
-        /* ✅ Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -433,7 +394,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
+            0%,
+            100% {
                 transform: scale(1);
             }
             50% {
@@ -442,7 +404,8 @@
         }
 
         @keyframes float {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateY(0);
             }
             50% {
@@ -473,7 +436,6 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        /* ✅ Header & Navigation المحسن */
         header {
             background-color: rgba(17, 24, 39, 0.95);
             backdrop-filter: blur(10px);
@@ -631,7 +593,6 @@
             transform: rotate(15deg);
         }
 
-        /* ✅ Mobile Menu */
         .menu-toggle {
             display: none;
             background: none;
@@ -752,12 +713,24 @@
             animation: fadeInRight 0.3s ease forwards;
         }
 
-        .mobile-links li:nth-child(1) { animation-delay: 0.1s; }
-        .mobile-links li:nth-child(2) { animation-delay: 0.15s; }
-        .mobile-links li:nth-child(3) { animation-delay: 0.2s; }
-        .mobile-links li:nth-child(4) { animation-delay: 0.25s; }
-        .mobile-links li:nth-child(5) { animation-delay: 0.3s; }
-        .mobile-links li:nth-child(6) { animation-delay: 0.35s; }
+        .mobile-links li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .mobile-links li:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+        .mobile-links li:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        .mobile-links li:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+        .mobile-links li:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+        .mobile-links li:nth-child(6) {
+            animation-delay: 0.35s;
+        }
 
         .mobile-links a {
             color: #e0e6f0;
@@ -836,7 +809,6 @@
             color: var(--primary-light);
         }
 
-        /* ✅ Hero Section المحسن */
         .hero {
             background: var(--gradient-hero);
             color: white;
@@ -856,7 +828,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.2) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
@@ -977,7 +949,6 @@
             opacity: 1;
         }
 
-        /* ✅ About Section المحسن */
         .about {
             background-color: var(--lighter);
             position: relative;
@@ -1008,6 +979,7 @@
             transition: var(--transition);
             animation: float 3s ease-in-out infinite;
             border: 8px solid white;
+            cursor: pointer;
         }
 
         body.night-mode .about-img {
@@ -1082,7 +1054,6 @@
             background: rgba(37, 99, 235, 0.25);
         }
 
-        /* ✅ Services/Courses Section المحسن */
         .services {
             background-color: var(--light-gray);
             position: relative;
@@ -1138,6 +1109,7 @@
             height: 12.5rem;
             object-fit: cover;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .service-card:hover .service-img {
@@ -1181,7 +1153,6 @@
             color: var(--gray);
         }
 
-        /* ✅ أعمالي Section المحسن */
         .my-works {
             background: linear-gradient(135deg, var(--primary-soft) 0%, var(--secondary-soft) 100%);
             position: relative;
@@ -1233,6 +1204,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-slow);
+            cursor: pointer;
         }
 
         .work-card:hover .work-image img {
@@ -1259,7 +1231,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -1377,7 +1349,6 @@
             box-shadow: var(--shadow);
         }
 
-        /* ✅ تطبيقاتي Section المحسن */
         .my-apps {
             background-color: var(--lighter);
             position: relative;
@@ -1455,6 +1426,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-slow);
+            cursor: pointer;
         }
 
         .app-card-compact:hover .app-card-image img {
@@ -1542,22 +1514,22 @@
             border-color: var(--gray);
         }
 
-        .app-size, .app-update {
+        .app-size,
+        .app-update {
             font-size: 0.85rem;
             color: var(--gray-dark);
         }
 
         .app-update {
-            background: rgba(0,0,0,0.05);
+            background: rgba(0, 0, 0, 0.05);
             padding: 0.25rem 0.75rem;
             border-radius: var(--radius-xl);
         }
 
         body.night-mode .app-update {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* ✅ Contact Section المحسن */
         .contact {
             background-color: var(--light-gray);
             position: relative;
@@ -1622,10 +1594,9 @@
             resize: vertical;
         }
 
-        /* ✅ Footer المحسن */
         footer {
-            background: linear-gradient(180deg, rgba(17,24,39,1) 0%, rgba(11,17,31,1) 100%);
-            color: rgba(255,255,250,0.95);
+            background: linear-gradient(180deg, rgba(17, 24, 39, 1) 0%, rgba(11, 17, 31, 1) 100%);
+            color: rgba(255, 255, 250, 0.95);
             padding-top: 4rem;
             position: relative;
             overflow: hidden;
@@ -1700,15 +1671,15 @@
             justify-content: center;
             width: 3rem;
             height: 3rem;
-            background: rgba(255,255,255,0.03);
-            color: rgba(255,255,250,0.95);
+            background: rgba(255, 255, 255, 0.03);
+            color: rgba(255, 255, 250, 0.95);
             border-radius: var(--radius);
             font-size: 1.3rem;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
             z-index: 1;
-            border: 1px solid rgba(217,119,6,0.1);
+            border: 1px solid rgba(217, 119, 6, 0.1);
         }
 
         .footer-social a::before {
@@ -1726,7 +1697,7 @@
 
         .footer-social a:hover {
             transform: translateY(-4px) scale(1.06);
-            box-shadow: 0 12px 30px rgba(217,119,6,0.2);
+            box-shadow: 0 12px 30px rgba(217, 119, 6, 0.2);
             color: var(--darker);
         }
 
@@ -1869,7 +1840,6 @@
             font-weight: 700;
         }
 
-        /* ✅ Scroll to Top Button المحسن */
         .scroll-top {
             position: fixed;
             bottom: 2rem;
@@ -1903,7 +1873,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* ✅ Toast Notification المحسن */
         .toast {
             position: fixed;
             bottom: 2rem;
@@ -1929,7 +1898,149 @@
             visibility: visible;
         }
 
-        /* ✅ Modal Windows المحسن */
+        /* ✅ Lightbox - عرض الصور بحجم كامل */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideUp 0.4s ease;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10000;
+            transition: var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox-close:hover {
+            background: var(--danger);
+            transform: rotate(90deg) scale(1.1);
+            border-color: var(--danger);
+        }
+
+        .lightbox-nav {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 10000;
+            transition: var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-nav.prev {
+            right: 2rem;
+        }
+
+        .lightbox-nav.next {
+            left: 2rem;
+        }
+
+        .lightbox-counter {
+            position: fixed;
+            bottom: 2rem;
+            right: 50%;
+            transform: translateX(50%);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(5px);
+            z-index: 10000;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .lightbox-nav {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.2rem;
+            }
+            .lightbox-nav.prev {
+                right: 0.5rem;
+            }
+            .lightbox-nav.next {
+                left: 0.5rem;
+            }
+            .lightbox-close {
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.2rem;
+                top: 1rem;
+                left: 1rem;
+            }
+            .lightbox-content img {
+                max-height: 70vh;
+            }
+            .lightbox-counter {
+                bottom: 1rem;
+                font-size: 0.85rem;
+                padding: 0.3rem 1rem;
+            }
+        }
+
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -1947,8 +2058,12 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         .modal-content {
@@ -1967,8 +2082,14 @@
         }
 
         @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .close-modal {
@@ -2147,6 +2268,7 @@
             transition: var(--transition);
             height: 12.5rem;
             position: relative;
+            cursor: pointer;
         }
 
         .screenshot-item:hover {
@@ -2159,6 +2281,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-slow);
+            cursor: pointer;
         }
 
         .screenshot-item:hover img {
@@ -2241,7 +2364,6 @@
             transform: translateY(-3px);
         }
 
-        /* ✅ Loading Spinner */
         .spinner {
             display: none;
             width: 3rem;
@@ -2254,10 +2376,11 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
-        /* ✅ Stats Counter */
         .stats-section {
             background: var(--gradient-dark);
             color: white;
@@ -2290,7 +2413,6 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        /* ✅ CTA Section المحسن */
         .cta-section {
             background: var(--gradient-primary);
             color: white;
@@ -2315,24 +2437,19 @@
             opacity: 0.9;
         }
 
-        /* ✅ Responsive Design */
         @media (max-width: 1200px) {
             .container {
                 max-width: 960px;
             }
-            
             .hero h1 {
                 font-size: 3rem;
             }
-            
             .hero h1 .greeting {
                 font-size: 3.2rem;
             }
-            
             .hero h1 .name {
                 font-size: 3rem;
             }
-            
             .hero h1 .title {
                 font-size: 2rem;
             }
@@ -2342,46 +2459,38 @@
             .container {
                 max-width: 720px;
             }
-            
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
             .about-img {
                 max-width: 20rem;
             }
-            
             .modal-grid {
                 grid-template-columns: 1fr;
             }
-            
             .works-grid {
                 grid-template-columns: 1fr;
                 max-width: 500px;
                 margin-left: auto;
                 margin-right: auto;
             }
-            
             .apps-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .nav-links, .search-bar {
+            .nav-links,
+            .search-bar {
                 display: none;
             }
-            
             .menu-toggle {
                 display: flex;
             }
-
-            /* Ensure the hamburger icon is fixed to the right on mobile */
             .navbar {
                 position: relative;
             }
-
             .menu-toggle {
                 position: absolute;
                 top: 50%;
@@ -2389,8 +2498,6 @@
                 transform: translateY(-50%);
                 z-index: 1003;
             }
-
-            /* Place the night-mode (light/dark) button on the left on mobile */
             .night-mode-btn {
                 position: absolute;
                 top: 50%;
@@ -2398,113 +2505,89 @@
                 transform: translateY(-50%);
                 z-index: 1003;
             }
-            
             .navbar {
                 justify-content: space-between;
             }
-            
             .logo {
                 font-size: 1.5rem;
-                /* Center logo text horizontally inside the header on mobile */
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1002;
             }
-            
             .logo-icon {
                 width: 2rem;
                 height: 2rem;
                 font-size: 1rem;
             }
-            
             .hero {
                 padding: 8rem 0 4rem;
                 min-height: auto;
             }
-            
             .hero h1 {
                 font-size: 2.3rem;
             }
-            
             .hero h1 .greeting {
                 font-size: 2.5rem;
             }
-            
             .hero h1 .name {
                 font-size: 2rem;
             }
-            
             .hero h1 .title {
                 font-size: 1.6rem;
             }
-            
             .hero .tagline {
                 font-size: 1.1rem;
                 padding: 0.75rem 1rem;
             }
-            
             .section-title {
                 font-size: 2rem;
             }
-            
             .hero-btns {
                 flex-direction: column;
                 align-items: center;
             }
-            
             .btn {
                 width: 100%;
                 max-width: 250px;
             }
-            
             .work-buttons {
                 flex-direction: column;
             }
-            
             .app-download-btns {
                 grid-template-columns: 1fr;
             }
-            
             .screenshots-grid {
                 grid-template-columns: 1fr;
             }
-            
             .modal-buttons {
                 flex-direction: column;
             }
-            
             .modal-btn {
                 width: 100%;
                 justify-content: center;
             }
-            
             .feature-item {
                 flex-direction: column;
                 text-align: center;
                 align-items: center;
             }
-            
             .apps-grid {
                 grid-template-columns: 1fr;
                 max-width: 400px;
                 margin: 2rem auto;
             }
-            
             .mobile-menu {
                 width: 90%;
                 max-width: 300px;
                 padding: 4rem 1rem 2rem;
-                /* Force drawer to originate from the right on small screens */
                 right: -100%;
                 left: auto;
             }
-            
             .mobile-links a {
                 font-size: 1.1rem;
                 padding: 0.75rem;
             }
-            
             .scroll-top {
                 bottom: 1rem;
                 left: 1rem;
@@ -2518,58 +2601,45 @@
             .container {
                 padding: 0 1rem;
             }
-            
             section {
                 padding: 3rem 0;
             }
-            
             .hero {
                 padding: 6rem 0 3rem;
             }
-            
             .hero h1 {
                 font-size: 1.8rem;
             }
-            
             .hero h1 .greeting {
                 font-size: 2rem;
             }
-            
             .hero h1 .name {
                 font-size: 1.6rem;
             }
-            
             .hero h1 .title {
                 font-size: 1.3rem;
             }
-            
             .section-title {
                 font-size: 1.8rem;
                 margin-bottom: 2rem;
             }
-            
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
             .footer-links ul,
             .footer-contact p {
                 justify-content: center;
             }
-            
             .modal-body {
                 padding: 1.5rem;
             }
-            
             .modal-header {
                 padding: 2rem 1.5rem;
             }
-            
             .modal-header h2 {
                 font-size: 1.8rem;
             }
-            
             .stat-number {
                 font-size: 2.5rem;
             }
@@ -2579,34 +2649,27 @@
             .hero h1 {
                 font-size: 1.5rem;
             }
-            
             .hero h1 .greeting {
                 font-size: 1.8rem;
             }
-            
             .hero h1 .name {
                 font-size: 1.4rem;
             }
-            
             .hero h1 .title {
                 font-size: 1.1rem;
             }
-            
             .section-title {
                 font-size: 1.6rem;
             }
-            
             .btn {
                 padding: 0.75rem 1.5rem;
                 font-size: 0.9rem;
             }
-            
             .stat-number {
                 font-size: 2rem;
             }
         }
 
-        /* ✅ Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
@@ -2615,13 +2678,11 @@
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-            
             html {
                 scroll-behavior: auto;
             }
         }
 
-        /* ✅ Print Styles */
         @media print {
             .nav-actions,
             .hero-social,
@@ -2629,20 +2690,18 @@
             .mobile-menu,
             .menu-toggle,
             .work-buttons .secondary,
-            .modal-buttons .secondary {
+            .modal-buttons .secondary,
+            .lightbox-overlay {
                 display: none !important;
             }
-            
             body {
                 background: white !important;
                 color: black !important;
                 font-size: 12pt;
             }
-            
             section {
                 padding: 2rem 0;
             }
-            
             .btn {
                 border: 1px solid black;
                 background: white !important;
@@ -2655,37 +2714,43 @@
     <!-- ✅ Header -->
     <header id="main-header">
         <div class="container">
-            <nav class="navbar">
-                <a href="#home" class="logo">
+            <nav class="navbar navbar-expand-lg" aria-label="رئيسي">
+                <a href="#home" class="logo navbar-brand d-flex align-items-center">
                     <div class="logo-icon">ع</div>
-                    عيسى <span>شايع</span>
+                    <span class="ms-2">عيسى <span>شايع</span></span>
                 </a>
-                
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">الرئيسية</a></li>
-                    <li><a href="#about">من أنا</a></li>
-                    <li><a href="#services">الدورات</a></li>
-                    <li><a href="#works">اعمالي</a></li>
-                    <li><a href="#apps">تطبيقاتي</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
-                
-                <div class="nav-actions">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="#mainNav" aria-expanded="false" aria-label="تبديل التنقل">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav-links navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="#home">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">من أنا</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">الدورات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#works">اعمالي</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#apps">تطبيقاتي</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-actions d-flex align-items-center gap-2">
                     <input type="text" class="search-bar" id="searchBar" placeholder="ابحث عن الكورس...">
                     <button class="night-mode-btn" id="nightModeBtn" aria-label="وضع الليل">
                         <i class="fas fa-moon"></i>
                     </button>
-                    <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
+                    <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="القائمة">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </nav>
         </div>
     </header>
-    
+
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-    
+
     <!-- ✅ Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <div class="mobile-menu-header">
@@ -2694,28 +2759,28 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <ul class="mobile-links">
             <li><a href="#home" class="mobile-nav-link active" data-section="home">
-                <i class="fas fa-home"></i> الرئيسية
-            </a></li>
+                    <i class="fas fa-home"></i> الرئيسية
+                </a></li>
             <li><a href="#about" class="mobile-nav-link" data-section="about">
-                <i class="fas fa-user"></i> من أنا
-            </a></li>
+                    <i class="fas fa-user"></i> من أنا
+                </a></li>
             <li><a href="#services" class="mobile-nav-link" data-section="services">
-                <i class="fas fa-graduation-cap"></i> الدورات
-            </a></li>
+                    <i class="fas fa-graduation-cap"></i> الدورات
+                </a></li>
             <li><a href="#works" class="mobile-nav-link" data-section="works">
-                <i class="fas fa-briefcase"></i> اعمالي
-            </a></li>
+                    <i class="fas fa-briefcase"></i> اعمالي
+                </a></li>
             <li><a href="#apps" class="mobile-nav-link" data-section="apps">
-                <i class="fas fa-mobile-alt"></i> تطبيقاتي
-            </a></li>
+                    <i class="fas fa-mobile-alt"></i> تطبيقاتي
+                </a></li>
             <li><a href="#contact" class="mobile-nav-link" data-section="contact">
-                <i class="fas fa-envelope"></i> اتصل بنا
-            </a></li>
+                    <i class="fas fa-envelope"></i> اتصل بنا
+                </a></li>
         </ul>
-        
+
         <div class="mobile-menu-footer">
             <div class="mobile-social">
                 <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك" target="_blank">
@@ -2731,14 +2796,14 @@
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
-            
+
             <div class="mobile-contact-info">
                 <p><i class="fas fa-phone"></i> +967 776 295 164</p>
                 <p><i class="fas fa-envelope"></i> eissashaya@gmail.com</p>
             </div>
         </div>
     </div>
-    
+
     <!-- ✅ Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -2748,26 +2813,26 @@
                     <span class="name">م/ عيسى شايع </span>
                     <span class="title">مبرمج ومطور ويب وتطبيقات موبايل</span>
                 </h1>
-               
+
                 <p class="tagline">
                     "البرمجة ليست مجرد كتابة أكواد، بل هي فن حل المشكلات وبناء المستقبل"
                 </p>
-                
-                <div class="hero-btns">
-                    <a href="#services" class="btn">
+
+                <div class="hero-btns d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#services" class="btn btn-primary">
                         <i class="fas fa-graduation-cap"></i> ابدأ رحلة التعلم
                     </a>
                     <a href="#works" class="btn btn-secondary">
                         <i class="fas fa-briefcase"></i> استعرض أعمالي
                     </a>
-                    <a href="#apps" class="btn btn-accent">
+                    <a href="#apps" class="btn btn-accent btn-outline-light">
                         <i class="fas fa-mobile-alt"></i> اكتشف تطبيقاتي
                     </a>
-                    <a href="#contact" class="btn btn-outline">
+                    <a href="#contact" class="btn btn-outline-light">
                         <i class="fas fa-comments"></i> تواصل معي الآن
                     </a>
                 </div>
-                
+
                 <div class="hero-social">
                     <a href="https://facebook.com/profile.php?id=100031199948943" aria-label="فيسبوك" target="_blank">
                         <i class="fab fa-facebook-f"></i>
@@ -2785,7 +2850,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ Stats Section -->
     <section class="stats-section">
         <div class="container">
@@ -2802,21 +2867,20 @@
                     <div class="stat-number" id="experienceCount">2+</div>
                     <div class="stat-label">سنوات خبرة</div>
                 </div>
-               
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ About Section -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title fade-in">من أنا؟</h2>
-            
+
             <div class="about-content">
                 <div class="about-img-container fade-in-right">
-                    <img src="imgs/1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy" width="400" height="400">
+                    <img src="imgs/1.jpg" alt="المبرمج عيسى شايع" class="about-img" loading="lazy" width="400" height="400" onclick="openLightbox(this.src)">
                 </div>
-                
+
                 <div class="about-text fade-in-left">
                     <h3>مرحبًا، أنا <span>عيسى إبراهيم شايع</span></h3>
                     <p>
@@ -2832,7 +2896,7 @@
                         مع التركيز على الأداء، الأمان، وسهولة الاستخدام.
                         يمكنك متابعة أعمالي وزيارة موقعي الشخصي أو حساباتي على منصات التواصل الاجتماعي.
                     </p>
-                    
+
                     <div class="about-skills">
                         <span class="skill-tag">Flutter</span>
                         <span class="skill-tag">Dart</span>
@@ -2850,33 +2914,35 @@
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ Services/Courses Section -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="section-title fade-in">الدورات التعليمية</h2>
             <p class="section-subtitle fade-in">تعلم البرمجة من الصفر إلى الاحتراف مع دورات عملية ومباشرة</p>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <img src="imgs/image.png" alt="Python Course" class="service-img" loading="lazy" width="400" height="200">
-                    <div class="service-info">
-                        <h3><a href="pyhon.html">أساسيات بايثون للمبتدئين</a></h3>
-                        <p>تعلم لغة البرمجة بايثون بسهولة وبشكل عملي. هذه الدورة تغطي المفاهيم الأساسية للبرمجة باستخدام بايثون مع تطبيقات عملية.</p>
-                        <a href="pyhon.html" class="btn">تعلم الآن</a>
+
+            <div class="row gy-4 services-grid">
+                <div class="col-md-6">
+                    <div class="service-card card fade-in h-100">
+                        <img src="imgs/image.png" alt="Python Course" class="service-img card-img-top" loading="lazy" width="400" height="200" onclick="openLightbox(this.src)">
+                        <div class="service-info card-body">
+                            <h3 class="card-title"><a href="pyhon.html">أساسيات بايثون للمبتدئين</a></h3>
+                            <p class="card-text">تعلم لغة البرمجة بايثون بسهولة وبشكل عملي. هذه الدورة تغطي المفاهيم الأساسية للبرمجة باستخدام بايثون مع تطبيقات عملية.</p>
+                            <a href="pyhon.html" class="btn btn-primary">تعلم الآن</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="service-card fade-in">
-                    <img src="imgs/image44.jpg" alt="C++ Course" class="service-img" loading="lazy" width="400" height="200">
-                    <div class="service-info">
-                        <h3><a href="c++.html">أساسيات C++ المتقدمة</a></h3>
-                        <p>لغة قوية لتطوير البرامج عالية الأداء. تعلم البرمجة الكائنية والتركيز على الأداء باستخدام C++ مع مشاريع عملية.</p>
-                        <a href="c++.html" class="btn">تعلم الآن</a>
+
+                <div class="col-md-6">
+                    <div class="service-card card fade-in h-100">
+                        <img src="imgs/image44.jpg" alt="C++ Course" class="service-img card-img-top" loading="lazy" width="400" height="200" onclick="openLightbox(this.src)">
+                        <div class="service-info card-body">
+                            <h3 class="card-title"><a href="c++.html">أساسيات C++ المتقدمة</a></h3>
+                            <p class="card-text">لغة قوية لتطوير البرامج عالية الأداء. تعلم البرمجة الكائنية والتركيز على الأداء باستخدام C++ مع مشاريع عملية.</p>
+                            <a href="c++.html" class="btn btn-primary">تعلم الآن</a>
+                        </div>
                     </div>
                 </div>
-                
-              
             </div>
         </div>
     </section>
@@ -2888,118 +2954,140 @@
             <p class="section-subtitle fade-in">
                 إليك بعض الأعمال التي قمت بتطويرها مؤخراً، يمكنك النقر على أي عمل لمشاهدة التفاصيل الكاملة
             </p>
-            
-<div class="container py-5">
 
-    <div class="row g-4">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <!-- البطاقة الأولى -->
+                    <div class="col-md-6">
+                        <div class="card shadow h-100">
+                            <img src="imgs/ساعات/ساعات 1.PNG" class="card-img-top" style="height:220px; object-fit:cover; cursor:pointer;" onclick="openLightbox(this.src)">
+                            <div class="card-body">
+                                <h4 class="card-title">مواقع TimeMasters لبيع الساعات الفاخرة</h4>
+                                <p class="card-text text-muted">يعرض أحدث الساعات الكلاسيكية والفاخرة</p>
 
-        <!-- البطاقة الأولى -->
-        <div class="col-md-6">
-            <div class="card shadow h-100">
-                <img src="imgs/ساعات/ساعات 1.PNG" class="card-img-top" style="height:220px; object-fit:cover;">
-                <div class="card-body">
-                    <h4 class="card-title">مواقع TimeMasters لبيع الساعات الفاخرة</h4>
-                    <p class="card-text text-muted">يعرض أحدث الساعات الكلاسيكية والفاخرة</p>
+                                <button class="btn btn-primary" onclick="showDetails(
+                                    'تفاصيل موقع الساعات',
+                                    'موقع TimeMasters متخصص في عرض وبيع الساعات الفاخرة بأحدث التصاميم.',
+                                    ['imgs/ساعات/ساعات2.PNG','imgs/ساعات/ساعات3.PNG','imgs/ساعات/ساعات4.PNG','imgs/ساعات/ساعات5.PNG']
+                                    )">
+                                    عرض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
-                    <button class="btn btn-primary"
-                    onclick="showDetails(
-                    'تفاصيل موقع الساعات',
-                    'موقع TimeMasters متخصص في عرض وبيع الساعات الفاخرة بأحدث التصاميم.',
-                    ['imgs/ساعات/ساعات2.PNG','imgs/ساعات/ساعات3.PNG','imgs/ساعات/ساعات4.PNG','imgs/ساعات/ساعات5.PNG']
-                    )">
-                    عرض التفاصيل
-                    </button>
+                    <!-- البطاقة الثانية -->
+                    <div class="col-md-6">
+                        <div class="card shadow h-100">
+                            <img src="imgs/سحاب/التقاط.PNG" class="card-img-top" style="height:220px; object-fit:cover; cursor:pointer;" onclick="openLightbox(this.src)">
+                            <div class="card-body">
+                                <h4 class="card-title">نظام مجموعة سحاب لتربية المواشي</h4>
+                                <p class="card-text text-muted">
+                                    مجموعة سحاب النموذجية لتربية المواشي - نظام إدارة تربية المواشي
+                                </p>
+
+                                <button class="btn btn-success" onclick="showDetails(
+                                    'تفاصيل نظام سحاب',
+                                    'نظام متكامل لإدارة المواشي ومتابعة التغذية والإنتاج والسجلات. يدير جميع بيانات الحظائر والمواليد وتلقيح الأغنام النظام يعمل لموسسة في المملكة العربية السعودية لعرض بقيه التفاصيل تواصل مع المبرمج. ',
+                                    ['imgs/سحاب/سحاب2.png','imgs/سحاب/سحاب3.png','imgs/سحاب/سحاب4.png','imgs/سحاب/سحاب5.png']
+                                    )">
+                                    عرض التفاصيل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- البطاقة الثانية -->
-        <div class="col-md-6">
-            <div class="card shadow h-100">
-                <img src="imgs/سحاب/التقاط.PNG" class="card-img-top" style="height:220px; object-fit:cover;">
-                <div class="card-body">
-                    <h4 class="card-title">نظام مجموعة سحاب لتربية المواشي</h4>
-                    <p class="card-text text-muted">
-                        مجموعة سحاب النموذجية لتربية المواشي - نظام إدارة تربية المواشي
-                    </p>
-
-                    <button class="btn btn-success"
-                    onclick="showDetails(
-                    'تفاصيل نظام سحاب',
-                    'نظام متكامل لإدارة المواشي ومتابعة التغذية والإنتاج والسجلات. يدير جميع بيانات الحظائر والمواليد وتلقيح الأغنام النظام يعمل لموسسة في المملكة العربية السعودية لعرض بقيه التفاصيل تواصل مع المبرمج. ',
-                    ['imgs/سحاب/سحاب2.png','imgs/سحاب/سحاب3.png','imgs/سحاب/سحاب4.png','imgs/سحاب/سحاب5.png']
-                    )">
-                    عرض التفاصيل
-                    </button>
+            <!-- Modal -->
+            <div class="modal fade" id="detailsModal" tabindex="-1">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle"></h5>
+                            <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="modalDesc"></p>
+                            <div class="row g-3" id="gallery"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+            </script>
 
-</div>
+            <script>
+                function showDetails(title, desc, images) {
 
-<!-- Modal -->
-<div class="modal fade" id="detailsModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
+                    document.getElementById("modalTitle").innerText = title;
+                    document.getElementById("modalDesc").innerText = desc;
 
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal"></button>
-      </div>
+                    let gallery = document.getElementById("gallery");
+                    gallery.innerHTML = "";
 
-      <div class="modal-body">
-        <p id="modalDesc"></p>
+                    images.forEach(img => {
+                        gallery.innerHTML += `
+                                <div class="col-md-6">
+                                    <img src="${img}" class="img-fluid rounded shadow-sm w-100" style="height:180px; object-fit:cover; cursor:pointer;" onclick="openLightbox('${img}')">
+                                </div>
+                            `;
+                    });
 
-        <div class="row g-3" id="gallery"></div>
-      </div>
+                    let modal = new bootstrap.Modal(document.getElementById('detailsModal'));
+                    modal.show();
+                }
 
-    </div>
-  </div>
-</div>
+                // ✅ Lightbox Functions
+                function openLightbox(imageSrc) {
+                    const lightbox = document.getElementById('lightboxOverlay');
+                    const lightboxImg = document.getElementById('lightboxImg');
+                    lightboxImg.src = imageSrc;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+                function closeLightbox() {
+                    const lightbox = document.getElementById('lightboxOverlay');
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
 
-<script>
-function showDetails(title, desc, images){
+                // Close lightbox with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    }
+                });
 
-    document.getElementById("modalTitle").innerText = title;
-    document.getElementById("modalDesc").innerText = desc;
+                // Close lightbox when clicking on overlay background
+                document.addEventListener('click', function(e) {
+                    const lightbox = document.getElementById('lightboxOverlay');
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+            </script>
 
-    let gallery = document.getElementById("gallery");
-    gallery.innerHTML = "";
-
-    images.forEach(img => {
-        gallery.innerHTML += `
-            <div class="col-md-6">
-                <img src="${img}" class="img-fluid rounded shadow-sm w-100" style="height:180px; object-fit:cover;">
-            </div>
-        `;
-    });
-
-    let modal = new bootstrap.Modal(document.getElementById('detailsModal'));
-    modal.show();
-}
-</script>
             <div class="works-grid">
-                
+
                 <!-- عمل 1: نظام معرض السيارات -->
                 <div class="work-card fade-in" data-work="cars">
                     <div class="work-image">
-                        <img src="imgs/معرض1.jpg" alt="نظام إدارة معرض السيارات" loading="lazy" width="400" height="250">
+                        <img src="imgs/معرض1.jpg" alt="نظام إدارة معرض السيارات" loading="lazy" width="400" height="250" onclick="openLightbox(this.src)">
                         <div class="work-badge">نظام معرض سيارات متكامل</div>
                         <div class="work-overlay">
                             <h3>نظام إدارة معرض السيارات</h3>
                             <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة</p>
                         </div>
                     </div>
-                    
+
                     <div class="work-content">
                         <h3>نظام إدارة معرض السيارات</h3>
                         <p>نظام متكامل لإدارة معارض السيارات، يتيح إدارة المخزون والمبيعات والعملاء بكفاءة عالية مع واجهة مستخدم سهلة الاستخدام.</p>
-                        
+
                         <div class="work-features">
                             <ul>
                                 <li><i class="fas fa-check"></i> إدارة كاملة للسيارات</li>
@@ -3008,33 +3096,30 @@ function showDetails(title, desc, images){
                                 <li><i class="fas fa-check"></i> واجهة إدارية متطورة</li>
                             </ul>
                         </div>
-                        
+
                         <div class="work-buttons">
                             <button class="work-btn primary view-details" data-work="cars">
                                 <i class="fas fa-eye"></i> عرض التفاصيل
                             </button>
-                            <a href="https://eissashaya.github.io/Exhibition_cars/" target="_blank" class="work-btn secondary">
-                                <i class="fas fa-external-link-alt"></i> زيارة الموقع
-                            </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- عمل 2: نظام محلات الجوالات -->
                 <div class="work-card fade-in" data-work="mobiles">
                     <div class="work-image">
-                        <img src="imgs/جوالات1.jpg" alt="نظام إدارة مخزون محل الجوالات" loading="lazy" width="400" height="250">
+                        <img src="imgs/جوالات1.jpg" alt="نظام إدارة مخزون محل الجوالات" loading="lazy" width="400" height="250" onclick="openLightbox(this.src)">
                         <div class="work-badge">نظام إدارة المخزون</div>
                         <div class="work-overlay">
                             <h3>نظام إدارة مخزون الجوالات</h3>
                             <p>حل متكامل لإدارة محلات الجوالات والاكسسوارات</p>
                         </div>
                     </div>
-                    
+
                     <div class="work-content">
                         <h3>نظام إدارة مخزون الجوالات</h3>
                         <p>نظام متطور لإدارة مخزون محلات الجوالات، يتيح تتبع المبيعات والمشتريات وإدارة العملاء والموردين بفعالية.</p>
-                        
+
                         <div class="work-features">
                             <ul>
                                 <li><i class="fas fa-check"></i> إدارة المخزون الشاملة</li>
@@ -3043,14 +3128,11 @@ function showDetails(title, desc, images){
                                 <li><i class="fas fa-check"></i> تقارير مالية مفصلة</li>
                             </ul>
                         </div>
-                        
+
                         <div class="work-buttons">
                             <button class="work-btn primary view-details" data-work="mobiles">
                                 <i class="fas fa-eye"></i> عرض التفاصيل
                             </button>
-                            <a href="javascript:void(0);" class="work-btn secondary demo-btn" data-work="mobiles">
-                                <i class="fas fa-play-circle"></i> تجربة النظام
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -3058,18 +3140,18 @@ function showDetails(title, desc, images){
                 <!-- عمل 3: ريال مدريد -->
                 <div class="work-card fade-in" data-work="rial">
                     <div class="work-image">
-                        <img src="imgs/ريال 1.jpeg" alt="ريال مدريد - النادي الملكي" loading="lazy" width="400" height="250">
+                        <img src="imgs/ريال 1.jpeg" alt="ريال مدريد - النادي الملكي" loading="lazy" width="400" height="250" onclick="openLightbox(this.src)">
                         <div class="work-badge">النادي الملكي</div>
                         <div class="work-overlay">
                             <h3>ريال مدريد - أسطورة كرة القدم</h3>
                             <p>أعظم نادي في تاريخ كرة القدم</p>
                         </div>
                     </div>
-                    
+
                     <div class="work-content">
                         <h3>ريال مدريد - أسطورة كرة القدم</h3>
                         <p>النادي الملكي الذي يمتلك 15 لقب دوري أبطال أوروبا و36 لقب الدوري الإسباني، أيقونة كرة القدم العالمية وأكثر الأندية تتويجاً في التاريخ.</p>
-                        
+
                         <div class="work-features">
                             <ul>
                                 <li><i class="fas fa-check"></i> 15 لقب دوري أبطال أوروبا</li>
@@ -3078,31 +3160,25 @@ function showDetails(title, desc, images){
                                 <li><i class="fas fa-check"></i> 20 لقب كأس الملك</li>
                             </ul>
                         </div>
-                        
+
                         <div class="work-buttons">
                             <button class="work-btn primary view-details" data-work="rial">
                                 <i class="fas fa-eye"></i> عرض التفاصيل
                             </button>
-                            <a href="https://eissashaya.github.io/rial_madrid/" target="_blank" rel="noopener noreferrer" class="work-btn secondary demo-btn" data-work="rial">
-                                <i class="fas fa-trophy"></i> زيارة الموقع
-                            </a>
                         </div>
                     </div>
                 </div>
-    
-              
 
-
-                  <div class="work-card fade-in" data-work="about">
+                <div class="work-card fade-in" data-work="about">
                     <div class="work-image">
-                        <img src="imgs/abut1.jpeg" alt=" مواقع تعريفي " loading="lazy" width="400" height="250">
-                        <div class="work-badge"> مواقع تعريفي</div>
+                        <img src="imgs/abut1.jpeg" alt="مواقع تعريفي" loading="lazy" width="400" height="250" onclick="openLightbox(this.src)">
+                        <div class="work-badge">مواقع تعريفي</div>
                         <div class="work-overlay">
-                            <h3> يعرض الملومات الشخصيه بشكل احترافي</h3>
-                            <p> عرض شخصي مميز</p>
+                            <h3>يعرض المعلومات الشخصية بشكل احترافي</h3>
+                            <p>عرض شخصي مميز</p>
                         </div>
                     </div>
-                    
+
                     <div class="work-content">
                         <h3>موقع تعريفي احترافي</h3>
                         <p>موقع ويب تعريفي متكامل مصمم لعرض المهارات والخبرات والمشاريع السابقة بشكل احترافي وجذاب. يتضمن جميع العناصر اللازمة لتقديم صورة متكاملة عن المهارات والإنجازات.</p>
@@ -3114,7 +3190,7 @@ function showDetails(title, desc, images){
                                 <li><i class="fas fa-check"></i>تتبع الزوار وتحليل الأداء</li>
                             </ul>
                         </div>
-                        
+
                         <div class="work-buttons">
                             <button class="work-btn primary view-details" data-work="about">
                                 <i class="fas fa-eye"></i> عرض التفاصيل
@@ -3125,15 +3201,213 @@ function showDetails(title, desc, images){
                         </div>
                     </div>
                 </div>
+
+                <!-- بطاقة تأمينات النخبة -->
+                <div class="work-card fade-in" data-work="insurance" style="background:var(--lighter);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);height:100%;display:flex;flex-direction:column;position:relative;border:1px solid var(--gray-light);">
+                    <div class="work-image" style="height:15.625rem;overflow:hidden;position:relative;">
+                        <img src="https://i.ibb.co/qLvptkGg/1.png" alt="تأمينات النخبة - نظام التأمين الإلكتروني الذكي" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;" onclick="openLightbox(this.src)">
+                        <div class="work-badge">نظام تأمين إلكتروني ذكي</div>
+
+                        <div class="work-overlay" style="position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to top, rgba(0,0,0,0.8), transparent);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;color:white;opacity:0;transition:var(--transition);">
+                            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;transform:translateY(1.25rem);transition:var(--transition);">
+                                تأمينات النخبة
+                            </h3>
+                            <p style="transform:translateY(1.25rem);transition:var(--transition);">
+                                منصة متكاملة لإدارة تأمين السيارات رقمياً
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-content" style="padding:1.5rem;flex-grow:1;display:flex;flex-direction:column;">
+                        <h3 style="color:var(--dark);margin-bottom:1rem;font-size:1.5rem;">
+                            تأمينات النخبة – نظام التأمين الإلكتروني
+                        </h3>
+
+                        <p style="color:var(--gray-dark);line-height:1.6;margin-bottom:1.5rem;flex-grow:1;">
+                            منصة رقمية متكاملة لإدارة تأمين السيارات، تتيح للعملاء تقديم طلبات التأمين إلكترونياً، متابعة حالة الطلبات، الدفع والتحقق عبر OTP، وإصدار وثائق التأمين مع لوحة تحكم إدارية متقدمة وإشعارات فورية.
+                        </p>
+
+                        <div class="work-features" style="margin-bottom:1.5rem;">
+                            <ul style="list-style:none;padding:0;margin:0;">
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary);font-size:0.9rem;"></i>
+                                    تقديم طلبات التأمين إلكترونياً
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary);font-size:0.9rem;"></i>
+                                    إشعارات فورية وتتبع الطلبات
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary);font-size:0.9rem;"></i>
+                                    لوحة إدارة وإصدار وثائق التأمين
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work-buttons" style="display:flex;gap:0.75rem;margin-top:auto;">
+                            <button class="work-btn primary view-details" data-work="insurance" style="flex:1;padding:0.75rem 1.25rem;border-radius:var(--radius-xl);text-align:center;text-decoration:none;font-weight:600;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.95rem;background:var(--primary);color:white;border:none;cursor:pointer;">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بطاقة نظام حضور وغياب -->
+                <div class="work-card fade-in" data-work="attendance" style="background:var(--lighter);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);height:100%;display:flex;flex-direction:column;position:relative;border:1px solid var(--gray-light);">
+                    <div class="work-image" style="height:15.625rem;overflow:hidden;position:relative;">
+                        <img src="https://i.ibb.co/35h4hsCd/2026-07-01-212328.png" alt="نظام حضور وغياب الموظفين بالتعرف على الوجه" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;" onclick="openLightbox(this.src)">
+                        <div class="work-badge" style="position:absolute;top:1rem;left:1rem;background:var(--primary,#2563eb);color:white;padding:0.3rem 0.9rem;border-radius:50px;font-size:0.75rem;font-weight:bold;letter-spacing:0.5px;text-transform:uppercase;box-shadow:0 4px 8px rgba(0,0,0,0.1);z-index:2;">
+                            نظام حضور ذكي
+                        </div>
+                        <div class="work-overlay" style="position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;color:white;opacity:0;transition:var(--transition,0.3s ease);z-index:1;">
+                            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;transform:translateY(1.25rem);transition:var(--transition,0.3s ease);font-weight:700;">
+                                نظام حضور وغياب الموظفين
+                            </h3>
+                            <p style="transform:translateY(1.25rem);transition:var(--transition,0.3s ease);opacity:0.9;margin:0;font-size:1rem;">
+                                نظام ذكي يعتمد على التعرف على الوجه والذكاء الاصطناعي
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-content" style="padding:1.5rem;flex-grow:1;display:flex;flex-direction:column;background:var(--lighter,#f8fafc);">
+                        <h3 style="color:var(--dark,#0f172a);margin-bottom:1rem;font-size:1.5rem;font-weight:700;line-height:1.3;">
+                            نظام حضور وغياب الموظفين
+                        </h3>
+
+                        <p style="color:var(--gray-dark,#334155);line-height:1.6;margin-bottom:1.5rem;flex-grow:1;">
+                            نظام متكامل لإدارة حضور وانصراف الموظفين باستخدام تقنيات الذكاء الاصطناعي والرؤية الحاسوبية، يعتمد على التعرف على الوجه لتسجيل الحضور بشكل آلي في الوقت الحقيقي مع إدارة الموظفين والتقارير ولوحة تحكم احترافية.
+                        </p>
+
+                        <div class="work-features" style="margin-bottom:1.5rem;">
+                            <ul style="list-style:none;padding:0;margin:0;">
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);width:1.25rem;text-align:center;"></i>
+                                    التعرف على الوجه بالذكاء الاصطناعي
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);width:1.25rem;text-align:center;"></i>
+                                    تسجيل الحضور والانصراف في الوقت الحقيقي
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);width:1.25rem;text-align:center;"></i>
+                                    تقارير وإحصائيات مع تصدير Excel وCSV
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work-buttons" style="display:flex;gap:0.75rem;margin-top:auto;">
+                            <button class="work-btn primary view-details" data-work="attendance" style="flex:1;padding:0.75rem 1.25rem;border-radius:var(--radius-xl,50px);font-weight:600;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:var(--primary,#2563eb);color:white;border:none;cursor:pointer;">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="work-card fade-in" data-work="logistics" style="background:var(--lighter);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);height:100%;display:flex;flex-direction:column;position:relative;border:1px solid var(--gray-light);">
 
-                
-               
+                    <div class="work-image" style="height:15.625rem;overflow:hidden;position:relative;">
+                        <img src="https://i.ibb.co/nNXMR5Wp/2026-07-03-220804.png" alt="Smart Logistics AI - نظام إدارة الشاحنات والمخازن" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;" onclick="openLightbox(this.src)">
 
+                        <div class="work-badge" style="position:absolute;top:1rem;left:1rem;background:var(--primary,#2563eb);color:white;padding:0.3rem 0.9rem;border-radius:50px;font-size:0.75rem;font-weight:bold;letter-spacing:0.5px;text-transform:uppercase;box-shadow:0 4px 8px rgba(0,0,0,0.1);z-index:2;">
+                            نظام لوجستي ذكي
+                        </div>
 
-                
+                        <div class="work-overlay" style="position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;color:white;opacity:0;transition:var(--transition,0.3s ease);z-index:1;">
+                            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;transform:translateY(1.25rem);transition:var(--transition,0.3s ease);font-weight:700;">
+                                Smart Logistics AI
+                            </h3>
+                            <p style="transform:translateY(1.25rem);transition:var(--transition,0.3s ease);opacity:0.9;margin:0;font-size:1rem;">
+                                منصة ذكية لإدارة الشاحنات والمخازن والشحنات
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="work-content" style="padding:1.5rem;flex-grow:1;display:flex;flex-direction:column;background:var(--lighter,#f8fafc);">
+                        <h3 style="color:var(--dark,#0f172a);margin-bottom:1rem;font-size:1.5rem;font-weight:700;line-height:1.3;">
+                            Smart Logistics AI – نظام إدارة وتوزيع الشاحنات
+                        </h3>
 
+                        <p style="color:var(--gray-dark,#334155);line-height:1.6;margin-bottom:1.5rem;flex-grow:1;">
+                            نظام متكامل لإدارة الشاحنات والسائقين والمخازن والعمال والشحنات، مع تتبع مواقع الشاحنات في الوقت الحقيقي، وإدارة الطلبات، والتقارير، والإحصائيات من خلال لوحة تحكم احترافية.
+                        </p>
+
+                        <div class="work-features" style="margin-bottom:1.5rem;">
+                            <ul style="list-style:none;padding:0;margin:0;">
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    إدارة الشاحنات والسائقين والعمال
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    تتبع مواقع الشاحنات والشحنات لحظياً
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    تقارير وإحصائيات ولوحة تحكم تفاعلية
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work-buttons" style="display:flex;gap:0.75rem;margin-top:auto;">
+                            <button class="work-btn primary view-details" data-work="logistics" style="flex:1;padding:0.75rem 1.25rem;border-radius:var(--radius-xl,50px);text-align:center;text-decoration:none;font-weight:600;transition:var(--transition,0.3s ease);display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.95rem;background:var(--primary,#2563eb);color:white;border:none;cursor:pointer;box-shadow:0 4px 6px -1px rgba(37,99,235,0.2);">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card fade-in" data-work="juice" style="background:var(--lighter);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition);height:100%;display:flex;flex-direction:column;position:relative;border:1px solid var(--gray-light);">
+
+                    <div class="work-image" style="height:15.625rem;overflow:hidden;position:relative;">
+                        <img src="https://i.ibb.co/twGbG9K6/2026-07-06-190657.png" alt="Juice ERP System - نظام إدارة شركات العصائر" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;" onclick="openLightbox(this.src)">
+
+                        <div class="work-badge" style="position:absolute;top:1rem;left:1rem;background:var(--primary,#2563eb);color:white;padding:0.3rem 0.9rem;border-radius:50px;font-size:0.75rem;font-weight:bold;letter-spacing:0.5px;text-transform:uppercase;box-shadow:0 4px 8px rgba(0,0,0,0.1);z-index:2;">
+                            نظام ERP متكامل
+                        </div>
+
+                        <div class="work-overlay" style="position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;color:white;opacity:0;transition:var(--transition,0.3s ease);z-index:1;">
+                            <h3 style="font-size:1.5rem;margin-bottom:0.5rem;transform:translateY(1.25rem);transition:var(--transition,0.3s ease);font-weight:700;">
+                                Juice ERP System
+                            </h3>
+                            <p style="transform:translateY(1.25rem);transition:var(--transition,0.3s ease);opacity:0.9;margin:0;font-size:1rem;">
+                                نظام احترافي لإدارة شركات العصائر والمشروبات
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work-content" style="padding:1.5rem;flex-grow:1;display:flex;flex-direction:column;background:var(--lighter,#f8fafc);">
+                        <h3 style="color:var(--dark,#0f172a);margin-bottom:1rem;font-size:1.5rem;font-weight:700;line-height:1.3;">
+                            Juice ERP System – نظام إدارة شركات العصائر
+                        </h3>
+
+                        <p style="color:var(--gray-dark,#334155);line-height:1.6;margin-bottom:1.5rem;flex-grow:1;">
+                            نظام ERP متكامل لإدارة شركات إنتاج وتوزيع العصائر، يشمل إدارة المبيعات والمشتريات والمخازن والعملاء والموردين والفواتير والحسابات والتقارير من خلال لوحة تحكم احترافية.
+                        </p>
+
+                        <div class="work-features" style="margin-bottom:1.5rem;">
+                            <ul style="list-style:none;padding:0;margin:0;">
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    إدارة المنتجات والمبيعات والمخزون
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    إدارة العملاء والموردين والفواتير
+                                </li>
+                                <li style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;color:var(--gray-dark,#334155);font-size:0.95rem;">
+                                    <i class="fas fa-check" style="color:var(--primary,#2563eb);font-size:0.9rem;width:1.25rem;text-align:center;"></i>
+                                    تقارير مالية وإحصائيات ولوحة تحكم تفاعلية
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="work-buttons" style="display:flex;gap:0.75rem;margin-top:auto;">
+                            <button class="work-btn primary view-details" data-work="juice" style="flex:1;padding:0.75rem 1.25rem;border-radius:var(--radius-xl,50px);text-align:center;text-decoration:none;font-weight:600;transition:var(--transition,0.3s ease);display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.95rem;background:var(--primary,#2563eb);color:white;border:none;cursor:pointer;box-shadow:0 4px 6px -1px rgba(37,99,235,0.2);">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -3143,20 +3417,20 @@ function showDetails(title, desc, images){
         <div class="container">
             <h2 class="section-title fade-in">تطبيقاتي</h2>
             <p class="section-subtitle fade-in">تطبيقات موبايل مبتكرة مصممة لتجربة مستخدم استثنائية</p>
-            
+
             <div class="apps-grid">
                 <!-- تطبيق 1: تحدي الويب -->
                 <div class="app-card-compact fade-in">
                     <div class="app-card-header">
-                        <div class="app-badge best">الأكثر </div>
+                        <div class="app-badge best">الأكثر</div>
                         <div class="app-card-image">
-                            <img src="imgs/apk.png" alt="تطبيق تحدي الويب" loading="lazy" width="300" height="180">
+                            <img src="imgs/apk.png" alt="تطبيق تحدي الويب" loading="lazy" width="300" height="180" onclick="openLightbox(this.src)">
                         </div>
                     </div>
-                    
+
                     <div class="app-card-body">
                         <h3>تحدي الويب</h3>
-                        
+
                         <div class="app-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -3167,11 +3441,11 @@ function showDetails(title, desc, images){
                             </div>
                             <span class="rating-text">4.5 (120)</span>
                         </div>
-                        
+
                         <div class="app-description">
                             <p>تطبيق تفاعلي ممتع لاختبار وتحسين مهاراتك في تطوير الويب!</p>
                         </div>
-                        
+
                         <div class="app-features-compact">
                             <ul>
                                 <li><i class="fas fa-check"></i> تحديات HTML و CSS</li>
@@ -3179,7 +3453,7 @@ function showDetails(title, desc, images){
                                 <li><i class="fas fa-check"></i> تحديات PHP</li>
                             </ul>
                         </div>
-                        
+
                         <div class="app-download-btns">
                             <a href="https://eissashaya.github.io/quiz" target="_blank" class="btn btn-success">
                                 <i class="fas fa-external-link-alt"></i> تجربة
@@ -3188,26 +3462,26 @@ function showDetails(title, desc, images){
                                 <i class="fas fa-download"></i> تحميل
                             </a>
                         </div>
-                        
+
                         <div class="app-footer">
                             <span class="app-size">20 MB</span>
                             <span class="app-update">v2.1</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- تطبيق 2: EissaTv -->
                 <div class="app-card-compact fade-in">
                     <div class="app-card-header">
                         <div class="app-badge new">EissaTv</div>
                         <div class="app-card-image">
-                            <img src="imgs/EissaTv.png" alt="تطبيق EissaTv" loading="lazy" width="300" height="180">
+                            <img src="imgs/EissaTv.png" alt="تطبيق EissaTv" loading="lazy" width="300" height="180" onclick="openLightbox(this.src)">
                         </div>
                     </div>
-                    
+
                     <div class="app-card-body">
                         <h3>تطبيق EissaTv</h3>
-                        
+
                         <div class="app-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -3218,48 +3492,48 @@ function showDetails(title, desc, images){
                             </div>
                             <span class="rating-text">4.0 (85)</span>
                         </div>
-                        
+
                         <div class="app-description">
                             <p>تطبيق مباريات احترافي يعرض الدوريات الخمس الكبرى</p>
                         </div>
-                        
+
                         <div class="app-features-compact">
                             <ul>
                                 <li><i class="fas fa-check"></i>يعرض المباريات المباشره</li>
                                 <li><i class="fas fa-check"></i> المباريات القادمه</li>
                                 <li><i class="fas fa-check"></i> يعرض المباريات المنتهيه</li>
-                                 <li><i class="fas fa-check"></i> وترتيب الدوري</li>
+                                <li><i class="fas fa-check"></i> وترتيب الدوري</li>
                             </ul>
                         </div>
-                        
+
                         <div class="app-download-btns">
                             <a href="https://mega.nz/file/79YwEabC#63u20fsEdebuyjbn2PAt2pmdBj9UDQGi_MaxRrkNh9Y" class="btn btn-success">
-                                <i class="fas fa-mobile-alt"></i> تحميل 
+                                <i class="fas fa-mobile-alt"></i> تحميل
                             </a>
                             <a href="https://mega.nz/file/79YwEabC#63u20fsEdebuyjbn2PAt2pmdBj9UDQGi_MaxRrkNh9Y" class="btn btn-outline">
                                 <i class="fab fa-app-store"></i> تحميل مباشر
                             </a>
                         </div>
-                        
+
                         <div class="app-footer">
                             <span class="app-size">18 MB</span>
                             <span class="app-update">v1.5</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- تطبيق 3:   -->
+
+                <!-- تطبيق 3: Data Watch Pro -->
                 <div class="app-card-compact fade-in">
                     <div class="app-card-header">
                         <div class="app-badge best">جاهز</div>
                         <div class="app-card-image">
-                            <img src="imgs/icon.png" alt="تطبيق  Data Watch" loading="lazy" width="300" height="180">
+                            <img src="imgs/icon.png" alt="تطبيق Data Watch" loading="lazy" width="300" height="180" onclick="openLightbox(this.src)">
                         </div>
                     </div>
-                    
+
                     <div class="app-card-body">
-                        <h3> Data Watch Pro </h3>
-                        
+                        <h3>Data Watch Pro</h3>
+
                         <div class="app-rating">
                             <div class="stars">
                                 <i class="fas fa-star"></i>
@@ -3270,30 +3544,29 @@ function showDetails(title, desc, images){
                             </div>
                             <span class="rating-text">4.2 (95)</span>
                         </div>
-                        
+
                         <div class="app-description">
                             <p>📱 Data Watch Pro – تحكّم ذكي في استهلاك الإنترنت</p>
                         </div>
-                        
+
                         <div class="app-features-compact">
                             <ul>
-                                <li><i class="fas fa-check"></i>  مراقبة استهلاك البيانات يوميًا وأسبوعيًا (WiFi + بيانات الجوال)</li>
-                                <li><i class="fas fa-check"></i> إحصائيات دقيقة لمعرفة أكثر التطبيقات استهلاكًا للإنترنت  </li>
-                                <li><i class="fas fa-check"></i> إدارة وتحكم في استهلاك الإنترنت بشكل ذكي عبر VPN </li>
-                                <li><i class="fas fa-check"></i>   عرض مباشر لسرعة الإنترنت لحظة بلحظة ⚡ </li>
+                                <li><i class="fas fa-check"></i> مراقبة استهلاك البيانات يوميًا وأسبوعيًا (WiFi + بيانات الجوال)</li>
+                                <li><i class="fas fa-check"></i> إحصائيات دقيقة لمعرفة أكثر التطبيقات استهلاكًا للإنترنت</li>
+                                <li><i class="fas fa-check"></i> إدارة وتحكم في استهلاك الإنترنت بشكل ذكي عبر VPN</li>
+                                <li><i class="fas fa-check"></i> عرض مباشر لسرعة الإنترنت لحظة بلحظة ⚡</li>
                             </ul>
                         </div>
-                        
+
                         <div class="app-download-btns">
                             <a href="https://apkpure.com/p/com.example.data_watch" class="btn btn-success">
-                                <i class="fas fa-mobile-alt"></i> تحميل من المتجر 
+                                <i class="fas fa-mobile-alt"></i> تحميل من المتجر
                             </a>
-                            <a href="https://mega.nz/file/rtoAHR4T#lelZnqL2j5A1wXJJA21CmwZGc8yrpJxkTLC4m_4OMdw
-" class="btn btn-outline">
-                                <i class="fab fa-app-store"></i> تحميل مباشر 
+                            <a href="https://mega.nz/file/rtoAHR4T#lelZnqL2j5A1wXJJA21CmwZGc8yrpJxkTLC4m_4OMdw" class="btn btn-outline">
+                                <i class="fab fa-app-store"></i> تحميل مباشر
                             </a>
                         </div>
-                        
+
                         <div class="app-footer">
                             <span class="app-size">27 MB</span>
                             <span class="app-update">v1.8</span>
@@ -3303,7 +3576,7 @@ function showDetails(title, desc, images){
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -3316,51 +3589,51 @@ function showDetails(title, desc, images){
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title fade-in">تواصل معنا</h2>
             <p class="section-subtitle fade-in">شاركنا فكرتك وسنساعدك في تحويلها إلى واقع</p>
-            
+
             <div class="contact-content">
                 <form id="contactForm" class="contact-form fade-in" action="https://formspree.io/f/mjkwrwpp" method="POST">
                     <div class="form-group">
-                        <label for="name">سجل اسمك </label>
-                        <input type="text" id="name" name="الاسم" class="form-control" placeholder="أدخل اسمك " required>
+                        <label for="name">سجل اسمك</label>
+                        <input type="text" id="name" name="الاسم" class="form-control" placeholder="أدخل اسمك" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">البريد الإلكتروني</label>
                         <input type="email" id="email" name="البريد الإلكتروني" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="phone">رقم الهاتف (اختياري)</label>
                         <input type="tel" id="phone" name="رقم الهاتف" class="form-control" placeholder="أدخل رقم هاتفك">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="subject">موضوع الرسالة</label>
                         <input type="text" id="subject" name="الموضوع" class="form-control" placeholder="موضوع رسالتك" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message">الرسالة</label>
                         <textarea id="message" name="الرسالة" class="form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
                     </div>
-                    
+
                     <button type="submit" class="btn btn-lg">
                         <i class="fas fa-paper-plane"></i> إرسال الرسالة
                     </button>
                 </form>
-                
+
                 <div class="spinner" id="contactSpinner"></div>
                 <div id="contactMsg"></div>
             </div>
         </div>
     </section>
-    
+
     <!-- ✅ Footer -->
     <footer>
         <div class="container">
@@ -3383,7 +3656,7 @@ function showDetails(title, desc, images){
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-links">
                     <h4>روابط سريعة</h4>
                     <ul>
@@ -3394,7 +3667,7 @@ function showDetails(title, desc, images){
                         <li><a href="#contact"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-contact">
                     <h4>معلومات الاتصال</h4>
                     <p>
@@ -3410,7 +3683,7 @@ function showDetails(title, desc, images){
                         <span>اليمن - اب</span>
                     </p>
                 </div>
-                
+
                 <div class="footer-newsletter">
                     <h4>اشترك في النشرة</h4>
                     <p>اشترك في نشرتنا البريدية لتكون أول من يعلم بالدورات الجديدة والعروض الخاصة.</p>
@@ -3420,20 +3693,31 @@ function showDetails(title, desc, images){
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p class="copyright">جميع الحقوق محفوظة &copy; <span id="currentYear"></span> - المبرمج عيسى شايع</p>
             </div>
         </div>
     </footer>
-    
+
     <!-- ✅ Scroll to Top Button -->
     <button class="scroll-top" id="scrollTopBtn" aria-label="العودة للأعلى">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
+
     <!-- ✅ Toast Notification -->
     <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <!-- ✅ Lightbox - عرض الصور بحجم كامل -->
+    <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="إغلاق">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="صورة مكبرة">
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
 
     <!-- ✅ Modals for Works -->
     <!-- Modal 1: نظام معرض السيارات -->
@@ -3442,7 +3726,7 @@ function showDetails(title, desc, images){
             <button class="close-modal" id="closeModalCars" aria-label="إغلاق">
                 <i class="fas fa-times"></i>
             </button>
-            
+
             <div class="work-modal">
                 <div class="modal-header">
                     <div class="modal-icon">
@@ -3451,7 +3735,7 @@ function showDetails(title, desc, images){
                     <h2 id="modalCarsTitle">نظام إدارة معرض السيارات</h2>
                     <p>حل متكامل لإدارة معارض السيارات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة مع واجهة إدارية متكاملة</p>
                 </div>
-                
+
                 <div class="modal-body">
                     <div class="modal-grid">
                         <div class="features-section">
@@ -3466,7 +3750,7 @@ function showDetails(title, desc, images){
                                         <p>إحصائيات فورية عن حالة المعرض، نظرة سريعة على المبيعات والمخزون، عرض السيارات والمبيعات الأخيرة</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-car"></i>
@@ -3476,7 +3760,7 @@ function showDetails(title, desc, images){
                                         <p>إضافة وتعديل وحذف السيارات، تصنيف حسب النوع والحالة، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل سيارة</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-chart-line"></i>
@@ -3486,7 +3770,7 @@ function showDetails(title, desc, images){
                                         <p>تسجيل عمليات البيع بسهولة، تتبع العملاء وطرق الدفع، سجل كامل لجميع المعاملات، إدارة العمولات والمصاريف</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-file-alt"></i>
@@ -3498,26 +3782,26 @@ function showDetails(title, desc, images){
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="screenshots-section">
                             <h3><i class="fas fa-images"></i> معاينة النظام</h3>
                             <div class="screenshots-grid">
-                                <div class="screenshot-item">
+                                <div class="screenshot-item" onclick="openLightbox('imgs/معرض1.jpg')">
                                     <img src="imgs/معرض1.jpg" alt="لوحة تحكم النظام" loading="lazy">
                                     <div class="screenshot-label">لوحة التحكم الرئيسية</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/معرض2.jpg')">
                                     <img src="imgs/معرض2.jpg" alt="إدارة السيارات" loading="lazy">
                                     <div class="screenshot-label">صفحة إدارة السيارات</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/معرض 3.jpg')">
                                     <img src="imgs/معرض 3.jpg" alt="إدارة المبيعات" loading="lazy">
                                     <div class="screenshot-label">صفحة إدارة المبيعات</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/معرض 4.jpg')">
                                     <img src="imgs/معرض 4.jpg" alt="التقارير والتحليلات" loading="lazy">
                                     <div class="screenshot-label">صفحة التقارير والتحليلات</div>
                                 </div>
@@ -3525,18 +3809,16 @@ function showDetails(title, desc, images){
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <h3>جاهز لتحويل إدارة معرضك إلى التجربة الرقمية؟</h3>
                     <p>اطلب النظام الآن واحصل على إدارة متكاملة لمعرضك مع دعم فني مستمر وتحديثات مجانية</p>
-                    
+
                     <div class="modal-buttons">
                         <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
                             <i class="fas fa-shopping-cart"></i> طلب النظام
                         </a>
-                        <a href="https://eissashaya.github.io/Exhibition_cars/" target="_blank" class="modal-btn secondary">
-                            <i class="fas fa-play-circle"></i> مشاهدة النظام
-                        </a>
+                      
                     </div>
                 </div>
             </div>
@@ -3549,7 +3831,7 @@ function showDetails(title, desc, images){
             <button class="close-modal" id="closeModalMobiles" aria-label="إغلاق">
                 <i class="fas fa-times"></i>
             </button>
-            
+
             <div class="work-modal">
                 <div class="modal-header">
                     <div class="modal-icon">
@@ -3558,7 +3840,7 @@ function showDetails(title, desc, images){
                     <h2 id="modalMobilesTitle">نظام إدارة مخزون محل الجوالات</h2>
                     <p>حل متكامل لإدارة مخزون وأعمال محلات الجوالات باحترافية وسهولة - نظام ويب متطور يعمل على جميع الأجهزة</p>
                 </div>
-                
+
                 <div class="modal-body">
                     <div class="modal-grid">
                         <div class="features-section">
@@ -3573,7 +3855,7 @@ function showDetails(title, desc, images){
                                         <p>إحصائيات فورية عن حالة المخزون، نظرة سريعة على المبيعات والمشتريات، عرض الجوالات والمبيعات الأخيرة</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-mobile-alt"></i>
@@ -3583,7 +3865,7 @@ function showDetails(title, desc, images){
                                         <p>إضافة وتعديل وحذف الجوالات والاكسسوارات، تصنيف حسب الماركة والنوع، فلترة متقدمة للبحث، عرض تفاصيل كاملة لكل منتج</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-chart-line"></i>
@@ -3593,7 +3875,7 @@ function showDetails(title, desc, images){
                                         <p>تسجيل عمليات البيع والشراء بسهولة، تتبع العملاء والموردين، سجل كامل لجميع المعاملات، إدارة المصاريف والأرباح</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feature-item">
                                     <div class="feature-icon">
                                         <i class="fas fa-users"></i>
@@ -3605,31 +3887,31 @@ function showDetails(title, desc, images){
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="screenshots-section">
                             <h3><i class="fas fa-images"></i> معاينة النظام</h3>
                             <div class="screenshots-grid">
-                                <div class="screenshot-item">
+                                <div class="screenshot-item" onclick="openLightbox('imgs/جوالات1.jpg')">
                                     <img src="imgs/جوالات1.jpg" alt="لوحة تحكم النظام" loading="lazy">
                                     <div class="screenshot-label">لوحة التحكم الرئيسية</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/جوالات2.jpg')">
                                     <img src="imgs/جوالات2.jpg" alt="إدارة المخزون" loading="lazy">
                                     <div class="screenshot-label">صفحة إدارة المخزون</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/جوالات3.jpg')">
                                     <img src="imgs/جوالات3.jpg" alt="إدارة المبيعات" loading="lazy">
                                     <div class="screenshot-label">صفحة إدارة المبيعات</div>
                                 </div>
-                                
-                                <div class="screenshot-item">
+
+                                <div class="screenshot-item" onclick="openLightbox('imgs/جوالات4.jpg')">
                                     <img src="imgs/جوالات4.jpg" alt="التقارير والتحليلات" loading="lazy">
                                     <div class="screenshot-label">صفحة التقارير والتحليلات</div>
                                 </div>
 
-                                <div class="screenshot-item">
+                                <div class="screenshot-item" onclick="openLightbox('imgs/جوالات5.jpg')">
                                     <img src="imgs/جوالات5.jpg" alt="مؤشر الاداء" loading="lazy">
                                     <div class="screenshot-label">صفحة مؤشرات الاداء</div>
                                 </div>
@@ -3637,18 +3919,16 @@ function showDetails(title, desc, images){
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <h3>جاهز لتحويل إدارة متجر الجوالات إلى التجربة الرقمية؟</h3>
                     <p>اطلب النظام الآن واحصل على إدارة متكاملة لمحلك مع دعم فني مستمر وتحديثات مجانية</p>
-                    
+
                     <div class="modal-buttons">
                         <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
                             <i class="fas fa-shopping-cart"></i> طلب النظام
                         </a>
-                        <a href="https://eissashaya.github.io/Warehouse_pohn/" target="_blank" class="modal-btn secondary">
-                            <i class="fas fa-play-circle"></i> مشاهدة النظام
-                        </a>
+                       
                     </div>
                 </div>
             </div>
@@ -3669,19 +3949,18 @@ function showDetails(title, desc, images){
                 <div class="modal-body">
                     <div class="modal-grid">
                         <div style="max-width:480px;">
-                            <img src="imgs/ريال 1.jpeg" alt="ريال مدريد" style="width:100%;border-radius:12px;object-fit:cover;" loading="lazy">
+                            <img src="imgs/ريال 1.jpeg" alt="ريال مدريد" style="width:100%;border-radius:12px;object-fit:cover;cursor:pointer;" onclick="openLightbox(this.src)" loading="lazy">
                         </div>
                         <div>
                             <h3>وصف المشروع</h3>
-                            <p>صفحة عرض   الموقع عن نادي ريال مدريد، تحتوي على صور ومعلومات وروابط تجريبية.</p>
+                            <p>صفحة عرض الموقع عن نادي ريال مدريد، تحتوي على صور ومعلومات وروابط تجريبية.</p>
                             <ul>
-                                <li> عرض البطولات  </li>
-                                <li>  عرض الاساطير</li>
-                                <LI>عرض تاريخ النادي</LI>
+                                <li>عرض البطولات</li>
+                                <li>عرض الاساطير</li>
+                                <li>عرض تاريخ النادي</li>
                                 <li>روابط مباشرة للموقع التجريبي</li>
                             </ul>
-                            <p style="margin-top:1rem;"><a href="https://eissashaya.github.io/rial_madrid/" target="_blank" rel="noopener noreferrer" class="btn">زيارة الموقع</a></p>
-                        </div>
+                                           </div>
                     </div>
                 </div>
             </div>
@@ -3702,7 +3981,7 @@ function showDetails(title, desc, images){
                 <div class="modal-body">
                     <div class="modal-grid">
                         <div style="max-width:480px;">
-                            <img src="imgs/abut1.jpeg" alt="موقع تعريفي" style="width:100%;border-radius:12px;object-fit:cover;" loading="lazy">
+                            <img src="imgs/abut1.jpeg" alt="موقع تعريفي" style="width:100%;border-radius:12px;object-fit:cover;cursor:pointer;" onclick="openLightbox(this.src)" loading="lazy">
                         </div>
                         <div>
                             <h3>وصف المشروع</h3>
@@ -3715,6 +3994,408 @@ function showDetails(title, desc, images){
                             </ul>
                             <p style="margin-top:1rem;"><a href="https://eissashaya.github.io/about/" target="_blank" rel="noopener noreferrer" class="btn">زيارة الموقع</a></p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: تأمينات النخبة -->
+    <div class="modal-overlay" id="modalInsurance" role="dialog" aria-labelledby="modalInsuranceTitle" aria-hidden="true" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalInsurance" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h2 id="modalInsuranceTitle">تأمينات النخبة – نظام التأمين الإلكتروني الذكي</h2>
+                    <p>
+                        منصة رقمية متكاملة لإدارة تأمين السيارات، تتيح للعملاء تقديم طلبات التأمين إلكترونياً،
+                        ومتابعة حالة الطلبات، وإتمام عمليات الدفع والتحقق، مع لوحة تحكم إدارية متقدمة
+                        وإشعارات فورية وإصدار وثائق التأمين بشكل آلي.
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                            <div class="screenshots-grid" style="grid-template-columns: repeat(2,1fr); gap:1rem;">
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/qLvptkGg/1.png')">
+                                    <img src="https://i.ibb.co/qLvptkGg/1.png" alt="تأمينات النخبة 1" loading="lazy">
+                                    <div class="screenshot-label">الصفحة الرئيسية</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/bMNPgnZT/2.png')">
+                                    <img src="https://i.ibb.co/bMNPgnZT/2.png" alt="تأمينات النخبة 2" loading="lazy">
+                                    <div class="screenshot-label">عروض التأمين</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/nMzyJPRN/3.png')">
+                                    <img src="https://i.ibb.co/nMzyJPRN/3.png" alt="تأمينات النخبة 3" loading="lazy">
+                                    <div class="screenshot-label">خطوات التأمين</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/jcY9Nmv/4.png')">
+                                    <img src="https://i.ibb.co/jcY9Nmv/4.png" alt="تأمينات النخبة 4" loading="lazy">
+                                    <div class="screenshot-label">نموذج طلب التأمين</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/nv6cjdW/5.jpg')">
+                                    <img src="https://i.ibb.co/nv6cjdW/5.jpg" alt="تأمينات النخبة 5" loading="lazy">
+                                    <div class="screenshot-label">لوحة الإدارة</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/mrWfsRBn/6.jpg')">
+                                    <img src="https://i.ibb.co/mrWfsRBn/6.jpg" alt="تأمينات النخبة 6" loading="lazy">
+                                    <div class="screenshot-label">جهات الاتصال</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>وصف المشروع</h3>
+                            <p>
+                                تأمينات النخبة هو نظام إلكتروني متكامل لتأمين السيارات، تم تطويره لتسهيل إجراءات
+                                الحصول على التأمين وتحويلها إلى تجربة رقمية سريعة وآمنة. يوفر النظام بيئة متكاملة
+                                تربط العملاء والإدارة في منصة واحدة.
+                            </p>
+
+                            <ul>
+                                <li>تقديم طلبات التأمين إلكترونياً بخطوات بسيطة وسهلة.</li>
+                                <li>تتبع حالة الطلب من التقديم حتى إصدار وثيقة التأمين.</li>
+                                <li>رفع المستندات وإدارة بيانات العملاء بشكل آمن.</li>
+                                <li>إرسال إشعارات فورية للإدارة عند وصول طلبات جديدة.</li>
+                                <li>الموافقة أو رفض الطلبات من خلال لوحة تحكم متقدمة.</li>
+                                <li>التحقق من العميل باستخدام رمز OTP قبل إصدار الوثيقة.</li>
+                                <li>إصدار وثائق التأمين إلكترونياً وإشعار العميل فوراً.</li>
+                                <li>تسجيل زيارات الموقع وتحليل بيانات المستخدمين والموقع الجغرافي.</li>
+                                <li>واجهة متجاوبة تعمل على الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر.</li>
+                            </ul>
+
+                            <p>
+                                تم تطوير النظام باستخدام أحدث تقنيات الويب لتوفير أداء عالٍ وتجربة استخدام احترافية،
+                                مما يساعد شركات التأمين على إدارة عملياتها بكفاءة وتحسين تجربة العملاء.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>هل تريد نظام تأمين متكامل؟</h3>
+                    <p>تواصل معنا الآن لبناء منصة تأمين احترافية تناسب احتياجاتك.</p>
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                        </a>
+                        <a href="#contact" class="modal-btn secondary">
+                            <i class="fas fa-envelope"></i> أرسل رسالة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: نظام حضور وغياب -->
+    <div class="modal-overlay" id="modalAttendance" role="dialog" aria-labelledby="modalAttendanceTitle" aria-hidden="true" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalAttendance" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h2 id="modalAttendanceTitle">
+                        نظام حضور وغياب الموظفين باستخدام الذكاء الاصطناعي
+                    </h2>
+                    <p>
+                        نظام احترافي لإدارة حضور وانصراف الموظفين يعتمد على تقنيات
+                        الذكاء الاصطناعي والرؤية الحاسوبية للتعرف على الوجه في الوقت
+                        الحقيقي، مع لوحة تحكم إدارية وتقارير تفصيلية وإدارة كاملة
+                        للموظفين وسجلات الحضور.
+                    </p>
+                </div>
+
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                            <div class="screenshots-grid" style="grid-template-columns:repeat(2,1fr);gap:1rem;">
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/35h4hsCd/2026-07-01-212328.png')">
+                                    <img src="https://i.ibb.co/35h4hsCd/2026-07-01-212328.png" alt="Dashboard">
+                                    <div class="screenshot-label">لوحة التحكم</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/HpbQXNK7/2026-07-01-212550.png')">
+                                    <img src="https://i.ibb.co/HpbQXNK7/2026-07-01-212550.png" alt="Employees">
+                                    <div class="screenshot-label">إدارة الموظفين</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/5WM5m5G8/2026-07-01-212610.png')">
+                                    <img src="https://i.ibb.co/5WM5m5G8/2026-07-01-212610.png" alt="Face Scan">
+                                    <div class="screenshot-label">التعرف على الوجه</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/DHQHvFPz/2026-07-01-212417.png')">
+                                    <img src="https://i.ibb.co/DHQHvFPz/2026-07-01-212417.png" alt="Attendance">
+                                    <div class="screenshot-label">سجل الحضور</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/Ld6WfrnF/2026-07-01-212743.png')">
+                                    <img src="https://i.ibb.co/Ld6WfrnF/2026-07-01-212743.png" alt="Reports">
+                                    <div class="screenshot-label">التقارير</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/7th7fV3Y/2026-07-01-212755.png')">
+                                    <img src="https://i.ibb.co/7th7fV3Y/2026-07-01-212755.png" alt="Settings">
+                                    <div class="screenshot-label">إعدادات النظام</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>وصف المشروع</h3>
+                            <p>
+                                نظام حضور وغياب ذكي تم تطويره لإدارة حضور الموظفين
+                                باستخدام تقنية التعرف على الوجه بدلاً من البصمة أو
+                                تسجيل الحضور اليدوي، مما يوفر سرعة ودقة عالية في
+                                تسجيل الحضور والانصراف ويمنع التلاعب في سجلات الدوام.
+                            </p>
+
+                            <ul>
+                                <li>التعرف على وجوه الموظفين باستخدام تقنيات الذكاء الاصطناعي.</li>
+                                <li>تسجيل الحضور والانصراف تلقائياً في الوقت الحقيقي.</li>
+                                <li>دعم الكاميرا المباشرة أو كاميرات المراقبة.</li>
+                                <li>إدارة بيانات الموظفين وإضافة الصور الشخصية.</li>
+                                <li>استخراج بصمة الوجه (Face Embedding) لكل موظف.</li>
+                                <li>لوحة تحكم إدارية لإدارة الموظفين والحضور والإعدادات.</li>
+                                <li>إحصائيات يومية وشهرية حول الحضور والغياب والتأخير.</li>
+                                <li>تصدير تقارير الحضور إلى ملفات Excel وCSV وPDF.</li>
+                                <li>دعم اللغة العربية وواجهة احترافية متجاوبة.</li>
+                                <li>تقنيات FaceNet وMTCNN وOpenCV للتعرف على الوجه.</li>
+                                <li>دعم نظام Fallback لضمان استمرار عمل النظام في جميع البيئات.</li>
+                                <li>سجل كامل لجميع العمليات والأنشطة داخل النظام.</li>
+                            </ul>
+
+                            <p>
+                                يوفر النظام حلاً متكاملاً للشركات والمؤسسات والمدارس
+                                والمراكز التدريبية، حيث يساعد على أتمتة إدارة الحضور
+                                وتقليل الأخطاء البشرية وتحسين كفاءة متابعة الموظفين.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <h3>هل ترغب في تطوير نظام حضور ذكي؟</h3>
+                    <p>
+                        تواصل معي الآن لتطوير نظام حضور وانصراف احترافي يناسب احتياجات مؤسستك.
+                    </p>
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                        </a>
+                        <a href="#contact" class="modal-btn secondary">
+                            <i class="fas fa-envelope"></i> أرسل رسالة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal: Smart Logistics AI -->
+    <div class="modal-overlay" id="modalLogistics" role="dialog" aria-labelledby="modalLogisticsTitle" aria-hidden="true" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalLogistics" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h2 id="modalLogisticsTitle">
+                        Smart Logistics AI - نظام إدارة وتوزيع الشاحنات والمخازن والعمال
+                    </h2>
+                    <p>
+                        نظام لوجستي متكامل لإدارة الشاحنات والسائقين والعمال والمخازن
+                        والشحنات من خلال منصة إلكترونية واحدة، مع متابعة مواقع
+                        الشاحنات في الوقت الحقيقي، وإدارة العمليات التشغيلية،
+                        والتقارير والإحصائيات ولوحة تحكم احترافية.
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                            <div class="screenshots-grid" style="grid-template-columns:repeat(2,1fr);gap:1rem;">
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/nNXMR5Wp/2026-07-03-220804.png')">
+                                    <img src="https://i.ibb.co/nNXMR5Wp/2026-07-03-220804.png" alt="Dashboard">
+                                    <div class="screenshot-label">لوحة التحكم</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Trucks')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Trucks" alt="Trucks">
+                                    <div class="screenshot-label">إدارة الشاحنات</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Tracking')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Tracking" alt="Tracking">
+                                    <div class="screenshot-label">تتبع الشاحنات</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Warehouses')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Warehouses" alt="Warehouses">
+                                    <div class="screenshot-label">إدارة المخازن</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Shipments')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Shipments" alt="Shipments">
+                                    <div class="screenshot-label">إدارة الشحنات</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Reports')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Reports" alt="Reports">
+                                    <div class="screenshot-label">التقارير والإحصائيات</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>وصف المشروع</h3>
+                            <p>
+                                Smart Logistics AI هو نظام ذكي لإدارة العمليات
+                                اللوجستية داخل الشركات، حيث يجمع جميع عمليات النقل
+                                والتوزيع والتخزين في منصة واحدة تساعد على تحسين
+                                الكفاءة التشغيلية وتقليل الوقت والتكاليف.
+                            </p>
+                            <ul>
+                                <li>إدارة الشاحنات وإضافة وتعديل وأرشفة بياناتها.</li>
+                                <li>متابعة مواقع الشاحنات لحظياً عبر الخرائط (GPS Tracking).</li>
+                                <li>إدارة السائقين وربطهم بالشاحنات المناسبة.</li>
+                                <li>إدارة العمال وتوزيعهم على المهام اليومية.</li>
+                                <li>إدارة المخازن والمنتجات والمخزون.</li>
+                                <li>إنشاء وإدارة الشحنات والطلبات ومتابعة حالتها.</li>
+                                <li>متابعة حالة كل شاحنة (نشطة - في الصيانة - متوقفة).</li>
+                                <li>تحسين مسارات النقل وتقليل استهلاك الوقود.</li>
+                                <li>اقتراح أفضل شاحنة وسائق لكل عملية توزيع.</li>
+                                <li>إشعارات فورية للصيانة وتأخر الشحنات ونقص المخزون.</li>
+                                <li>تقارير تفصيلية مع إمكانية التصدير إلى PDF وExcel.</li>
+                                <li>لوحة تحكم تفاعلية تعرض الإحصائيات ومؤشرات الأداء لحظياً.</li>
+                            </ul>
+                            <p>
+                                يوفر النظام حلاً احترافياً لشركات النقل والخدمات
+                                اللوجستية، ويساعد على متابعة أسطول الشاحنات، وإدارة
+                                الموارد، وتحسين عمليات النقل والتوزيع والتخزين من
+                                خلال منصة عربية حديثة ومتجاوبة.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>هل ترغب في تطوير نظام لوجستي احترافي؟</h3>
+                    <p>
+                        تواصل معي الآن لتطوير نظام متكامل لإدارة الشاحنات والمخازن
+                        والشحنات يناسب احتياجات شركتك.
+                    </p>
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                        </a>
+                        <a href="#contact" class="modal-btn secondary">
+                            <i class="fas fa-envelope"></i> أرسل رسالة
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Juice ERP System -->
+    <div class="modal-overlay" id="modalJuiceERP" role="dialog" aria-labelledby="modalJuiceERPTitle" aria-hidden="true" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModalJuiceERP" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="work-modal">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-glass-whiskey"></i>
+                    </div>
+                    <h2 id="modalJuiceERPTitle">
+                        Juice ERP System - نظام إدارة شركات العصائر
+                    </h2>
+                    <p>
+                        نظام ERP احترافي لإدارة شركات إنتاج وتوزيع العصائر والمشروبات،
+                        يجمع المبيعات والمشتريات والمخزون والإنتاج والحسابات
+                        والعملاء والموردين في منصة إلكترونية واحدة مع لوحة تحكم
+                        تفاعلية وتقارير وإحصائيات دقيقة تساعد الإدارة على متابعة
+                        جميع العمليات التشغيلية والمالية.
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-grid">
+                        <div class="screenshots-section">
+                            <h3><i class="fas fa-images"></i> معرض الصور</h3>
+                            <div class="screenshots-grid" style="grid-template-columns:repeat(2,1fr);gap:1rem;">
+                                <div class="screenshot-item" onclick="openLightbox('https://i.ibb.co/twGbG9K6/2026-07-06-190657.png')">
+                                    <img src="https://i.ibb.co/twGbG9K6/2026-07-06-190657.png" alt="Dashboard">
+                                    <div class="screenshot-label">لوحة التحكم</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Products')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Products" alt="Products">
+                                    <div class="screenshot-label">إدارة المنتجات</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Sales')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Sales" alt="Sales">
+                                    <div class="screenshot-label">نظام المبيعات</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Warehouse')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Warehouse" alt="Warehouse">
+                                    <div class="screenshot-label">إدارة المخازن</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Invoices')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Invoices" alt="Invoices">
+                                    <div class="screenshot-label">الفواتير والباركود</div>
+                                </div>
+                                <div class="screenshot-item" onclick="openLightbox('https://via.placeholder.com/400x250/1e293b/ffffff?text=Reports')">
+                                    <img src="https://via.placeholder.com/400x250/1e293b/ffffff?text=Reports" alt="Reports">
+                                    <div class="screenshot-label">التقارير والإحصائيات</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>وصف المشروع</h3>
+                            <p>
+                                نظام ERP متكامل لإدارة شركات العصائر والمشروبات، يساعد
+                                على أتمتة جميع العمليات اليومية بدءًا من إدارة المنتجات
+                                والمواد الخام وحتى المبيعات والحسابات والتقارير،
+                                مما يرفع كفاءة العمل ويقلل الأخطاء ويزيد الإنتاجية.
+                            </p>
+                            <ul>
+                                <li>لوحة تحكم تعرض مؤشرات المبيعات والأرباح والمخزون بشكل لحظي.</li>
+                                <li>إدارة المنتجات والعصائر مع التصنيفات والأسعار وصور المنتجات.</li>
+                                <li>إدارة المواد الخام ومتابعة الكميات والاستهلاك وتنبيهات النقص.</li>
+                                <li>إدارة المخازن ونقل المنتجات بين الفروع وتتبع حركة المخزون.</li>
+                                <li>إنشاء فواتير البيع والشراء مع احتساب الخصومات والضرائب.</li>
+                                <li>طباعة الفواتير والباركود وإنشاء ملفات PDF وإرسالها للعملاء.</li>
+                                <li>إدارة العملاء والموردين مع كشف حساب كامل وسجل لجميع العمليات.</li>
+                                <li>إدارة الإيرادات والمصروفات والأرباح والخسائر والحسابات المالية.</li>
+                                <li>تقارير تفصيلية للمبيعات والمشتريات والمخزون والعملاء والموردين.</li>
+                                <li>تصدير التقارير إلى ملفات PDF وExcel مع إمكانية الطباعة.</li>
+                                <li>إشعارات ذكية عند انخفاض المخزون أو وجود فواتير ومستحقات.</li>
+                                <li>نظام صلاحيات متكامل لإدارة المستخدمين حسب الوظائف والصلاحيات.</li>
+                            </ul>
+                            <p>
+                                يوفر النظام حلاً احترافياً للشركات والمصانع العاملة
+                                في مجال إنتاج وتوزيع العصائر، ويساعد الإدارة على
+                                متابعة جميع العمليات التجارية والمالية من خلال منصة
+                                عربية حديثة وسهلة الاستخدام وقابلة للتطوير مستقبلاً.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>هل ترغب في تطوير نظام ERP احترافي لشركتك؟</h3>
+                    <p>
+                        تواصل معي الآن لتطوير نظام متكامل لإدارة المبيعات والمشتريات
+                        والمخزون والفواتير والحسابات بما يتناسب مع احتياجات شركتك.
+                    </p>
+                    <div class="modal-buttons">
+                        <a href="https://wa.me/967776295164" target="_blank" class="modal-btn primary">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                        </a>
+                        <a href="#contact" class="modal-btn secondary">
+                            <i class="fas fa-envelope"></i> أرسل رسالة
+                        </a>
                     </div>
                 </div>
             </div>
@@ -3747,18 +4428,17 @@ function showDetails(title, desc, images){
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const stats = [
-                            { element: document.getElementById('projectsCount'), target: 20},
-                            { element: document.getElementById('clientsCount'), target: 10 },
-                            { element: document.getElementById('experienceCount'), target: 2 },
-                            { element: document.getElementById('studentsCount'), target: 100 }
+                            { element: document.getElementById('projectsCount'), target: 30 },
+                            { element: document.getElementById('clientsCount'), target: 15 },
+                            { element: document.getElementById('experienceCount'), target: 2 }
                         ];
-                        
+
                         stats.forEach(stat => {
                             if (stat.element) {
                                 animateCounter(stat.element, stat.target, 2000);
                             }
                         });
-                        
+
                         observer.unobserve(entry.target);
                     }
                 });
@@ -3770,10 +4450,10 @@ function showDetails(title, desc, images){
             // ✅ Night Mode Toggle
             const nightModeBtn = document.getElementById('nightModeBtn');
             const nightModeIcon = nightModeBtn.querySelector('i');
-            
+
             nightModeBtn.addEventListener('click', function() {
                 document.body.classList.toggle('night-mode');
-                
+
                 if (document.body.classList.contains('night-mode')) {
                     nightModeIcon.classList.remove('fa-moon');
                     nightModeIcon.classList.add('fa-sun');
@@ -3826,7 +4506,7 @@ function showDetails(title, desc, images){
 
             // ✅ Scroll to Top Button
             const scrollTopBtn = document.getElementById('scrollTopBtn');
-            
+
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 300) {
                     scrollTopBtn.classList.add('active');
@@ -3844,7 +4524,7 @@ function showDetails(title, desc, images){
 
             // ✅ Header Scroll Effect
             const header = document.getElementById('main-header');
-            
+
             window.addEventListener('scroll', function() {
                 if (window.pageYOffset > 50) {
                     header.classList.add('scrolled');
@@ -3857,19 +4537,19 @@ function showDetails(title, desc, images){
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         const offsetTop = targetElement.offsetTop - 80;
-                        
+
                         window.scrollTo({
                             top: offsetTop,
                             behavior: 'smooth'
                         });
-                        
+
                         // Update active nav links
                         updateActiveNavLink(targetId);
                     }
@@ -3885,7 +4565,7 @@ function showDetails(title, desc, images){
                         link.classList.add('active');
                     }
                 });
-                
+
                 // Update mobile nav links
                 document.querySelectorAll('.mobile-nav-link').forEach(link => {
                     link.classList.remove('active');
@@ -3897,7 +4577,7 @@ function showDetails(title, desc, images){
 
             // ✅ Search Functionality
             const searchBar = document.getElementById('searchBar');
-            
+
             searchBar.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     const searchTerm = this.value.trim();
@@ -3912,18 +4592,18 @@ function showDetails(title, desc, images){
             const contactForm = document.getElementById('contactForm');
             const contactSpinner = document.getElementById('contactSpinner');
             const contactMsg = document.getElementById('contactMsg');
-            
+
             if (contactForm) {
                 contactForm.addEventListener('submit', async function(e) {
                     e.preventDefault();
-                    
+
                     // Show loading spinner
                     contactSpinner.style.display = 'block';
                     contactMsg.innerHTML = '';
-                    
+
                     // Get form data
                     const formData = new FormData(this);
-                    
+
                     try {
                         const response = await fetch(this.action, {
                             method: 'POST',
@@ -3932,19 +4612,21 @@ function showDetails(title, desc, images){
                                 'Accept': 'application/json'
                             }
                         });
-                        
+
                         if (response.ok) {
                             // Success
                             showToast('تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.', 'success');
                             contactForm.reset();
-                            contactMsg.innerHTML = '<div style="background: var(--success); color: white; padding: 1rem; border-radius: var(--radius);">تم إرسال رسالتك بنجاح!</div>';
+                            contactMsg.innerHTML =
+                                '<div style="background: var(--success); color: white; padding: 1rem; border-radius: var(--radius);">تم إرسال رسالتك بنجاح!</div>';
                         } else {
                             throw new Error('فشل في إرسال الرسالة');
                         }
                     } catch (error) {
                         // Error
                         showToast('حدث خطأ في الإرسال، حاول مرة أخرى', 'error');
-                        contactMsg.innerHTML = '<div style="background: var(--danger); color: white; padding: 1rem; border-radius: var(--radius);">حدث خطأ في الإرسال</div>';
+                        contactMsg.innerHTML =
+                            '<div style="background: var(--danger); color: white; padding: 1rem; border-radius: var(--radius);">حدث خطأ في الإرسال</div>';
                     } finally {
                         // Hide loading spinner
                         contactSpinner.style.display = 'none';
@@ -3957,7 +4639,7 @@ function showDetails(title, desc, images){
                 const toast = document.getElementById('toast');
                 toast.textContent = message;
                 toast.className = 'toast active';
-                
+
                 // Set color based on type
                 if (type === 'success') {
                     toast.style.background = 'var(--success)';
@@ -3968,7 +4650,7 @@ function showDetails(title, desc, images){
                 } else {
                     toast.style.background = 'var(--dark)';
                 }
-                
+
                 // Auto hide after 3 seconds
                 setTimeout(() => {
                     toast.classList.remove('active');
@@ -3985,9 +4667,20 @@ function showDetails(title, desc, images){
             viewDetailBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     const workId = this.getAttribute('data-work');
-                    const modalId = `modal${workId.charAt(0).toUpperCase() + workId.slice(1)}`;
+                    let modalId = '';
+
+                    // Map work IDs to modal IDs
+                    if (workId === 'cars') modalId = 'modalCars';
+                    else if (workId === 'mobiles') modalId = 'modalMobiles';
+                    else if (workId === 'rial') modalId = 'modalRial';
+                    else if (workId === 'about') modalId = 'modalAbout';
+                    else if (workId === 'insurance') modalId = 'modalInsurance';
+                    else if (workId === 'attendance') modalId = 'modalAttendance';
+                    else if (workId === 'logistics') modalId = 'modalLogistics';
+                    else if (workId === 'juice') modalId = 'modalJuiceERP';
+
                     const modal = document.getElementById(modalId);
-                    
+
                     if (modal) {
                         modal.style.display = 'flex';
                         modal.setAttribute('aria-hidden', 'false');
@@ -3996,17 +4689,20 @@ function showDetails(title, desc, images){
                 });
             });
 
+            // Demo buttons
             demoBtns.forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     const workId = this.getAttribute('data-work');
                     e.preventDefault();
-                    
+
                     if (workId === 'mobiles') {
                         window.open('https://eissashaya.github.io/Warehouse_pohn/', '_blank');
                     } else if (workId === 'rial') {
                         window.open('https://eissashaya.github.io/rial_madrid/', '_blank');
                     } else if (workId === 'about') {
                         window.open('https://eissashaya.github.io/about/', '_blank');
+                    } else if (workId === 'insurance') {
+                        window.open('https://eissashaya.github.io/insurance-elite/', '_blank');
                     }
                 });
             });
@@ -4148,7 +4844,33 @@ function showDetails(title, desc, images){
                     }
                 });
             }
+
+            // ✅ Lightbox - keyboard navigation for close
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
         });
+
+        // ✅ Lightbox Functions (Global)
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightboxOverlay');
+            const lightboxImg = document.getElementById('lightboxImg');
+            if (lightbox && lightboxImg) {
+                lightboxImg.src = imageSrc;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightboxOverlay');
+            if (lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
 
         // ✅ Error Handling
         window.addEventListener('error', function(e) {
@@ -4168,58 +4890,60 @@ function showDetails(title, desc, images){
 
     <!-- ✅ Schema.org Markup -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "عيسى إبراهيم شايع",
-        "url": "https://eissashaya.github.io/eissaa/",
-        "image": "https://eissashaya.github.io/eissaa/1.jpg",
-        "jobTitle": "مبرمج ومطور ويب وتطبيقات موبايل",
-        "description": "عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. تخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب.",
-        "knowsAbout": ["Flutter", "Dart", "Python", "HTML", "CSS", "JavaScript", "PHP", "تطوير الويب", "تطبيقات الموبايل"],
-        "sameAs": [
-            "https://facebook.com/profile.php?id=100031199948943",
-            "https://t.me/EissaCodes",
-            "https://instagram.com/v_b.j",
-            "https://github.com/eissashaya"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "Yemen"
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "عيسى إبراهيم شايع",
+            "url": "https://eissashaya.github.io/eissaa/",
+            "image": "https://eissashaya.github.io/eissaa/1.jpg",
+            "jobTitle": "مبرمج ومطور ويب وتطبيقات موبايل",
+            "description": "عيسى شايع - مبرمج ومطور ويب وتطبيقات موبايل محترف. تخصص في تطوير تطبيقات Flutter وبرمجة مواقع الويب.",
+            "knowsAbout": ["Flutter", "Dart", "Python", "HTML", "CSS", "JavaScript", "PHP", "تطوير الويب", "تطبيقات الموبايل"],
+            "sameAs": [
+                "https://facebook.com/profile.php?id=100031199948943",
+                "https://t.me/EissaCodes",
+                "https://instagram.com/v_b.j",
+                "https://github.com/eissashaya"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Yemen"
+            }
         }
-    }
     </script>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "عيسى إبراهيم شايع",
-  "alternateName": "Eissa Ibrahim Shaya",
-  "url": "https://eissashaya.github.io/eissashaya/",
-  "sameAs": [
-    "https://github.com/eissashaya",
-    "https://www.linkedin.com/in/eissashaya",
-    "https://www.facebook.com/profile.php?id=100031199948943",
-    "https://www.instagram.com/v_b.j/"
-  ],
-  "jobTitle": "Software Developer",
-  "knowsAbout": [
-    "Flutter",
-    "Python",
-    "Dart",
-    "Web Development",
-    "HTML",
-    "CSS",
-    "JavaScript"
-  ]
-}
-</script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "عيسى إبراهيم شايع",
+            "alternateName": "Eissa Ibrahim Shaya",
+            "url": "https://eissashaya.github.io/eissashaya/",
+            "sameAs": [
+                "https://github.com/eissashaya",
+                "https://www.linkedin.com/in/eissashaya",
+                "https://www.facebook.com/profile.php?id=100031199948943",
+                "https://www.instagram.com/v_b.j/"
+            ],
+            "jobTitle": "Software Developer",
+            "knowsAbout": [
+                "Flutter",
+                "Python",
+                "Dart",
+                "Web Development",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    </script>
 
     <!-- ✅ Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEB43FT1P2">
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-GEB43FT1P2');
     </script>
